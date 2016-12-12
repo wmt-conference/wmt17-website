@@ -13,7 +13,7 @@ TRANSLATION TASKS: \
   [<A HREF="/wmt17/index.html">QUALITY ESTIMATION</A>]   \
 <br> OTHER TASKS: \
   [<A HREF="/wmt17/index.html">AUTOMATIC POST-EDITING</A>] \
-  [<A HREF="/wmt17/index.html">NEURAL MT TRAINING</A>] \
+  [<A HREF="/wmt17/nmt-training-task">NEURAL MT TRAINING</A>] \
   [<A HREF="/wmt17/index.html">BANDIT LEARNING</A>] \
 ');
 /*| [<A HREF="/wmt17/papers.html">PAPERS</A>]  \
