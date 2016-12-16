@@ -5,7 +5,7 @@ document.write('\
         MACHINE TRANSLATION (WMT17) \
       </h2> \
       <h3> \
-        September, 2017<br> \
+        September 7-8, 2017<br> \
         Copenhagen, Denmark \
       </h3>\
 ');

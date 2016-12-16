@@ -1,0 +1,243 @@
+
+<html>
+  <HEAD>
+    <title>Multimodal Translation Task - 2017 Second Conference  on  Machine Translation (WMT17)</title>
+  </HEAD>
+  <body>
+
+    <center>
+      <script src="title.js"></script>
+      <p><h2>Shared Task: Multimodal Machine Translation</h2></p>
+      <script src="menu.js"></script>
+    </center>
+
+<p>This is shared task is aimed at the generation of image descriptions in a target language. The task can be addressed from two different perspectives:
+<ul>
+<li>as a <b><a href="#task1">translation task</a></b>, which will take a source language description and translate it into the target language, where this process can be supported by information from the image (multimodal translation), and </li>
+<li>as a <b><a href="#task2">description generation task</a></b>, which will take an image and generate a description for it in the target language, with no additional source language information (crosslingual image description generation). </li>
+</ul>
+
+We welcome participants focusing on either or both of these task variants. They differ mainly in the training data (see below) and in the way the target language descriptions are evaluated: against one translation of the corresponding source description (translation variant) or against one or more descriptions of the same image in the target language, created independently from the corresponding source description (image description variant).   
+</li>
+This task has the following main <b>goals</b>:
+
+<ul>
+<li>To push existing work on the integration of computer vision and language processing. </li>   
+<li>To push existing work on multimodal language processing towards multilingual multimodal language processing.</li>
+<li>To investigate the effectiveness of information from images in machine translation. </li>
+<li>To investigate image description generation in a multilingual setting.</li>
+</ul>
+
+We will provide new training and test datasets for both variants of the task and also allow participants to use external data and resources (constrained vs unconstrained submissions). The data to be used for both tasks is an extended version of the <a href="http://shannon.cs.illinois.edu/DenotationGraph/">Flickr30K</a> dataset. The original dataset contains 31,783 images from Flickr on various topics and five crowdsourced English descriptions per image, totalling 158,915 English descriptions. This dataset was extended in different ways for each of the subtasks, as discussed below.
+
+
+<!-- <p><b><font color="red">New</font></b>: -->
+<p>The code for the <b>main baseline system</b> for both tasks is available <a href="https://github.com/elliottd/GroundedTranslation">here</a>, following the approach described in <a href="http://arxiv.org/abs/1510.04709">(Elliott et al. 2015)</a>, in particular, the MLM&#10141;LM model (due to several requests). A secondary baseline for both tasks will be a Moses phrase-based statistical machine translation system trained using only the textual training data provided, following the pipeline described <a href="http://www.statmt.org/moses/?n=moses.baseline">here</a>.
+
+<hr>
+
+<!-- MULTIMODAL MT-->
+
+<h3 id="task1"><font color="blue">Task 1: Multimodal Machine Translation</font></h3>
+
+<p>This task consists in translating English sentences that describe an image into German, given the English sentence itself and the image that it describes (or features from this image, if participants chose to). For this task, the Flickr30K Entities dataset was extended in the following way: for each image, one of the English descriptions was selected and manually translated into German by a professional translator. <!--; the translator was not given access to the image -->
+We will provide most of the resulting parallel data and corresponding images for training, while smaller portions will be used for development and test. 
+</p>
+
+<p>As <i><font color="green">training</font></i> and <i><font color="green">development</font></i> data, we provide 29,000, and 1,014 triples respectively, each containing an English source sentence, its German human translation and corresponding image. We also provide the 2016 test set, which people can use for validation/evaluation. We note that human translations in the 2016 validation and test datasets have been post-edited (by humans) using the images to make sure the target descriptions are faithful to these images.  
+
+<p>As <i><font color="green">test data</font></i>, we provide a new set of 1,000 tuples containing an English description and its corresponding image. 
+
+<p><i><font color="green">Evaluation</font></i> will be performed against the German human translation on the test set using standard MT evaluation metrics, with METEOR as the primary metric (lowercased text, with punctuation, tokenised). We recommend normalising punctuation and tokenising the system submissions using this <a href="https://github.com/moses-smt/mosesdecoder/blob/master/scripts/tokenizer/normalize-punctuation.perl">script</a>. These are the scripts that will be used for the reference translations.
+<!--(Here are some <a href="http://www.quest.dcs.shef.ac.uk/wmt16_files_mmt/wmt16mmt_notes_Task1">additional notes</a> on how we did the evaluation.) We may also include manual evaluation.
+<!--<p><b><font color="red">New</font></b>: The METEOR command is the following (e.g. for en-de, using <a href="https://github.com/jhclark/multeval">multeval implementation</a>): 
+<p>
+<font face="Courier New" size="2">
+./multeval.sh eval --refs wmt2016/de_test/reference.ref --hyps-baseline baseline_model/de/generated --hyps-sys1 my_great_model/de_generated --meteor.language de
+</font>
+
+
+<p>For those interested in translating in the inverse direction, i.e., German into English, we can release a test set for that direction. The training and development sets will remain the same, their translation direction can simply be flipped. 
+-->
+
+<hr>
+
+<!-- DESCRIPTION GENERATION-->
+
+<h3 id="task2"><font color="magenta">Task 2: Multilingual Image Description Generation</font></h3>
+
+<!-- 
+<p><b><font color="purple">Results <a href="http://www.quest.dcs.shef.ac.uk/wmt15_files/results/task2.pdf">here<a/></font></b>, <b>gold-standard labels</b> <a href="http://www.quest.dcs.shef.ac.uk/wmt15_files/gold/Task2_gold.tar.gz">here<a/>  
+-->
+
+<p>This task consists in generating a German sentence that describes an image, given the image itself and one or more descriptions in English. For this task, the Flickr30K Entities dataset was extended in the following way: for each image, five German descriptions were crowdsourced independently from their English versions, and independently from each other. 
+Any English-German pair of descriptions for a given image could be considered a comparable translation pair.  We will provide most of the images and associated descriptions for training, while smaller portions will be used for development and test. 
+</p>
+
+<!-- <p><b><font color="red">Update</font></b>: -->
+<!--<a href="http://staff.fnwi.uva.nl/d.elliott/wmt16/mmt_task2.zip">Download the complete release of the training and validation data</a>. This release contains 29,000 <i><font color="green">training</font></i> tuples of German described 
+images and 1,014 <i><font color="green">development</font></i> tuples of German described images. A tuple contains an image paired with five (5) crowdsourced descriptions. Note, the entire English training and development datasets are included in this download. </p>-->
+
+<p>As <i><font color="green">training</font></i> and <i><font color="green">development</font></i> data, we provide 29,000 and 1,014 images, each with 5 descriptions in English and 5 descriptions in German, i.e., 29,014 tuples containing an image and 10 descriptions, 5 in each language. 
+<!--<a href="http://www.quest.dcs.shef.ac.uk/wmt15_files/task1_en-es_dev.tar.gz">Download development data (and baseline features)</a>. <a href="http://www.quest.dcs.shef.ac.uk/wmt15_files/task1_en-es_training.tar.gz">Download training data (and baseline features)</a>. 
+<!--Download 17 baseline feature set for the <a href="http://www.quest.dcs.shef.ac.uk/wmt15_files/task1_en-es_training.baseline17.features">traning</a> and <a href="http://www.quest.dcs.shef.ac.uk/wmt15_files/task1_en-es_dev.baseline17.features">dev</a> sets.-->
+</li>
+
+<p>As <i><font color="green">test data</font></i>, we provide a new set of approximately 1,000 tuples containing an image and 5 English descriptions. 
+<!--<a href="http://www.quest.dcs.shef.ac.uk/wmt15_files/task1_en-es_test.tar.gz">Download test data (and baseline features)</a>. 
+<!--Download 17 baseline feature set for the <a href="http://www.quest.dcs.shef.ac.uk/wmt15_files/task1_en-es_test.baseline17.features">test</a> set.--></li>
+
+
+<p><i><font color="green">Evaluation</font></i> will be performed against five German descriptions collected as reference on the test set, with lowercased text and without punctuation, using METEOR. We may also include manual evaluation.</p> 
+
+
+
+<hr>
+<h3><font color="magenta">Datasets</font></h3>
+
+<p>Task 1: <a href="http://www.quest.dcs.shef.ac.uk/wmt16_files_mmt/training.tar.gz">Training</a>, <a href="http://www.quest.dcs.shef.ac.uk/wmt17_files_mmt/validation_edited.tar.gz">Validation</a>, and <a href="https://staff.fnwi.uva.nl/d.elliott/wmt16/mmt16_task1_test_edited.tgz">2016 Test</a> sentences, and the <a href=" http://staff.fnwi.uva.nl/d.elliott/wmt16/splits.zip"><font color="magenta">splits</font></a>.
+
+<p><font color="magenta">Task 2: <a href="http://staff.fnwi.uva.nl/d.elliott/wmt16/mmt_task2.zip">Training and Validation</a>, and <a href="https://staff.fnwi.uva.nl/d.elliott/wmt16/mmt16_task2_test.tgz">Test</a> sentences, and the <a href=" http://staff.fnwi.uva.nl/d.elliott/wmt16/splits.zip">splits</a></font>.
+
+<p>Image features will be provided to participants, but their use is not mandatory. In particular, we will release features extracted from the VGG-19 CNN, described in <a href="http://arxiv.org/abs/1409.1556">(Simonyan and Zisserman, 2015)</a> from the FC<sub>7</sub> (relu7) and CONV<sub>5_4</sub> layers using <a href="https://github.com/BVLC/caffe/releases/tag/rc2">Caffe RC2</a>.
+
+<!--
+<ul>
+  <li>we used the matlab_features_reference code in <a href="https://github.com/karpathy/neuraltalk/tree/master/matlab_features_reference">NeuralTalk</a>
+  <li>The <a href="https://staff.fnwi.uva.nl/d.elliott/wmt16/fc7_vgg_feats_hdf5-flickr30k.mat">FC_7 features</a> were extracted from the layer labelled 'relu7', as defined in the deploy_features.prototxt in NeuralTalk.</li>
+  <li>The <a href="https://staff.fnwi.uva.nl/d.elliott/wmt16/conv54_vgg_feats_hdf5-flickr30k.mat">CONV_5,4 features</a> (warning: 11GB file) were extracted from the layer labelled 'conv5_4', following correspondence with Kelvin Xu.</li>
+  <li>For those who want to extract other image features, the original images can be downloaded from the <a href="http://shannon.cs.illinois.edu/DenotationGraph/">Flickr30K</a> dataset.</li>
+</ul>
+-->
+
+<p>If you use the dataset created for this shared task, please cite the following paper: <a href="http://aclweb.org/anthology/W16-3210.pdf">Multi30K: Multilingual English-German Image Descriptions</a>.
+
+<p>
+<pre>
+@article{elliott-EtAl:2016:VL16,
+ author    = {{Elliott}, D. and {Frank}, S. and {Sima'an}, K. and {Specia}, L.},
+ title     = {Multi30K: Multilingual English-German Image Descriptions},
+ booktitle = {Proceedings of the 5th Workshop on Vision and Language},
+ year      = {2016},
+ pages     = {70--74},
+ year      = 2016
+}
+</pre>
+</p>
+
+<hr>
+
+<!--<h3><font color="blue">Results</font></h3>
+
+
+<p>The results are also available for both tasks in the
+
+following paper: <a
+
+  href="http://www.statmt.org/wmt16/pdf/W16-2346.pdf">A Shared Task on
+
+  Multimodal Machine Translation and Crosslingual Image
+
+  Description</a>.
+
+
+
+<p>Stella Frank gave a <a href="https://staff.fnwi.uva.nl/s.c.frank/mmt_wmt_slides.pdf">presentation</a> about the shared task submissions and results at the conference.
+
+
+
+<p>You can also download the <a href="https://staff.fnwi.uva.nl/d.elliott/wmt16/mmt16_submissions.tgz">submissions</a> to the shared task.
+
+
+
+<hr>-->
+
+
+
+<!-- EXTRA STUFF -->
+
+<h3>Additional resources</h3>
+
+<p>We suggest the following <b><font color="green">interesting resources</font></b> that can be used as additional training data for either or both tasks:
+<ul>
+<li><a href="http://www.statmt.org/wmt17/translation-task.html">WMT17 News translation task data</a> for both bilingual (English-German) and monolingual (English or German) data.</li>
+<li><a href="http://web.engr.illinois.edu/~bplumme2/Flickr30kEntities/">Flickr30K Entities</a> dataset: an extension of the Flickr30K dataset which contains additional layers of annotation such as 244K coreference chains in the English descriptions and 276K manually annotated bounding boxes for entities in the images.</li>
+<li>Additional image description datasets for source (English) side models, such as the <a href="http://mscoco.org/">Microsoft COCO Dataset</a>, among others. See <a href="http://visionandlanguage.net/">this survey</a>  for a complete list.
+</ul>
+
+Submissions using these or any other resources external to those provided for the tasks should indicate that their submissions are of the "unconstrained" type. 
+
+<hr>
+
+<!-- SUBMISSION INFO -->
+
+<h3>Submission Format</h3>
+
+<p> The output of your system <b>a given task</b> should produce a target language description for each image formatted in the following way: </p>
+<pre>&lt;METHOD NAME&gt; &lt;IMAGE ID&gt; &lt;DESCRIPTION&gt; &lt;TASK&gt; &lt;TYPE&gt;<br><br></pre>
+Where:
+<ul>
+<li><code>METHOD NAME</code> is the name of your method.</li>
+<li><code>IMAGE ID</code> is the identifier of the test image.</li>
+<li><code>DESCRIPTION</code> is the output generated by your system (either a translation or an independently generated description). </li>
+<li><code>TASK</code> is one of the following flags: 1 (for translation task), 2 (for image description task), 3 (for both). The choice here will indicate how your descriptions will be evaluated. Option 3 means they will be evaluated both as a translation task and as an image description task.</li>
+<li><code>TYPE</code> is either C or U, where C indicates "constrained", i.e. using only the resources provided by the task organisers, and U indicates "unconstrained".</li>
+</ul>
+Each field should be delimited by a single tab character.
+
+<h3>Submission Requirements</h3>
+
+Each participating team can submit at most 2 systems for each of the task variants (so up to 4 submissions). These should be sent
+via email to Lucia Specia <a href="mailto:lspecia@gmail.com" target="_blank">lspecia@gmail.com</a>. Please use the following pattern to name your files:
+<p>
+<code>INSTITUTION-NAME</code>_<code>TASK-NAME</code>_<code>METHOD-NAME</code>_<code>TYPE</code>, where:
+<p> <code>INSTITUTION-NAME</code> is an acronym/short name for your institution, e.g. SHEF
+<p><code>TASK-NAME</code> is one of the following: 1 (translation), 2 (description), 3 (both).
+<p><code>METHOD-NAME</code> is an identifier for your method in case you have multiple methods for the same task, e.g. 2_NeuralTranslation, 2_Moses
+<p><code>TYPE</code> is either C or U, where C indicates "constrained", i.e. using only the resources provided by the task organisers, and U indicates "unconstrained".
+<p> For instance, a constrained submission from team SHEF for task 2 using method "Moses" could be named SHEF_2_Moses_C.
+
+<p>You are invited to submit a short paper (4 to 6 pages) to WMT
+describing your method(s). You are not required to
+submit a paper if you do not want to. In that case, we ask you
+to provide a summary and/or an appropriate reference describing your method(s) that we can cite
+in the WMT overview paper.</p>
+
+
+<h3>Important dates</h3>
+<!--
+    <table>
+      <tr><td>Release of training data </td><td>January 30, 2016</td></tr>
+      <tr><td>Release of test data </td><td>April 10, 2016</td></tr>
+      <tr><td>Results submission deadline  </td><td>May 4, 2016</td></tr>
+      <tr><td>Paper submission deadline</td><td>May 15, 2016</td></tr> 
+      <tr><td>Notification of acceptance</td><td>June 5, 2016</td></tr> 
+      <tr><td>Camera-ready deadline</td><td>June 22, 2016</td></tr>
+    </table>
+-->
+
+<h3>Organisers</h3>
+Lucia Specia (University of Sheffield)
+<br>
+Desmond Elliott (University of Amsterdam)
+<br>
+Stella Frank (University of Amsterdam)
+<br>
+
+
+<h3>Contact</h3>
+<p> For questions or comments, email Lucia
+Specia <a href="mailto:lspecia@gmail.com" target="_blank">lspecia@gmail.com</a>.
+</p>
+
+<h3>License</h3>
+The data is licensed under Creative Commons: <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike 4.0 International</a>.  
+
+<p align="right">
+Supported by the European Commission under the MultiMT
+<a href="http://cordis.europa.eu/project/rcn/200709_en.html"><img align=right src="figures/ERC_Logo.png" border=0 width=100 height=40></a> 
+<!--and QT21 <a href="http://www.qt21.eu/"><img align=right src="figures/qt21.png" border=0 width=100 height=40></a>-->
+<br>project (grant number 645452) <p>
+
+
+</body></html>

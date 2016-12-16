@@ -1,0 +1,171 @@
+<html>
+  <head>
+    <title>WMT17 NMT Training Task</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <style> h3 { margin-top: 2em; } </style>
+  </head>
+  <body>
+
+    <center>
+      <script src="../title.js"></script>
+      <p><h2>WMT17 Neural MT Training Task</h2></p>
+      <script src="../menu.js"></script>
+    </center>
+
+    <!--<p>
+    <center><font color="red"><b><a href="https://www.softconf.com/acl2016/WMT16/">Submission</a> is open</b></font></center>
+    </p>-->
+
+ 
+    <h3>NMT Training Task Important Dates</h3>
+    <table>
+      <tr><td>Release of NMT system and training data</td><td>January/February, 2017</td></tr>
+      <tr><td>Evaluation periods for shared tasks</td><td>April/May, 2017</td></tr>
+      <tr><td>Conference in Copenhagen</td><td>September 7-8, 2017</td></tr>
+    </table>
+
+<h3>NMT Training Task Overview</h3>
+<p>
+The training of one configuration of a neural MT system takes a few weeks and the currently used training criteria are rather basic, lacking a systematic evaluation and the common models are optimized not even towards BLEU. By organizing Neural MT Training Task, we hope to provide comparable conditions and encourage research into:
+
+<ul>
+<li>training criteria that lead to the best translation quality</li> 
+<li>organization of training data that helps to speed up the training, make it more robust or leads to better translation quality</li>
+</ul>
+</p>
+
+
+<p>We will provide the participants with:
+<ul>
+<li>a complete neural MT system to modify, specifically <a href="https://github.com/ufal/neuralmonkey/">Neural Monkey</a></li>
+<li>a fixed configuration file for running (this defines the neural model)</li>
+<li>a fixed and pre-processed collection of training and validation data</li>
+<li>a fixed revision number of the MT system which will be used to run the model</li>
+<li>a baseline configuration file for training</li>
+</ul>
+</p>
+
+<p>The participants are expected to train the model and submit the parameters.
+While doing so, they can
+modify the training data, training config and the training parts of the neural MT system in any possible way.</p>
+
+<p>We will use the fixed version of the NMT system to run the trained models on the official news test sets. The translations will be then manually evaluated along with the submissions to the standard News Translation Task.
+</p>
+
+<p>The task is aimed at both experienced NMT researchers and newcomers. A valid submission can be achieved with minimal or no modifications of the provided system at all. Below, we provide suggestions what could people experiment with.
+</p>
+
+<p>NMT Training Task was inspired by the past <a href="http://www.statmt.org/wmt16/tuning-task/">Tuning Tasks</a> and serves as its replacement. In the last tuning task where phase-based MT components were fixed, it turned out that the few parameters of a log-linear model do not give enough room for interesting setup differences, especially when the model components are realistically large. This is certainly not the case for a neural model.</p>
+
+<H3>Other Requirements</H3>
+
+<p>
+For each run submitted to the tuning task, the team promises to join the
+WMT manual evaluation and annotate at a share of the items. The exact involvement will be determined later but usually ranges from 4 to 8 hours of work. This contribution to the manual evaluation can be done in
+whichever language
+pair you can evaluate and is needed most.
+</p>
+
+<!--<p>No registration is needed for the participation in the tuning task, unless you would like to make use of our manual judgements of Czech, see <a href="#maneval">Complimentary Manual Evaluation</a> below.</p>-->
+
+<p>You are invited to submit a short paper (4 to 6 pages) describing your
+NMT training technique. You are not required to submit a paper if you do
+not want to. If you don't, we ask that you give an appropriate description (a few paragraphs) or an appropriate reference
+describing your method to include or cite in the overview paper.</p>
+
+
+<h3>Suggested Topics for Experimenting</h3>
+<p>
+Neural MT is flexible and unexplored enough to offer quite a few interesting things to try:
+
+<ul>
+<li>Just let it run. As soon as the data is available, launch the training and let it run until the deadline. This may well give you the best model and it is a totally valid submission.</li>
+
+<li>Curricula. Reorder the training data in various ways to allow the model to learn faster or in a more robust way, hinting it towards better local optima. Only shuffle sentences or also create artificial sentences, e.g. by first feeding in some form of a lexicon.</li>
+
+<li>Optimizers. Use something else than the default Adam, tweak any of the parameters.</li>
+
+<li>Reinforcement. Modify the training and train towards an MT evaluation metric through reinforcement learning, experiment with various ways of reinforcement and with various MT metrics.</li>
+
+<li>Other objectives. Modify the trainer and add a secondary task in a multi-task training (e.g. source sentence tagging, syntatic analysis, ...). Submit only the required part of the model.</li>
+
+<li>Knowledge distillation. Feel free to use whatever advanced MT systems you have (including our model at larger network sizes) and distill the knowledge of this better system into your submission (i.e. use Neural Monkey to train on the training data and the outputs of the better system).</li>
+</ul>
+</p>
+
+<p>We would very much appreciate if prospective participants 
+shared their plans and perhaps even code modifications (e.g. reinforcement learning into which anyone could plug in their MT metric) during the task.
+If you are interested in this more collaborative form of participation, please describe briefly your plans to the task mailing list: <a href="https://groups.google.com/forum/#!forum/nmt-training-task">nmt-training-task@googlegroups.com</a>.
+</p>
+
+<!-- 
+<a name="maneval"></a>
+<h3>Complimentary Manual Evaluation of Translations into Czech</h3>
+
+<p>
+To allow a broader participation in the English-to-Czech direction, each
+registered participant of the tuning task will be given a 'credit'
+of manual pairwise sentence comparisons by our Czech native speakers. The
+exact number of judgments we can provide will be determined from the number
+of registered participants, but we expect no less than a few hundred sentence pair comparisons.
+Obviously, manual judging takes time and there can be a peak of demand as
+the submission deadline approaches, so remember to get in touch early.
+</p>
+
+<p>
+To register for this English-to-Czech complimentary  manual pre-evaluation,
+please send an e-mail to
+  <a href="mailto:wmt-tuning-submissions@googlegroups.com">wmt-tuning-submissions@googlegroups.com</a>.
+</p>
+
+<h4>Submitting Sentence Pairs for Czech Manual Evaluation</h4>
+
+<p>To make use of some of your 'credit', simply send the following plain text files to 
+  <a href="mailto:wmt-tuning-submissions@googlegroups.com">wmt-tuning-submissions@googlegroups.com</a>:
+
+  <ul>
+  <li>The source English sentence.</li>
+  <li>The reference translation (if available).</li>
+  <li>System A output</li>
+  <li>System B output</li>
+  </ul>
+
+  Each sentence should be on a separate line, so all the three or four files must have exactly the same number of lines.
+</p>
+
+<p>
+Our annotators will see the source, optionally the reference, and the two outputs. The outputs will be shuffled so that the system cannot be determined from the order of the hypotheses. The order of the sentences will not be shuffled, so do this yourself if you want to.
+</p>
+
+<p>
+For each sentence, the annotator will mark one of the following:
+<ul>
+<li>Exactly one candidate translation as being the better one.</li>
+<li>Both candidates as being equally good, acceptable translations.</li>
+<li>Both candidates as being equally bad, inacceptable translations.</li>
+</ul>
+</p>
+
+<H4>How to submit</H4>
+<p>
+Submissions should be sent as an e-mail to <a href="wmt-tuning-submissions@googlegroups.com">wmt-tuning-submissions@googlegroups.com</a>.
+</p>
+
+<p>In case the above e-mail doesn't work for you (Google seems to prevent non-member postings despite we set it so), please contact us directly.</p>
+
+     -->
+
+<h3>NMT Training Task Organizers</h3>
+Ond&#345;ej Bojar (Charles University in Prague)<br>
+Jindřich Helcl (Charles University in Prague)<br>
+Tom Kocmi (Charles University in Prague)<br>
+Jindřich Libovický (Charles University in Prague)<br>
+Tomáš Musil (Charles University in Prague)<br>
+
+<h3>Acknowledgement</h3>
+<p>
+Supported by the European Commision under the
+<a href="http://www.qt21.eu/"><img src="qt21-quality-translation-cropped.png" border=0 width=105 height=45 alt="QT 21"></a> project (grant number 645452) <p>
+
+  </body>
+</html>
