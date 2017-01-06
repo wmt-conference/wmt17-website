@@ -13,12 +13,12 @@
 
     <P>
       The recurring translation task of the <A HREF="index.html">WMT workshops</A> focuses on
-      news text and European language pairs. For 2016 the language pairs are:
+      news text and (mainly) European language pairs. For the year the language pairs are:
      <ul>
+        <li> Chinese-English
         <li> Czech-English
-        <li> German-English
-        <li> Romanian-English
         <li> Finnish-English
+        <li> Latvian-English
         <li> Russian-English
         <li> Turkish-English
       </ul>
@@ -49,11 +49,11 @@
     <h3>IMPORTANT DATES</h3>
 
     <table>
-      <tr><td>Release of training data for shared tasks</td><td>January, 2016</td></tr>
-      <tr><td>Test data released</td><td>April 18, 2016</td></tr>
-      <tr><td>Translation submission deadline</td><td>April 24, 2016</td></tr>
-      <tr><td>Start of manual evaluation</td><td>May 2, 2016</td></tr>
-      <tr><td>End of manual evaluation (provisional)</td><td>May 22, 2016</td></tr>
+      <tr><td>Release of training data for shared tasks</td><td>January, 2017</td></tr>
+      <tr><td>Test data released</td><td>May 2, 2017</td></tr>
+      <tr><td>Translation submission deadline</td><td>May 8, 2017</td></tr>
+      <tr><td>Start of manual evaluation</td><td>May 15, 2017</td></tr>
+      <tr><td>End of manual evaluation (provisional)</td><td>June 4, 2017</td></tr>
       <!-- <tr><td>Papers available online</td><td>TBA</td></tr> -->
     </table>
 
@@ -62,7 +62,7 @@
     <H3>TASK DESCRIPTION</H3>
 
     <p>
-      We provide training data for five  language pairs, and a common
+      We provide training data for seven language pairs, and a common
       framework. The task is to improve methods
       current methods. This can be done in many ways. For instance participants
       could try to:
@@ -81,7 +81,7 @@
     </P>
 
     <p>
-      You may participate in any or all of the six language pairs.
+      You may participate in any or all of the seven language pairs.
             For all language pairs we will test translation in both directions. To
       have a common framework that allows for comparable results, and also to
       lower the barrier to entry, we provide a common training set.
@@ -115,46 +115,29 @@
     <H3><a name="training">TRAINING DATA</a></H3>
 
     <p>
-      The provided data is mainly taken from version 7 of
-      the <A HREF="/europarl/">Europarl corpus</A>, which is freely available.
-      Please click on the links below to download the sentence-aligned data, or
-      go to <a href="/europarl/">the Europarl website</a> for the source
-      release.
-      Note that this the same data as last year, since Europarl is not anymore
-      translated across all 23 official European languages.
-    </p>
-
-    <P>
-      Additional training data is taken from the new News Commentary corpus.
-      There are about 50 million words of training data per language from the
-      Europarl corpus and 3 million words from the News Commentary corpus.
+      The provided data is mainly taken from public data sources such as
+      the <A HREF="/europarl/">Europarl corpus</A>, and the 
+      <A href="https://conferences.unite.un.org/UNCorpus">UN corpus</a>.
+      Additional training data is taken from the News Commentary corpus, which
+      we re-extract every year from the task.
     </p>
     <p>
-      For Romanian-English and Turkish-English we have added the
-      <a href="http://opus.lingfil.uu.se/SETIMES2.php">SETIMES2</a> corpus to the constrained data task.
+      We have added suitable additional training data to some of the language pairs.
     </p>
-    <p>
-      A new data resource from 2016 is the monolingual Common Crawl corpus which was collected
-      from web sources.
-    </p>
-
-    <p>
-      We have released development data for the Romanian-English task, and
-      for the Turkish-English task.
-    <p>
       You may also use the following monolingual corpora released by the LDC:
 
       <UL>
         <LI>LDC2011T07 <a href="http://www.ldc.upenn.edu/Catalog/catalogEntry.jsp?catalogId=LDC2011T07">English Gigaword Fifth Edition</a>
         <LI>LDC2009T13 <a href="http://www.ldc.upenn.edu/Catalog/catalogEntry.jsp?catalogId=LDC2009T13">English Gigaword Fourth Edition</a>
         <LI>LDC2007T07 <a href="http://www.ldc.upenn.edu/Catalog/catalogEntry.jsp?catalogId=LDC2007T07">English Gigaword Third Edition</a>
+        <LI>LDC2009T27 <a href="https://catalog.ldc.upenn.edu/LDC2009T27">Chinese Gigaword Fourth Edition</a>
       </UL>
     </p>
 
     <p>
       Note that the released data is not tokenized and includes sentences of
       any length (including empty sentences). All data is in Unicode (UTF-8)
-      format. The following tools allow the processing of the training data
+      format. The following Moses tools allow the processing of the training data
       into tokenized format:
 
       <UL>
@@ -171,134 +154,124 @@
 
     <p>
       To evaluate your system during development, we suggest using the
-      2015 test set. The data is provided in raw text format and in an
+      2016 test set. The data is provided in raw text format and in an
       SGML format that suits the NIST scoring tool. We also release other
-      test sets from previous years.
+      dev and test sets from previous years.
     </P>
 
-    <TABLE CELLPADDING=5 CELLSPACING=0 BORDER=1>
-      <tr>
-        <TD VALIGN=TOP width=250>
-          <B>news-test2008</B>
-          <UL>
-            <LI> English
-            <LI> French
-            <LI> Spanish
-            <LI> German
-            <LI> Czech
-            <LI> Hungarian
-          </UL>
-          Cleaned version of the 2008 test set.<br>
-          2051 sentences.
-        </TD>
-        <TD VALIGN=TOP width=250>
-          <B>news-test2009</B>
-          <UL>
-            <LI> English
-            <LI> French
-            <LI> Spanish
-            <LI> German
-            <LI> Czech
-            <LI> Hungarian
-            <LI> Italian
-          </UL>
-          2525+502 sentences.
-        </TD>
-        <TD VALIGN=TOP width=250>
-          <B>news-test2010</B>
-          <UL>
-            <LI> English
-            <LI> French
-            <LI> Spanish
-            <LI> German
-            <LI> Czech
-          </UL>
-          2489 sentences.
-        </TD>
-        <TD VALIGN=TOP width=250>
-          <B>news-test2011</B>
-          <UL>
-            <LI> English
-            <LI> French
-            <LI> Spanish
-            <LI> German
-            <LI> Czech
-          </UL>
-          3003 sentences.
-        </TD>
-        <TD VALIGN=TOP width=250>
-          <B>news-test2012</B>
-          <UL>
-            <LI> English
-            <LI> French
-            <LI> Spanish
-            <LI> German
-            <LI> Czech
-            <LI> Russian
-          </UL>
-          3003 sentences.
-        </TD>
-      <TD VALIGN=TOP width=250>
-          <B>news-test2013</B>
-          <UL>
-            <LI> English
-            <LI> French
-            <LI> Spanish
-            <LI> German
-            <LI> Czech
-            <LI> Russian
-          </UL>
-          3000 sentences.
-        </TD>
-      <TD VALIGN=TOP width=250>
-          <B>news-test2014</B>
-          <UL>
-            <LI> English
-            <LI> Czech
-            <LI> French
-            <LI> German
-            <LI> Hindi
-            <LI> Russian
-          </UL>
-          3003 sentences.
-        </TD>
-      <TD VALIGN=TOP width=250>
-          <B>news-test2015</B>
-          <UL>
-            <LI> English
-            <LI> Czech
-            <LI> Finnish
-            <LI> German
-            <LI> Russian
-          </UL>
-          3000 sentences.
-          (1500 sentences for Finnish)
-        </TD>
-        <TD VALIGN=TOP width=250>
-          <TABLE>
-          <TD>
-          <B>news-dev2016</B>
-          <UL>
-            <LI> Romanian
-            <LI> Turkish
-          </UL>
-          2000/1000 sentences.
-          </TD>
-          </TR><TR>
-          <TD>
-          <B> news-dev2015</B>
-          <UL>
-            <LI> Finnish
-          </UL>
-          1500 sentences.
-          </TD></TR>
-        </TABLE>
-        </TD>
+      <table border=1 cellpadding=5>
+        <tr>
+          <th>Year</th>
+          <th>CS-EN</th>
+          <th>DE-EN</th>
+          <th>FI-EN</th>
+          <th>LV-EN</th>
+          <th>RU-EN</th>
+          <th>TR-EN</th>
+          <th>ZH-EN</th>
+        </tr>
+        <tr>
+          <td>2008</td>
+          <td align=center>&#x2713;</td> 
+          <td align=center>&#x2713;</td> 
+          <td align=center>&nbsp;</td> 
+          <td align=center>&nbsp;</td> 
+          <td align=center>&nbsp;</td> 
+          <td align=center>&nbsp;</td> 
+          <td align=center>&nbsp;</td> 
+        </tr>
+ <tr>
+          <td>2009</td>
+          <td align=center>&#x2713;</td> 
+          <td align=center>&#x2713;</td> 
+          <td align=center>&nbsp;</td> 
+          <td align=center>&nbsp;</td> 
+          <td align=center>&nbsp;</td> 
+          <td align=center>&nbsp;</td> 
+          <td align=center>&nbsp;</td> 
+        </tr>
+ <tr>
+          <td>2010</td>
+          <td align=center>&#x2713;</td> 
+          <td align=center>&#x2713;</td> 
+          <td align=center>&nbsp;</td> 
+          <td align=center>&nbsp;</td> 
+          <td align=center>&nbsp;</td> 
+          <td align=center>&nbsp;</td> 
+          <td align=center>&nbsp;</td> 
+        </tr>
+ <tr>
+          <td>2011</td>
+          <td align=center>&#x2713;</td> 
+          <td align=center>&#x2713;</td> 
+          <td align=center>&nbsp;</td> 
+          <td align=center>&nbsp;</td> 
+          <td align=center>&nbsp;</td> 
+          <td align=center>&nbsp;</td> 
+          <td align=center>&nbsp;</td> 
+        </tr>
+ <tr>
+          <td>2012</td>
+          <td align=center>&#x2713;</td> 
+          <td align=center>&#x2713;</td> 
+          <td align=center>&nbsp;</td> 
+          <td align=center>&nbsp;</td> 
+          <td align=center>&#x2713;</td> 
+          <td align=center>&nbsp;</td> 
+          <td align=center>&nbsp;</td> 
+        </tr>
+ <tr>
+          <td>2013</td>
+          <td align=center>&#x2713;</td> 
+          <td align=center>&#x2713;</td> 
+          <td align=center>&nbsp;</td> 
+          <td align=center>&nbsp;</td> 
+          <td align=center>&#x2713;</td> 
+          <td align=center>&nbsp;</td> 
+          <td align=center>&nbsp;</td> 
+        </tr>
+ <tr>
+          <td>2014</td>
+          <td align=center>&#x2713;</td> 
+          <td align=center>&#x2713;</td> 
+          <td align=center>&#x2713;</td> 
+          <td align=center>&nbsp;</td> 
+          <td align=center>&#x2713;</td> 
+          <td align=center>&nbsp;</td> 
+          <td align=center>&nbsp;</td> 
+        </tr>
+ <tr>
+          <td>2015</td>
+          <td align=center>&#x2713;</td> 
+          <td align=center>&#x2713;</td> 
+          <td align=center>&#x2713;</td> 
+          <td align=center>&nbsp;</td> 
+          <td align=center>&#x2713;</td> 
+          <td align=center>&nbsp;</td> 
+          <td align=center>&nbsp;</td> 
+        </tr>
+ <tr>
+          <td>2016</td>
+          <td align=center>&#x2713;</td> 
+          <td align=center>&#x2713;</td> 
+          <td align=center>&#x2713;</td> 
+          <td align=center>&nbsp;</td> 
+          <td align=center>&#x2713;</td> 
+          <td align=center>&#x2713;</td> 
+          <td align=center>&nbsp;</td> 
+        </tr>
 
- </TR>
-    </TABLE>
-
+     </table>
     <p>
+      The 2017 test sets will be created from a sample of online newspapers from August 2016. The English-X sets
+      are created using equal sized samples of English, and language X, and professionally translating them
+      into the other language.
+    </p>
+    <p>
+      We have released development data for the tasks that are new this year, i.e. 
+      Chinese-English and Latvian-English. It is created in the same way as the test set.
+    <p>
+     <p>
       The news-test2011 set has three additional Czech translations that you may want to use. You can download them
       from <a href="https://ufal-point.mff.cuni.cz/xmlui/handle/11858/00-097C-0000-0008-D259-7">Charles University</a>.
     </p>
