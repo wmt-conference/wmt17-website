@@ -1,0 +1,693 @@
+<HTML>
+  <HEAD>
+    <title>Translation Task - ACL 2016 First Conference  on  Machine Translation</title>
+    <style> h3 { margin-top: 2em; } </style>
+  </HEAD>
+  <body>
+
+    <center>
+      <script src="title.js"></script>
+      <p><h2>Shared Task: Machine Translation of News</h2></p>
+      <script src="menu.js"></script>
+    </center>
+
+    <P>
+      The recurring translation task of the <A HREF="index.html">WMT workshops</A> focuses on
+      news text and European language pairs. For 2016 the language pairs are:
+     <ul>
+        <li> Czech-English
+        <li> German-English
+        <li> Romanian-English
+        <li> Finnish-English
+        <li> Russian-English
+        <li> Turkish-English
+      </ul>
+      The first three language pairs are sponsored by the EU Horizon2020 projects QT21 and Cracker, the Finnish-English task
+      is sponsored by the University of Helsinki, and funding for the last two language pairs come from Yandex.
+
+      We provide  parallel corpora for all languages  as
+      training data, and additional resources
+      <A HREF="#download">for download</A>.
+    </p>
+
+    <H3>GOALS</H3>
+
+    <p>
+      The goals of the shared translation task are:
+      <UL>
+        <LI>To investigate the applicability of current MT techniques when translating into languages other than English</LI>
+        <LI>To examine special challenges in translating between European languages, including word order differences and morphology</LI>
+        <LI>To investigate the translation of low-resource, morphologically rich languages</LI>
+        <LI>To create publicly available corpora for machine translation and machine translation evaluation</LI>
+        <LI>To generate up-to-date performance numbers for European languages in order to provide a basis of comparison in future research</LI>
+        <LI>To offer newcomers a smooth start with hands-on experience in state-of-the-art statistical machine translation methods</LI>
+      </UL>
+
+      We hope that both beginners and established research groups will participate in this task.
+    </p>
+
+    <h3>IMPORTANT DATES</h3>
+
+    <table>
+      <tr><td>Release of training data for shared tasks</td><td>January, 2016</td></tr>
+      <tr><td>Test data released</td><td>April 18, 2016</td></tr>
+      <tr><td>Translation submission deadline</td><td>April 24, 2016</td></tr>
+      <tr><td>Start of manual evaluation</td><td>May 2, 2016</td></tr>
+      <tr><td>End of manual evaluation (provisional)</td><td>May 22, 2016</td></tr>
+      <!-- <tr><td>Papers available online</td><td>TBA</td></tr> -->
+    </table>
+
+
+
+    <H3>TASK DESCRIPTION</H3>
+
+    <p>
+      We provide training data for five  language pairs, and a common
+      framework. The task is to improve methods
+      current methods. This can be done in many ways. For instance participants
+      could try to:
+      <ul>
+        <li> improve word alignment quality, phrase extraction, phrase scoring
+        <li> add new components to the open source software of the baseline system
+        <li> augment the system otherwise (e.g. by preprocessing, reranking, etc.)
+        <li> build an entirely new translation systems
+      </ul>
+
+      Participants will use their systems to translate a test set of unseen
+      sentences in the source language. The translation quality is measured by
+      a manual evaluation and various automatic evaluation metrics.
+      Participants agree to contribute to the manual evaluation about eight
+      hours of work.
+    </P>
+
+    <p>
+      You may participate in any or all of the six language pairs.
+            For all language pairs we will test translation in both directions. To
+      have a common framework that allows for comparable results, and also to
+      lower the barrier to entry, we provide a common training set.
+    </p>
+
+    <P>
+      We also strongly encourage your participation, if you use your own
+      training corpus, your own sentence alignment, your own language model, or
+      your own decoder.
+    </p>
+
+    <P>
+      If you use additional training data or existing translation systems, you
+      must flag that your system uses additional data. We will distinguish
+      system submissions that used the provided training data (constrained)
+      from submissions that used significant additional data resources. Note
+      that basic linguistic tools such as taggers, parsers, or morphological
+      analyzers are allowed in the constrained condition.
+    </p>
+
+    <p>
+      Your submission report should highlight in which ways your own methods
+      and data differ from the standard task. We may break down submitted
+      results in different tracks, based on what resources were used. We are
+      mostly interested in submission that are constrained to the provided
+      training data, so that the comparison is focused on the methods, not on
+      the data used. You may submit contrastive runs to demonstrate the benefit
+      of additional training data.
+      </p>
+
+    <H3><a name="training">TRAINING DATA</a></H3>
+
+    <p>
+      The provided data is mainly taken from version 7 of
+      the <A HREF="/europarl/">Europarl corpus</A>, which is freely available.
+      Please click on the links below to download the sentence-aligned data, or
+      go to <a href="/europarl/">the Europarl website</a> for the source
+      release.
+      Note that this the same data as last year, since Europarl is not anymore
+      translated across all 23 official European languages.
+    </p>
+
+    <P>
+      Additional training data is taken from the new News Commentary corpus.
+      There are about 50 million words of training data per language from the
+      Europarl corpus and 3 million words from the News Commentary corpus.
+    </p>
+    <p>
+      For Romanian-English and Turkish-English we have added the
+      <a href="http://opus.lingfil.uu.se/SETIMES2.php">SETIMES2</a> corpus to the constrained data task.
+    </p>
+    <p>
+      A new data resource from 2016 is the monolingual Common Crawl corpus which was collected
+      from web sources.
+    </p>
+
+    <p>
+      We have released development data for the Romanian-English task, and
+      for the Turkish-English task.
+    <p>
+      You may also use the following monolingual corpora released by the LDC:
+
+      <UL>
+        <LI>LDC2011T07 <a href="http://www.ldc.upenn.edu/Catalog/catalogEntry.jsp?catalogId=LDC2011T07">English Gigaword Fifth Edition</a>
+        <LI>LDC2009T13 <a href="http://www.ldc.upenn.edu/Catalog/catalogEntry.jsp?catalogId=LDC2009T13">English Gigaword Fourth Edition</a>
+        <LI>LDC2007T07 <a href="http://www.ldc.upenn.edu/Catalog/catalogEntry.jsp?catalogId=LDC2007T07">English Gigaword Third Edition</a>
+      </UL>
+    </p>
+
+    <p>
+      Note that the released data is not tokenized and includes sentences of
+      any length (including empty sentences). All data is in Unicode (UTF-8)
+      format. The following tools allow the processing of the training data
+      into tokenized format:
+
+      <UL>
+        <LI>Tokenizer <CODE>tokenizer.perl</CODE>
+        <LI>Detokenizer <CODE>detokenizer.perl</CODE>
+        <LI>Lowercaser <CODE>lowercase.perl</CODE>
+        <LI>SGML Wrapper <CODE>wrap-xml.perl</CODE>
+      </UL>
+
+      These tools are available in the <a href="https://github.com/moses-smt/mosesdecoder">Moses git repository</a>.
+    </p>
+
+    <H3><a name="dev">DEVELOPMENT DATA</a></H3>
+
+    <p>
+      To evaluate your system during development, we suggest using the
+      2015 test set. The data is provided in raw text format and in an
+      SGML format that suits the NIST scoring tool. We also release other
+      test sets from previous years.
+    </P>
+
+    <TABLE CELLPADDING=5 CELLSPACING=0 BORDER=1>
+      <tr>
+        <TD VALIGN=TOP width=250>
+          <B>news-test2008</B>
+          <UL>
+            <LI> English
+            <LI> French
+            <LI> Spanish
+            <LI> German
+            <LI> Czech
+            <LI> Hungarian
+          </UL>
+          Cleaned version of the 2008 test set.<br>
+          2051 sentences.
+        </TD>
+        <TD VALIGN=TOP width=250>
+          <B>news-test2009</B>
+          <UL>
+            <LI> English
+            <LI> French
+            <LI> Spanish
+            <LI> German
+            <LI> Czech
+            <LI> Hungarian
+            <LI> Italian
+          </UL>
+          2525+502 sentences.
+        </TD>
+        <TD VALIGN=TOP width=250>
+          <B>news-test2010</B>
+          <UL>
+            <LI> English
+            <LI> French
+            <LI> Spanish
+            <LI> German
+            <LI> Czech
+          </UL>
+          2489 sentences.
+        </TD>
+        <TD VALIGN=TOP width=250>
+          <B>news-test2011</B>
+          <UL>
+            <LI> English
+            <LI> French
+            <LI> Spanish
+            <LI> German
+            <LI> Czech
+          </UL>
+          3003 sentences.
+        </TD>
+        <TD VALIGN=TOP width=250>
+          <B>news-test2012</B>
+          <UL>
+            <LI> English
+            <LI> French
+            <LI> Spanish
+            <LI> German
+            <LI> Czech
+            <LI> Russian
+          </UL>
+          3003 sentences.
+        </TD>
+      <TD VALIGN=TOP width=250>
+          <B>news-test2013</B>
+          <UL>
+            <LI> English
+            <LI> French
+            <LI> Spanish
+            <LI> German
+            <LI> Czech
+            <LI> Russian
+          </UL>
+          3000 sentences.
+        </TD>
+      <TD VALIGN=TOP width=250>
+          <B>news-test2014</B>
+          <UL>
+            <LI> English
+            <LI> Czech
+            <LI> French
+            <LI> German
+            <LI> Hindi
+            <LI> Russian
+          </UL>
+          3003 sentences.
+        </TD>
+      <TD VALIGN=TOP width=250>
+          <B>news-test2015</B>
+          <UL>
+            <LI> English
+            <LI> Czech
+            <LI> Finnish
+            <LI> German
+            <LI> Russian
+          </UL>
+          3000 sentences.
+          (1500 sentences for Finnish)
+        </TD>
+        <TD VALIGN=TOP width=250>
+          <TABLE>
+          <TD>
+          <B>news-dev2016</B>
+          <UL>
+            <LI> Romanian
+            <LI> Turkish
+          </UL>
+          2000/1000 sentences.
+          </TD>
+          </TR><TR>
+          <TD>
+          <B> news-dev2015</B>
+          <UL>
+            <LI> Finnish
+          </UL>
+          1500 sentences.
+          </TD></TR>
+        </TABLE>
+        </TD>
+
+ </TR>
+    </TABLE>
+
+    <p>
+      The news-test2011 set has three additional Czech translations that you may want to use. You can download them
+      from <a href="https://ufal-point.mff.cuni.cz/xmlui/handle/11858/00-097C-0000-0008-D259-7">Charles University</a>.
+    </p>
+
+    <H3><A NAME="download">DOWNLOAD</a></H3>
+
+    <UL>
+      <LI>Parallel data:
+      <p></p>
+      <table border=1 cellpadding=2>
+        <tr>
+          <th>File</th>
+          <th>Size</th>
+          <th>CS-EN</th>
+          <th>DE-EN</th>
+          <th>FI-EN</th>
+          <th>RO-EN</th>
+          <th>RU-EN</th>
+          <th>TR-EN</th>
+          <th>Notes</th>
+        </tr>
+        <tr>
+          <td><A HREF="../wmt13/training-parallel-europarl-v7.tgz">Europarl v7</A></td>
+          <td>628MB</td>
+          <td align=center>&#x2713;</td> <!-- cs-en -->
+          <td align=center>&#x2713;</td> <!-- de-en -->
+          <td align=center>&nbsp;</td> <!-- fi-en -->
+          <td align=center>&nbsp;</td> <!-- ro-en -->
+          <td align=center>&nbsp;</td> <!-- ru-en -->
+          <td align=center>&nbsp;</td> <!-- tr-en -->
+          <td>same as previous year, <a href="/europarl/">corpus home page</a></td>
+        </tr>
+        <tr>
+          <td><A HREF="http://data.statmt.org/wmt16/translation-task/training-parallel-ep-v8.tgz">Europarl v8</A></td>
+          <td>215MB</td>
+          <td align=center>&nbsp;</td> <!-- cs-en -->
+          <td align=center>&nbsp;</td> <!-- de-en -->
+          <td align=center>&#x2713;</td> <!-- fi-en -->
+          <td align=center>&#x2713;</td> <!-- ro-en -->
+          <td align=center>&nbsp;</td> <!-- ru-en -->
+          <td align=center>&nbsp;</td> <!-- tr-en -->
+          <td>ro-en is new for this  year, <a href="/europarl/">corpus home page</a></td>
+        </tr>
+        <tr>
+          <td><A HREF="../wmt13/training-parallel-commoncrawl.tgz"><nobr>Common Crawl corpus</nobr></A></td>
+          <td>876MB</td>
+          <td align=center>&#x2713;</td> <!-- cs-en -->
+          <td align=center>&#x2713;</td> <!-- de-en -->
+          <td align=center>&nbsp;</td> <!-- fi-en -->
+          <td align=center>&nbsp;</td> <!-- ro-en -->
+          <td align=center>&#x2713;</td> <!-- ru-en -->
+          <td align=center>&nbsp;</td> <!-- tr-en -->
+          <td>Same as last year</td>
+        </tr>
+        <tr>
+          <td><A HREF="http://data.statmt.org/wmt16/translation-task/training-parallel-nc-v11.tgz">News Commentary v11</A></td>
+          <td>72MB</td>
+          <td align=center>&#x2713;</td> <!-- cs-en -->
+          <td align=center>&#x2713;</td> <!-- de-en -->
+          <td align=center>&nbsp;</td> <!-- fi-en -->
+          <td align=center>&nbsp;</td> <!-- ro-en -->
+          <td align=center>&#x2713;</td> <!-- ru-en -->
+          <td align=center>&nbsp;</td> <!-- tr-en -->
+          <td>updated<!--, <a href="news-commentary-v9-by-document.tgz">data with document boundaries</a>--></td>
+        </tr>
+        <tr>
+          <td><a href="http://ufal.mff.cuni.cz/czeng/czeng16pre">CzEng 1.6pre</a></td>
+          <td>3.1GB</td>
+          <td align=center>&#x2713;</td> <!-- cs-en -->
+          <td align=center>&nbsp;</td> <!-- de-en -->
+          <td align=center>&nbsp;</td> <!-- fi-en -->
+          <td align=center>&nbsp;</td> <!-- ro-en -->
+          <td align=center>&nbsp;</td> <!-- ru-en -->
+          <td align=center>&nbsp;</td> <!-- tr-en -->
+          <td><font color="red">New for 2016.</font> <a href="http://ufal.mff.cuni.cz/czeng/czeng16pre">Register and download CzEng 1.6pre.</a></td>
+        </tr>
+        <tr>
+          <td><nobr>Yandex Corpus</nobr></td>
+          <td>121MB</td>
+          <td align=center>&nbsp;</td> <!-- cs-en -->
+          <td align=center>&nbsp;</td> <!-- de-en -->
+          <td align=center>&nbsp;</td> <!-- fi-en -->
+          <td align=center>&nbsp;</td> <!-- ro-en -->
+          <td align=center>&#x2713;</td> <!-- ru-en -->
+          <td align=center>&nbsp;</td> <!-- tr-en -->
+          <td><a href="https://translate.yandex.ru/corpus?lang=en">ru-en</a></td>
+        </tr>
+        <tr>
+          <td><nobr><a href="../wmt15/wiki-titles.tgz">Wiki Headlines</a></nobr></td>
+          <td>9.1MB</td>
+          <td align=center>&nbsp;</td> <!-- cs-en -->
+          <td align=center>&nbsp;</td> <!-- de-en -->
+          <td align=center>&#x2713;</td> <!-- fi-en -->
+          <td align=center>&nbsp;</td> <!-- ro-en -->
+          <td align=center>&#x2713;</td> <!-- ru-en -->
+          <td align=center>&nbsp;</td> <!-- tr-en -->
+          <td>Provided by CMU..</td>
+        </tr>
+        <tr>
+          <td><nobr><a href="http://opus.lingfil.uu.se/SETIMES2.php">SETIMES2</a></nobr></td>
+          <td>?? MB</td>
+          <td align=center>&nbsp;</td> <!-- cs-en -->
+          <td align=center>&nbsp;</td> <!-- de-en -->
+          <td align=center>&nbsp;</td> <!-- fi-en -->
+          <td align=center>&#x2713;</td> <!-- ro-en -->
+          <td align=center>&nbsp;</td> <!-- ru-en -->
+          <td align=center>&#x2713;</td> <!-- tr-en -->
+          <td>Distributed by <a href="http://opus.lingfil.uu.se">OPUS</a></td>
+        </tr>
+
+      </table>
+      <p></p>
+      <LI>Monolingual language model training data:
+      <p></p>
+      <table border=1 cellpadding=2>
+        <tr>
+          <th>Corpus</th>
+          <th>CS</th>
+          <th>DE</th>
+          <th>EN</th>
+          <th>FI</th>
+          <th>RO</th>
+          <th>RU</th>
+          <th>TR</th>
+          <th>All languages<br>combined</th>
+          <th>Notes</th>
+        </tr>
+        <tr>
+          <td><a href="/europarl/">Europarl v7/v8</a></td>
+          <td align=center><a href="../wmt14/training-monolingual-europarl-v7/europarl-v7.cs.gz">32MB</a></td>
+          <td align=center><a href="../wmt14/training-monolingual-europarl-v7/europarl-v7.de.gz">107MB</a></td>
+          <td align=center><a href="../wmt14/training-monolingual-europarl-v7/europarl-v7.en.gz">99MB</a></td>
+          <td align=center><a href="../wmt15/europarl-v8.fi.tgz">95MB</a></td> <!-- fi -->
+          <td align=center>&nbsp;</td>
+          <td align=center>&nbsp;</td> <!-- ru -->
+          <td align=center>&nbsp;</td> <!-- tr -->
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>News Commentary</A></td>
+          <td align=center><a href="http://data.statmt.org/wmt16/translation-task/news-commentary-v11.cs.gz">13MB</a></td>
+          <td align=center><a href="http://data.statmt.org/wmt16/translation-task/news-commentary-v11.de.gz">17MB</a></td>
+          <td align=center><a href="http://data.statmt.org/wmt16/translation-task/news-commentary-v11.en.gz">20MB</a></td>
+          <td align=center>&nbsp;</td> <!-- fi -->
+          <td align=center>&nbsp;</td> <!-- ro -->
+          <td align=center><a href="http://data.statmt.org/wmt16/translation-task/news-commentary-v11.ru.gz">17MB</a></td>
+          <td align=center>&nbsp;</td> <!-- fi -->
+          <td align=center><A HREF="http://data.statmt.org/wmt16/translation-task/training-monolingual-nc-v11.tgz">65MB</A></td>
+          <td>Updated</td>
+        </tr>
+        <tr>
+          <td>Common Crawl</A></td>
+          <td align=center><a href="http://web-language-models.s3-website-us-east-1.amazonaws.com/wmt16/deduped/cs.xz">10.5GB</a></td> <!-- cs -->
+          <td align=center><a href="http://web-language-models.s3-website-us-east-1.amazonaws.com/wmt16/deduped/de.xz">102GB</a></td> <!-- de -->
+          <td align=center><a href="http://web-language-models.s3-website-us-east-1.amazonaws.com/wmt16/deduped/en-new.xz">103 GB</a></td> <!-- en -->
+          <td align=center><a href="http://web-language-models.s3-website-us-east-1.amazonaws.com/wmt16/deduped/fi.xz">5.3GB</a></td> <!-- fi -->
+          <td align=center><a href="http://web-language-models.s3-website-us-east-1.amazonaws.com/wmt16/deduped/ro.xz">11.3GB</a></td> <!-- ro -->
+          <td align=center><a href="http://web-language-models.s3-website-us-east-1.amazonaws.com/wmt16/deduped/ru.xz">42GB</a></td> <!-- ru -->
+          <td align=center><a href="http://web-language-models.s3-website-us-east-1.amazonaws.com/wmt16/deduped/tr.xz">18GB</a></td> <!-- tr -->
+          <td align=center>&nbsp;</td>
+          <td><font color="red">New for 2016</font>. Deduplicated with development and evaluation sentences removed.  English was updated 31 January 2016 to remove bad UTF-8.  Downloads can be verified with <a href="http://data.statmt.org/ngrams/wmt16/checksums">SHA512 checksums</a>.  <a href="http://data.statmt.org/ngrams/deduped_en/">More English is available for unconstrained participants.</a></td>
+        </tr>
+<tr>
+          <td>News Crawl: articles from 2007</td>
+          <td align=center><a href="../wmt14/training-monolingual-news-crawl/news.2007.cs.shuffled.gz">3.7MB</td>
+          <td align=center><a href="../wmt14/training-monolingual-news-crawl/news.2007.de.shuffled.gz">92MB</td>
+          <td align=center><a href="../wmt14/training-monolingual-news-crawl/news.2007.en.shuffled.gz">198MB</td>
+          <td align=center>&nbsp;</td> <!-- fi -->
+          <td align=center>&nbsp;</td> <!-- ro -->
+          <td align=center>&nbsp;</td> <!-- ru -->
+          <td align=center>&nbsp;</td> <!-- tr -->
+          <td align=center><a href="../wmt13/training-monolingual-news-2007.tgz">302MB</a></td>
+          <td rowspan="10">
+            <p>News Crawl</p>
+            <p>Extracted article text from various online news publications.</p>
+            <p>The data sets from 2007-2014, and news-discuss,  are the same
+            as <a href="../wmt15/translation-task.html">last year's</a>.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>News Crawl: articles from 2008</td>
+          <td align=center><a href="../wmt14/training-monolingual-news-crawl/news.2008.cs.shuffled.gz">191MB</a></td>
+          <td align=center><a href="../wmt14/training-monolingual-news-crawl/news.2008.de.shuffled.gz">313MB</a></td>
+          <td align=center><a href="../wmt14/training-monolingual-news-crawl/news.2008.en.shuffled.gz">672MB</a></td>
+          <td align=center>&nbsp;</a></td>
+          <td align=center>&nbsp;</td> <!-- ro -->
+          <td align=center><a href="../wmt14/training-monolingual-news-crawl/news.2008.ru.shuffled.gz">2.3MB</a></td>
+          <td align=center>&nbsp;</td> <!-- tr -->
+          <td align=center><a href="../wmt13/training-monolingual-news-2008.tgz">1.5GB</a></td>
+        </tr>
+        <tr>
+          <td>News Crawl: articles from 2009</td>
+          <td align=center><a href="../wmt14/training-monolingual-news-crawl/news.2009.cs.shuffled.gz">194MB</a></td>
+          <td align=center><a href="../wmt14/training-monolingual-news-crawl/news.2009.de.shuffled.gz">296MB</a></td>
+          <td align=center><a href="../wmt14/training-monolingual-news-crawl/news.2009.en.shuffled.gz">757MB</a></td>
+          <td align=center>&nbsp;</a></td>
+          <td align=center>&nbsp;</td> <!-- ro -->
+          <td align=center><a href="../wmt14/training-monolingual-news-crawl/news.2009.ru.shuffled.gz">5.1MB</a></td>
+          <td align=center>&nbsp;</td> <!-- tr -->
+          <td align=center><a href="../wmt13/training-monolingual-news-2009.tgz">1.6GB</a></td>
+        </tr>
+        <tr>
+          <td>News Crawl: articles from 2010</td>
+          <td align=center><a href="../wmt14/training-monolingual-news-crawl/news.2010.cs.shuffled.gz">107MB</a></td>
+          <td align=center><a href="../wmt14/training-monolingual-news-crawl/news.2010.de.shuffled.gz">135MB</a></td>
+          <td align=center><a href="../wmt14/training-monolingual-news-crawl/news.2010.en.shuffled.gz">345MB</a></td>
+          <td align=center>&nbsp;</td> <!-- fi -->
+          <td align=center>&nbsp;</td> <!-- ro -->
+          <td align=center><a href="../wmt14/training-monolingual-news-crawl/news.2010.ru.shuffled.gz">2.5MB</a></td>
+          <td align=center>&nbsp;</td> <!-- tr -->
+          <td align=center><a href="../wmt13/training-monolingual-news-2010.tgz">727MB</a></td>
+        </tr>
+        <tr>
+          <td>News Crawl: articles from 2011</td>
+          <td align=center><a href="../wmt14/training-monolingual-news-crawl/news.2011.cs.shuffled.gz">389MB</a></td>
+          <td align=center><a href="../wmt14/training-monolingual-news-crawl/news.2011.de.shuffled.gz">746MB</a></td>
+          <td align=center><a href="../wmt14/training-monolingual-news-crawl/news.2011.en.shuffled.gz">784MB</a></td>
+          <td align=center>&nbsp;</td> <!-- fi -->
+          <td align=center>&nbsp;</td> <!-- ro -->
+          <td align=center><a href="../wmt14/training-monolingual-news-crawl/news.2011.ru.shuffled.gz">564MB</a></td>
+          <td align=center>&nbsp;</td> <!-- tr -->
+          <td align=center><a href="../wmt13/training-monolingual-news-2011.tgz">3.1GB</a></td>
+        </tr>
+        <tr>
+          <td>News Crawl: articles from 2012</td>
+          <td align=center><a href="../wmt14/training-monolingual-news-crawl/news.2012.cs.shuffled.gz">337MB</a></td>
+          <td align=center><a href="../wmt14/training-monolingual-news-crawl/news.2012.de.shuffled.gz">946MB</a></td>
+          <td align=center><a href="../wmt14/training-monolingual-news-crawl/news.2012.en.shuffled.gz">751MB</a></td>
+          <td align=center>&nbsp;</td> <!-- fi -->
+          <td align=center>&nbsp;</td> <!-- ro -->
+          <td align=center><a href="../wmt14/training-monolingual-news-crawl/news.2012.ru.shuffled.gz">568MB</a></td>
+          <td align=center>&nbsp;</td> <!-- tr -->
+          <td align=center><a href="../wmt13/training-monolingual-news-2012.tgz">3.1GB</a></td>
+        </tr>
+        <tr>
+          <td>News Crawl: articles from 2013</td>
+          <td align=center><a href="../wmt14/training-monolingual-news-crawl/news.2013.cs.shuffled.gz">395MB</a></td>
+          <td align=center><a href="../wmt14/training-monolingual-news-crawl/news.2013.de.shuffled.gz">1.6GB</a></td>
+          <td align=center><a href="../wmt14/training-monolingual-news-crawl/news.2013.en.shuffled.gz">1.1GB</a></td>
+          <td align=center>&nbsp;</td> <!-- fi -->
+          <td align=center>&nbsp;</td> <!-- ro -->
+          <td align=center><a href="../wmt14/training-monolingual-news-crawl/news.2013.ru.shuffled.gz">730MB</a></td>
+          <td align=center>&nbsp;</td> <!-- tr -->
+          <td align=center><a href="../wmt14/training-monolingual-news-2013.tgz">4.3GB</a></td>
+        </tr>
+        <tr>
+          <td>News Crawl: articles from 2014</td>
+          <td align=center><a href="../wmt15/training-monolingual-news-crawl-v2/news.2014.cs.shuffled.v2.gz">380MB</a></td>
+          <td align=center><a href="../wmt15/training-monolingual-news-crawl-v2/news.2014.de.shuffled.v2.gz">2.1GB</a></td>
+          <td align=center><a href="../wmt15/training-monolingual-news-crawl-v2/news.2014.en.shuffled.v2.gz">1.4GB</a></td>
+          <td align=center><a href="../wmt15/training-monolingual-news-crawl-v2/news.2014.fi.shuffled.v2.gz">52MB</a></td>
+          <td align=center>&nbsp;</td> <!-- ro -->
+          <td align=center><a href="../wmt15/training-monolingual-news-crawl-v2/news.2014.ru.shuffled.v2.gz">801MB</a></td>
+          <td align=center>&nbsp;</td> <!-- tr -->
+          <td align=center><a href="../wmt15/training-monolingual-news-2014.v2.tgz">5.3GB</a></td>
+          </tr>
+          <tr>
+          <td>News Discussions. Version 1 from 2014/15
+          <td align=center></td>
+          <td align=center></td>
+          <td align=center><a href="../wmt15/news-discuss-v1.en.txt.gz">1.7GB</a></td>
+          <td align=center></td>
+          <td align=center></td>
+          <td align=center></td>
+          <td align=center></td>
+          <td align=center></td>
+          </tr>
+          <tr>
+          <td>News Crawl: articles from 2015</td>
+          <td align=center><a href="http://data.statmt.org/wmt16/translation-task/news.2015.cs.shuffled.gz">360MB</a></td>
+          <td align=center><a href="http://data.statmt.org/wmt16/translation-task/news.2015.de.shuffled.gz">2.2GB</a></td>
+          <td align=center><a href="http://data.statmt.org/wmt16/translation-task/news.2015.en.shuffled.gz">1.3GB</a></td>
+          <td align=center><a href="http://data.statmt.org/wmt16/translation-task/news.2015.fi.shuffled.gz">203MB</a></td>
+          <td align=center><a href="http://data.statmt.org/wmt16/translation-task/news.2015.ro.shuffled.gz">125MB</a></td>
+          <td align=center><a href="http://data.statmt.org/wmt16/translation-task/news.2015.ru.shuffled.gz">608MB</a></td>
+          <td align=center>&nbsp;</td>
+          <td align=center><a href="http://data.statmt.org/wmt16/translation-task/training-monolingual-news-crawl.tgz">4.8G</a></td>
+          </tr>
+      </table>
+      <p>The Common Crawl monolingual data is hosted by Amazon Web Services as a <a href="https://aws.amazon.com/public-data-sets/">public data set</a>.  The underlying S3 URL is <code>s3://web-language-models/wmt16/deduped</code>.</p>
+      <LI><A HREF="http://data.statmt.org/wmt16/translation-task/dev.tgz">Development sets</A> (22 MB) 
+      <LI><A HREF="http://data.statmt.org/wmt16/translation-task/dev-romanian-updated.tgz">Updated Romanian dev, with fixed diacritics</A> (0.5 MB) 
+      <LI><font color=red><b>NEW: </b></font> <A HREF="http://data.statmt.org/wmt16/translation-task/test.tgz">Test sets</A> (3.4 MB) Test sets (source and references)  </li>
+      <!-- <LI><font color=red><b>NEW:</b></font> <A HREF="test.tgz">Test sets (source and reference)</a> (2MB) </li> -->
+
+    <H3><a name="submission">TEST SET SUBMISSION</a></H3>
+
+      Punctuation in the official test sets will be encoded with ASCII characters (not complex Unicode characters) as much as possible. You may want to <A HREF="../wmt11/normalize-punctuation.perl">normalize</A> your system's output before submission.
+    <p>
+      To submit your results, please first convert into into SGML format as
+      required by the NIST BLEU scorer, and then upload it to the
+      website <A HREF="http://matrix.statmt.org/">matrix.statmt.org</A>.
+    </p>
+
+    <H4 id="sgml">SGML Format</H4>
+
+    <p>
+      Each submitted file has to be in a format that is used by standard
+      scoring scripts such as NIST BLEU or TER.
+    </p>
+
+    <P>
+      This format is similar to the one used in the source test set files that
+      were released, except for:
+
+      <UL>
+        <LI>
+          First line is <CODE>&lt;tstset trglang="en" setid="newstest2015"
+          srclang="any"&gt;</CODE>, with trglang set to
+          either <CODE>en</CODE>, <CODE>de</CODE>, <CODE>fr</CODE>, <CODE>es</CODE>,
+          <CODE>cs</CODE> or <CODE>ru</CODE>. Important: srclang is
+          always <CODE>any</CODE>.
+        <LI>
+          Each document tag also has to include the system name,
+          e.g. <CODE>sysid="uedin"</CODE>.
+        <LI>
+          CLosing tag (last line) is <CODE>&lt;/tstset&gt;</CODE>
+      </UL>
+    </p>
+
+    <p>
+      The script <A HREF="../wmt11/wrap-xml.perl">wrap-xml.perl</A> makes the conversion
+      of a output file in one-segment-per-line format into the required SGML
+      file very easy:
+    </p>
+
+    <P>
+      Format: <CODE>wrap-xml.perl LANGUAGE SRC_SGML_FILE SYSTEM_NAME &lt; IN &gt; OUT</CODE><BR>
+      Example: <CODE>wrap-xml.perl en newstest2016-src.de.sgm Google &lt; decoder-output &gt; decoder-output.sgm</CODE>
+    </p>
+
+    <H4>Upload to Website</H4>
+
+    <p>Upload happens in three easy steps:</p>
+
+    <OL>
+      <LI>Go to the website <A HREF="http://matrix.statmt.org/">matrix.statmt.org</A>.
+      <LI>Create an account under the menu item Account -&gt; Create Account.
+      <LI>Go to Account -&gt; upload/edit content, and follow the link "Submit a system run"
+        <UL><LI>select as test set "newstest2015" and the language pair you are submitting
+          <LI>select "create new system"
+          <LI>click "continue"
+          <LI>on the next page, upload your file and add some description
+        </UL>
+    </OL>
+
+    <p>
+      If you are submitting contrastive runs, please submit your primary system
+      first and mark it clearly as the primary submission.
+    </p>
+
+
+    <H3>EVALUATION</H3>
+
+    <p>Evaluation will be done both automatically as well as by human judgement.</p>
+
+    <UL>
+      <LI>
+        Manual Scoring: We will collect subjective judgments about translation
+        quality from human annotators. If you participate in the shared task,
+        we ask you to perform a defined amount of evaluation per language pair
+        submitted. The amount of manual evaluation is TBD for 2016.
+
+        <!-- The judgements will be collected in "HITs", where each HIT
+        consists of ranking the outputs of 5 different systems for 3 sentences. Each
+        team will be expected to complete 100 HITs per language pair.
+        The evaluation will be done with an online tool. -->
+      <LI>
+        As in previous years, we expect the translated submissions to be in
+        recased, detokenized, XML format, just as in most other translation
+        campaigns (NIST, TC-Star).
+    </UL>
+
+
+<!--    <p align=right>
+      <a href="http://www.euromatrixplus.net/"><img align=right src="EMplus_100px.png" border=0 width=100 height=100></a>
+      supported by the <a href="http://www.euromatrixplus.net/">EuroMatrixPlus</a> project<BR>P7-IST-231720-STP<BR> funded by the European Commission<BR> under Framework Programme 7
+    </p> -->
+
+<h3>ACKNOWLEDGEMENTS</h3>
+This conference has received funding
+from the European Union's Horizon 2020 research
+and innovation programme under grant agreements
+645452 (<a href="http://www.qt21.eu/">QT21</a>) and  645357 (<a href="http://www.meta-net.eu/projects/cracker/">Cracker</a>).
+<br>
+We thank <a href="http://www.yandex.com">Yandex</a> for their donation of data for the Russian-English and Turkish-English news tasks, and the University of Helsinki for their donation for the Finnish-English news tasks.
+
+
+
+  </BODY>
+</HTML>
+
