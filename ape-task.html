@@ -1,0 +1,124 @@
+﻿<HTML>
+  <HEAD>
+    <title>Automatic Post-Editing Task - ACL 2016 First Conference  on  Machine Translation</title>
+    <style> h3 { margin-top: 2em; } </style>
+  </HEAD>
+  <body>
+
+    <center>
+      <script src="title.js"></script>
+      <p><h2>Shared Task: Automatic Post-Editing</h2></p>
+      <script src="menu.js"></script>
+    </center>
+
+<H3>OVERVIEW</H3>
+<p> The third round of the APE shared task follows the success of the success of the previous two rounds organised in 2015 and 2016. The aim is to examine <b> automatic methods for correcting errors produced by an unknown machine translation (MT) system.</b> This has to be done by exploiting knowledge acquired from human post-edits, which are provided as training material.</p>
+
+<H3>Goals</H3>
+
+<p>
+The aim of this task is to improve MT output in black-box scenarios, in which the MT system is used "as is" and cannot be modified. From the application point of view, APE components would make it possible to:
+<UL>
+<LI>Cope with systematic errors of an MT system whose decoding process is not accessible</LI>
+<LI>Provide professional translators with improved MT output quality to reduce (human) post-editing effort</LI>
+<LI>Adapt the output of a general-purpose system to the lexicon/style requested in a specific application domain</LI>
+</UL>
+</p>
+
+<H3>Task Description</H3> 
+<p>
+Similar to the last round, this year the task focuses on the Information Technology (IT) domain. One novelty, however, is represented by the addition of one language direction: this year, the task will hence cover English-German, and German-English. In both cases, the source sentences  have been translated into the target language by an MT system unknown to the participants and then manually post-edited by professional translators.</p>
+<p>At training stage, the collected human post-edits have to be used to learn correction rules for the APE systems. At test stage they will be used for system evaluation with automatic metrics (TER and BLEU).
+</p>
+
+<H3>Data</H3>
+<p>
+Training, development and test data consist in English-German and German-English triplets (source, target and post-edit) belonging to the IT domain and <b>already tokenized.</b></p>
+<p>Training and development respectively contain &lt; X &gt; and &lt; Y &gt; triplets, while the test set &lt; Z &gt; instances. All data is provided by the EU project QT21 (<a href="http://www.qt21.eu/" target="_blank">http://www.qt21.eu/</a>).</p>
+<p><b>NOTE:</b> Any use of additional data for training your system is allowed (e.g. parallel corpora, post-edited corpora).</p>
+
+<H3>DIFFERENCES FROM THE SECOND ROUND (WMT 2016)</H3>
+<p>
+Compared to the the second round, the main differences are:
+<UL>
+<LI>Additional language direction (German-English);</LI>
+<LI>Larger data set.</LI>
+</UL>
+</p>
+
+<H3>Evaluation</H3>
+<p>Systems' performance will be evaluated with respect to their capability to reduce the distance that separates an automatic translation from its human-revised version.</p>
+<p>Such distance will be measured in terms of TER, which will be computed between automatic and human post-edits in <b>case-sensitive mode.</b></p>
+<p>Also BLEU will be taken into consideration as a secondary evaluation metric. To gain further insights on final output quality, a subset of the outputs of the submitted systems will also be manually evaluated like in 2016.</p>
+<p>The submitted runs will be ranked based on the average HTER calculated on the test set by using the <a href="http://www.cs.umd.edu/~snover/tercom/" target="_blank">tercom</a> software.</p>
+<p>The HTER calculated between the raw MT output and human post-editions in the test set will be used as baseline (<i>i.e.</i> the baseline is a system that leaves all the test instances unmodified).</p>
+
+<H3>Download Links</H3>
+<p><a href="" target="_blank">Training and development data</a></p>
+<!-- <p><a href="" target="_blank">Test data </a> <b>(gold standard references are released in <a href="" target="_blank">test_pe.zip</a>)</b></p>  -->
+<p><a href="" target="_blank">Evaluation script</a></p>
+
+<H3>Submission Format</H3>
+
+<p>
+The output of your system should produce automatic post-editions of the target sentences in the test in the following way:
+<pre>
+<b>&lt;METHOD NAME&gt;   &lt;SEGMENT NUMBER&gt;   &lt;APE SEGMENT&gt;</b>
+</pre>
+</p>
+
+Where:
+<ul>
+<li><code><b>METHOD NAME</b></code> is the name of your automatic post-editing method.</li>
+<li><code><b>SEGMENT NUMBER</b></code> is the line number of the plain text target file you are post-editing.</li>
+<li><code><b>APE SEGMENT</b></code> is the automatic post-edition for the particular segment.</li>
+</ul>
+Each field should be delimited by a single tab character.
+</p>
+
+<H3>Submission Requirements</H3>
+
+<p>Each participating team can submit at most 3 systems, but they have to explicitly indicate which of them represents their <i>primary</i> submission. In the case that none of the runs is marked as primary, the latest submission received will be used as the primary submission.</p>
+
+ 
+<p>Submissions should be sent via email to <font color="red"><a href="mailto:wmt-ape-submission@fbk.eu">wmt-ape-submission@fbk.eu</a></font>. Please use the following pattern to name your files:</p>
+
+<p><code><b>INSTITUTION-NAME_METHOD-NAME_SUBTYPE</b></code>, where:</p>
+
+<p><code><b>INSTITUTION-NAME</b></code> is an acronym/short name for your institution, e.g. "UniXY"</p>
+
+<p><code><b>METHOD-NAME</b></code> is an identifier for your method, e.g. "pt_1_pruned"</p>
+
+<p><code><b>SUBTYPE</b></code> indicates whether the submission is primary or contrastive with the two alternative values: <code>PRIMARY</code>, <code>CONTRASTIVE</code>.</p>
+
+<p>You are also invited to submit a short paper (4 to 6 pages) to WMT describing your APE method(s). You are not required to submit a paper if you do not want to. In that case, we ask you to give an appropriate reference describing your method(s) that we can cite in the WMT overview paper.</p>
+
+<h3>Important dates</h3>
+
+    <table>
+      <tr><td>Release of training data </td><td>TBD</td></tr>
+      <tr><td>Test set distributed  </td><td>TBD</td></tr>
+      <tr><td>Submission deadline  </td><td>TBD</td></tr>
+      <tr><td>Paper submission deadline</td><td>TBD</td></tr>
+      <tr><td>Manual evaluation</td><td>TBD</td></tr>
+      <tr><td>Notification of acceptance</td><td>TBD</td></tr>
+      <tr><td>Camera-ready deadline</td><td>TBD</td></tr>
+    </table>
+
+<h3>Organisers</h3>
+Rajen Chatterjee (Fondazione Bruno Kessler)
+<br>
+Matteo Negri (Fondazione Bruno Kessler)
+<br>
+Marco Turchi (Fondazione Bruno Kessler)
+
+<h3>Contact</h3>
+<p>For any information or question on the task, please send an email to:<a href="mailto:wmt-ape@fbk.eu">wmt-ape@fbk.eu</a>.<br> 
+To be always updated about this year's edition of the APE task, you can also join the <a href="http://groups.google.com/a/fbk.eu/group/wmt-ape/" target="_blank">wmt-ape group</a>.</p>
+
+<p align="right">
+Supported by the European Commission under the QT21
+<a href="http://www.qt21.eu/"><img align=right src="figures/qt21.png" border=0 width=100 height=40></a>
+<br>project (grant number 645452) <p>
+
+</HTML>
