@@ -6,7 +6,7 @@ document.write('\
 [<A HREF="/wmt17/index.html">RESULTS</A>] <br>  \
 TRANSLATION TASKS: \
   [<A HREF="/wmt17/translation-task.html">NEWS</A>] \
-  [<A HREF="/wmt17/biomedical.html">BIOMEDICAL</A>] \
+  [<A HREF="/wmt17/biomedical-translation-task.html">BIOMEDICAL</A>] \
   [<A HREF="/wmt17/index.html">MULTIMODAL</A>] \
 <br> EVALUATION TASKS: \
   [<A HREF="/wmt17/index.html">METRICS</A>] \
