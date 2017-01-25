@@ -18,8 +18,8 @@
 
    <p>
 
-      This conference builds on ten previous workshops on statistical machine
-      translation:
+      This conference builds on a series of annual workshops and conferences on statistical machine
+      translation, going back to 2006:
 
       <UL id="">
         <LI>the <a href="http://www.statmt.org/wmt06/">NAACL-2006 Workshop on
@@ -51,7 +51,10 @@
     <table>
       <tr><td>Release of training data for shared tasks</td><td>January/February, 2017</td></tr>
       <tr><td>Evaluation periods for shared tasks</td><td>April/May, 2017</td></tr>
-      <tr><td>Conference in Copenhagen</td><td>September, 2017</td></tr>
+      <tr><td>Paper submission deadline</td><td>June 9th, 2017</td></tr>
+      <tr><td>Paper notification</td><td>June 30th, 2017</td></tr>
+      <tr><td>Camera-ready version due</td><td>July 14th, 2017</td></tr>
+      <tr><td>Conference in Copenhagen</td><td>September 7-8, 2017</td></tr>
     </table>
 
     <h3>OVERVIEW</h3>
@@ -63,6 +66,7 @@
     <li>a metrics task (assess MT quality given reference translation).
     <li>a quality estimation task (assess MT quality without access to any reference),
     <li>a multimodal translation task
+    <li>a task dedicated to the training of neural MT systems
 </ul>
     </p>
 
@@ -85,9 +89,8 @@
     </p>
 
     <h3>REGISTRATION</h3>
-<!--    <p>
-    Registration will be handled by <a href="http://acl2016.org/">ACL 2016</a>.
--->
+    Registration will be handled by <a href="http://emnlp2017.net/">EMNLP 2017</a>.
+
     <h3>NEWS TRANSLATION TASK</h3>
     <p>
       The first shared task which will examine translation between the
@@ -116,36 +119,23 @@
       to ranking 300 sets of 5 translations, per language pair submitted.
     </p>
 
-<!--
-
-<h3>IT TRANSLATION TASK</h3>
-<p>This task focuses on domain adaptation of MT to the <abbr title="information technologies">IT</abbr> domain for the following languages pairs:<p>
-<ul>
- <li>English-to-Bulgarian (EN-BG)</li>
- <li>English-to-Czech (EN-CS)</li>
- <li>English-to-German (EN-DE)</li>
- <li>English-to-Spanish (EN-ES)</li>
- <li>English-to-Basque (EN-EU)</li>
- <li>English-to-Dutch (EN-NL)</li>
- <li>English-to-Portuguese (EN-PT)</li>
-</ul>
-
-<p>Parallel corpora (including in-domain training data) are available.
-Evaluation will be carried out both automatically and manually.
-See <a href="it-translation-task.html">detailed information about the task</a>.</p>
-    
 <h3>BIOMEDICAL TRANSLATION TASK</h3> 
 
-<p>In this first edition of this task, we will evaluate systems for the translation of scientific abstracts in biological and health sciences for the following languages pairs:<p>
+<p>In this second edition of this task, we will evaluate systems for the translation of 
+clinical trials and scientific abstracts in biological and health sciences for the following languages pairs:<p>
 
 <ul>
 <li> English-French and French-English</li>
 <li> English-Spanish and Spanish-English</li>
 <li> English-Portuguese and Portuguese-English </li>
+<li> English-German and German-English <font color=red><b>NEW</b></font></li>
+<li> among others...</li>
 </ul>
 
-<p>Parallel corpora will be available for the above language pairs but also monoligual corpora for each of the four languages. 
+<p>Parallel corpora will be available for all language pairs but also monoligual corpora for each of the languages. 
 Evaluation will be carried out both automatically and manually.</p>
+
+<!--
 
     <h3>AUTOMATIC POST-EDITING TASK</h3>
 
@@ -158,34 +148,40 @@ From the application point of view APE components would make it possible to:</p>
 
     <p>In this second edition of the task, the evaluation will focus on one language pair (English-German), measuring systems' capability to reduce the distance (HTER) that separates an automatic translation from its human-revised version approved for publication. This edition will focus on IT domain data, and will provide post-editions (of MT output) collected from professional translators.</p>
 
+-->
     <h3>METRICS TASK</h3>
 The metrics task (also called evaluation task) will assess automatic evaluation metrics' ability to:
 </p>
 
 <ul>
-<li> Rank systems on their overall performance on the test set </li>
-<li> Rank systems on a sentence by sentence level </li>
+<li> Evaluate systems on their overall performance on the test set </li>
+<li> Evaluate systems on a sentence by sentence level </li>
 </ul>
 
 <p>
-Participants in the shared evaluation task will use their automatic evaluation metrics to score the output from the translation task and the tunable metrics task.  In addition to MT outputs from the other two tasks, the participants will be provided with reference translations.   We will measure the correlation of automatic evaluation metrics with the human judgments.  
+Participants in the shared evaluation task will use their automatic evaluation metrics to score the output from the translation task and the NMT training task.  In addition to MT outputs from the other two tasks, the participants will be provided with reference translations.   We will measure the correlation of automatic evaluation metrics with the human judgments.  
 </p>
 
-
+<!--
     <h3>QUALITY ESTIMATION TASK</h3>
 
 <p> Quality estimation systems aim at producing an estimate on the quality of a given translation at system run-time, without access to a reference translation. This topic is particularly relevant from a user perspective. Among other applications, it can (i) help decide whether a given translation is good enough for publishing as is; (ii) filter out sentences that are not good enough for post-editing; (iii) select the best translation among options from multiple MT and/or translation memory systems; (iv) inform readers of the target language of whether or not they can rely on a translation; and (v) spot parts (words or phrases) of a translation that are potentially incorrect.</p>
 
     <p>Research on this topic has been showing promising results in the last couple of years. Building on the last three years' experience, the Quality-Estimation track of the WMT15 workshop and shared-task will focus on English, Spanish and German as languages and provide new training and test sets, along with evaluation metrics and baseline systems for variants of the task at three different levels of prediction: word, sentence, and document.
 
-    <h3>TUNING TASK</h3>
+-->
+    <h3>NEURAL MT TRAINING TASK (NMT TRAINING TASK)</h3>
 
-This task will assess your team's ability to <b>optimize the parameters</b> of a given hierarchical MT system (Moses).
+This task will assess your team's ability to <b>train a fixed neural MT model</b> given fixed data.
 
 <p>
-Participants in the tuning task will be given complete Moses models for English-to-Czech and Czech-to-English translation and the standard developments sets from the translation task. The participants are expected to submit the <code>moses.ini</code> for one or both of the translation directions. We will use the configuration and a fixed revision of Moses to translate official WMT15 test set. The outputs of the various configurations of the system will be scored using the standard manual evaluation procedure.
+Participants in the NMT training task will be given complete a Neural Monkey configuration file which describes the neural model. Training and validation data with fixed pre-processing scheme will be also given (English-to-Czech and Czech-to-English translation).
+</p>
+<p>
+The participants will be expected to submit the variables file, i.e. the trained neural network, for one or both of the translation directions. We will use the variables and a fixed revision of Neural Monkey to translate official WMT17 test set. The outputs of the various configurations of the system will be scored using the standard manual evaluation procedure.
 </p>
 
+<!--
 <h3>CROSS-LINGUAL PRONOUN PREDICTION TASK</h3>
 <p>Pronoun translation poses a problem for current state-of-the-art SMT systems as pronoun systems do not map well across languages, e.g., due to differences in gender, number, case, formality, or humanness, and to differences in where pronouns may be used. Translation divergences typically lead to mistakes in SMT, as when translating the English "it" into French ("il", "elle", or "cela"?) or into German ("er", "sie", or "es"?). One way to model pronoun translation is to treat it as a cross-lingual pronoun prediction task.</p>
 
@@ -272,7 +268,7 @@ Barry Haddow (University of Edinburgh)<br>
 Matthias Huck (University of Edinburgh)<br>
 Antonio Jimeno Yepes (IBM Research Australia)<br>
 Julia Kreutzer (Heidelberg University)<br>
-<!--Varvara Logacheva (University of Sheffield)<br>-->
+Varvara Logacheva (University of Sheffield)<br>
 Aur&eacute;lie N&eacute;v&eacute;ol (LIMSI, CNRS)<br>
 Mariana Neves (Hasso-Plattner Institute)<br>
 Philipp Koehn (University of Edinburgh / Johns Hopkins University)<br>
