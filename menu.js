@@ -14,7 +14,7 @@ TRANSLATION TASKS: \
 <br> OTHER TASKS: \
   [<A HREF="/wmt17/ape-task.html">AUTOMATIC POST-EDITING</A>] \
   [<A HREF="/wmt17/bilingual-task.html">BILINGUAL DOCUMENT ALIGNMENT</A>] \
-  [<A HREF="/wmt17/bilingual-task.html">BANDIT LEARNING</A>] \
+  [<A HREF="/wmt17/bandit-learning-task.html">BANDIT LEARNING</A>] \
 ');
 /*| [<A HREF="/wmt17/papers.html">PAPERS</A>]  \
 | [<A HREF="/wmt17/authors.html">AUTHORS</A>] \
