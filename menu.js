@@ -14,7 +14,7 @@ TRANSLATION TASKS: \
 <br> OTHER TASKS: \
   [<A HREF="/wmt17/index.html">AUTOMATIC POST-EDITING</A>] \
   [<A HREF="/wmt17/nmt-training-task">NEURAL MT TRAINING</A>] \
-  [<A HREF="/wmt17/index.html">BANDIT LEARNING</A>] \
+  [<A HREF="/wmt17/bandit-learning-task.html">BANDIT LEARNING</A>] \
 ');
 /*| [<A HREF="/wmt17/papers.html">PAPERS</A>]  \
 | [<A HREF="/wmt17/authors.html">AUTHORS</A>] \
