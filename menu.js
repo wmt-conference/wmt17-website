@@ -1,9 +1,10 @@
 document.write('\
 [<A HREF="/wmt17/index.html">HOME</A>] \
-[<A HREF="/wmt17/index.html">SCHEDULE</A>] \
+/*[<A HREF="/wmt17/index.html">SCHEDULE</A>] \
 [<A HREF="/wmt17/index.html">PAPERS</A>] \
 [<A HREF="/wmt17/index.html">AUTHORS</A>] \
-[<A HREF="/wmt17/index.html">RESULTS</A>] <br>  \
+[<A HREF="/wmt17/index.html">RESULTS</A>] */
+ <br>  \
 TRANSLATION TASKS: \
   [<A HREF="/wmt17/translation-task.html">NEWS</A>] \
   [<A HREF="/wmt17/biomedical-translation-task.html">BIOMEDICAL</A>] \
