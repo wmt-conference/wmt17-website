@@ -54,15 +54,14 @@ variants.</p>
   <img style="width: 500px; margin-left: auto; margin-right: auto; display: block;" src="figures/mmt_task1.png"></img> 
 </div>
 
-<p>This task consists in translating English sentences that describe an image into German, given the English sentence itself and the image that it describes (or features from this image, if participants chose to). For this task, the Flickr30K Entities dataset was extended in the following way: for each image, one of the English descriptions was selected and manually translated into German by a professional translator. <!--; the translator was not given access to the image -->
-We will provide most of the resulting parallel data and corresponding images for training, while smaller portions will be used for development and test. 
+<p>This task consists in translating English sentences that describe an image into German and/or French, given the English sentence itself and the image that it describes (or features from this image, if participants chose to). For this task, the Flickr30K Entities dataset was extended in the following way: for each image, one of the English descriptions was selected and manually translated into German and French by professional translators. <!--; the translator was not given access to the image -->
 </p>
 
-<p>As <i><font color="green">training</font></i> and <i><font color="green">development</font></i> data, we provide 29,000, and 1,014 triples respectively, each containing an English source sentence, its German human translation and corresponding image. We also provide the 2016 test set, which people can use for validation/evaluation. We note that human translations in the 2016 validation and test datasets have been post-edited (by humans) using the images to make sure the target descriptions are faithful to these images.  
+<p>As <i><font color="green">training</font></i> and <i><font color="green">development</font></i> data, we provide 29,000, and 1,014 triples respectively, each containing an English source sentence, its German and French human translations and corresponding image. We also provide the 2016 test set, which people can use for validation/evaluation. The English-German datasets are the same as those in 2016, but we note that human translations in the 2016 validation and test datasets have been post-edited (by humans) using the images to make sure the target descriptions are faithful to these images. There were cases where in the 2016 the source text was ambiguous and the image was used to solve the ambiguities. The French translations were added in 2017.  
 
-<p>As <i><font color="green">test data</font></i>, we provide a new set of 1,000 tuples containing an English description and its corresponding image. 
+<p>As <i><font color="green">test data</font></i>, we provide a new set of 1,000 tuples containing an English description and its corresponding image.  Gold labels will be translations in German or French. 
 
-<p><i><font color="green">Evaluation</font></i> will be performed against the German human translation on the test set using standard MT evaluation metrics, with METEOR as the primary metric (lowercased text, with punctuation, tokenised). We recommend normalising punctuation and tokenising the system submissions using this <a href="https://github.com/moses-smt/mosesdecoder/blob/master/scripts/tokenizer/normalize-punctuation.perl">script</a>. These are the scripts that will be used for the reference translations.
+<p><i><font color="green">Evaluation</font></i> will be performed against the German or French human translations of  the test set using standard MT evaluation metrics, with METEOR as the primary metric (lowercased text, with punctuation, tokenised). We recommend <a href="https://github.com/moses-smt/mosesdecoder/blob/master/scripts/tokenizer/normalize-punctuation.perl">normalising punctuation</a> and <a href="https://github.com/moses-smt/mosesdecoder/blob/master/scripts/tokenizer/tokenizer.perl">tokenising</a> the system submissions using these scripts. They will be used for the reference translations too. Each language will be evaluated independently.
 <!--(Here are some <a href="http://www.quest.dcs.shef.ac.uk/wmt16_files_mmt/wmt16mmt_notes_Task1">additional notes</a> on how we did the evaluation.) We may also include manual evaluation.
 <!--<p><b><font color="red">New</font></b>: The METEOR command is the following (e.g. for en-de, using <a href="https://github.com/jhclark/multeval">multeval implementation</a>): 
 <p>
@@ -73,10 +72,9 @@ We will provide most of the resulting parallel data and corresponding images for
 <p><font color="magenta">For those interested in translating in the inverse direction, i.e., German into English, we can release a test set for that direction. The training and development sets will remain the same, their translation direction can simply be flipped. </font>
 -->
 
-<p>The <i><font color="green">baseline</font></i> for this task will be a Moses phrase-based
-statistical machine translation system trained using only the textual
-training data provided, following the pipeline described <a
-         href="http://www.statmt.org/moses/?n=moses.baseline">here</a>.
+<p>The <i><font color="green">baselines</font></i> for this task will be 
+<!--both a Moses phrase-based statistical machine translation system trained using only the textual training data provided, following the pipeline described <a href="http://www.statmt.org/moses/?n=moses.baseline">here</a>, and -->
+neural MT systems trained using only the textual training data provided and the <a href="https://github.com/rsennrich/nematus">Nematus</a> tool (details later).
 </p>
 
 <hr>
@@ -220,6 +218,8 @@ We provide training and test datasets for both variants of the task and also all
 <p>We suggest the following <b><font color="green">interesting resources</font></b> that can be used as additional training data for either or both tasks:
 <ul>
 <li><a href="http://www.statmt.org/wmt17/translation-task.html">WMT17 News translation task data</a> for both bilingual (English-German) and monolingual (English or German) data.</li>
+<li><a href="http://www.statmt.org/wmt15/translation-task.html">WMT15 News translation task data</a> for both bilingual (English-French) and monolingual (English or French) data.</li>
+<li><a href="http://statmt.org/rsennrich/wmt16_systems/">Pre-trained Nematus models (on News)</a> for (English-German).</li>
 <li><a href="http://web.engr.illinois.edu/~bplumme2/Flickr30kEntities/">Flickr30K Entities</a> dataset: an extension of the Flickr30K dataset which contains additional layers of annotation such as 244K coreference chains in the English descriptions and 276K manually annotated bounding boxes for entities in the images.</li>
 <li>Additional image description datasets for the English models, such as the <a href="http://mscoco.org/">Microsoft COCO Dataset</a>, among others. See <a href="http://visionandlanguage.net/">this survey</a> for a complete list.
 </ul>
@@ -267,7 +267,7 @@ Lucia Specia (University of Sheffield)
 <br>
 Stella Frank (University of Amsterdam)
 <br>
-Loïc Barrault (University of Le Mans)
+Lo&iuml;c Barrault (University of Le Mans)
 <br>
 Fetih Bougares (University of Le Mans)
 <br>
