@@ -107,20 +107,19 @@ next example.
     <h3 id="data"><font color="blue">Data</font></h3>
     
     <p>
-    For training seed systems, out-of-domain parallel data shall be 
-restricted to German-English Europarl, NewsCommentary, CommonCrawl and Rapid data for the <a href="http://www.statmt.org/wmt17/translation-task.html">News Translation (constrained) task</a>, monolingual English data from the constrained task is allowed.
+    For training seed systems, out-of-domain parallel data shall be restricted to German-English Europarl, NewsCommentary, CommonCrawl and Rapid data for the <a href="http://www.statmt.org/wmt17/translation-task.html">News Translation (constrained) task</a>, monolingual English data from the constrained task is allowed. 
+It is recommended to use <a href="https://github.com/moses-smt/mosesdecoder/tree/master/scripts/tokenizer">Moses' scripts</a> for data pre-processing (normalization, tokenization, lowercasing).
     </p>
     
     <p>
-    The in-domain sequence of data for online learning will be e-commerce domain provided by Amazon. These data can only be accessed via the service. No reference translations will be revealed, only feedback to submitted translations is returned from the service.
+    The in-domain sequence of data for online learning will be e-commerce domain provided by Amazon (pre-processed as above). These data can only be accessed via the service. No reference translations will be revealed, only feedback to submitted translations is returned from the service. 
     </p>
-    
+    <p></p>
     <p>
     Simulated <i>reward-type</i> real-valued feedback will be based on a
  combination of several quality models, including automatic measures 
 w.r.t. human references, and will be normalized to the range&nbsp;[0,1] 
-('very bad' to 'excellent'). 
-Feedback can only be accessed via the service. 
+('very bad' to 'excellent'). Feedback can only be accessed via the service. 
 Only one feedback is allowed per source sentence.
     </p>
 
@@ -140,9 +139,8 @@ large in-domain dataset. Participants will have to consume a fixed
 number of samples during the allocated online learning period to be 
 eligible for final evaluation.
     </li></ol>
-    The respective data samples will be the same for all participants.
+    <p>The respective data samples will be the same for all participants.</p>
     <p>
-    
     </p>
 
     <hr/>
@@ -181,6 +179,8 @@ parallel data, or by using the <b>development service</b>).
     <hr/>
     
     <h3>Organizers</h3>
+    Pavel Danchenko, Amazon Development Center Berlin, Germany
+    <br />
     Hagen Fuerstenau, Amazon Development Center Berlin, Germany
     <br/>
     Julia Kreutzer, Heidelberg University, Germany
