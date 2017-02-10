@@ -123,12 +123,12 @@ target language data.</p>
 
 We provide training and test datasets for both variants of the task and also allow participants to use external data and resources (constrained vs unconstrained submissions). The data to be used for both tasks is an extended version of the <a href="http://shannon.cs.illinois.edu/DenotationGraph/">Flickr30K</a> dataset. The original dataset contains 31,783 images from Flickr on various topics and five crowdsourced English descriptions per image, totalling 158,915 English descriptions.
 
-<p>Task 1: <a href="http://www.quest.dcs.shef.ac.uk/wmt17_files_mmt/mmt_tas1_training.tar.gz">Training</a>, 
-<a href="http://www.quest.dcs.shef.ac.uk/wmt17_files_mmt/mmt_task1_validation_edited.tar.gz">Validation</a>, and 
-<a href="http://www.quest.dcs.shef.ac.uk/wmt17_files_mmt/mmt_task1_test2016_edited.tar.gz">2016 Test</a> sentences, and 
+<p>Task 1: <a href="http://www.quest.dcs.shef.ac.uk/wmt17_files_mmt/	mmt_task1_training.tar.gz">Training</a>, 
+<a href="http://www.quest.dcs.shef.ac.uk/wmt17_files_mmt/mmt_task1_validation.tar.gz">Validation</a>, and 
+<a href="http://www.quest.dcs.shef.ac.uk/wmt17_files_mmt/mmt_task1_test2016.tar.gz">2016 Test</a> sentences, and 
 the <a href=" http://staff.fnwi.uva.nl/d.elliott/wmt16/splits.zip">splits</a>.
 
-<p>Task 2: <a href="http://staff.fnwi.uva.nl/d.elliott/wmt17/mmt_task2.zip">Training and Validation</a>, and <a href="https://staff.fnwi.uva.nl/d.elliott/wmt17/mmt16_task2_test.tgz">2016 Test</a> sentences, and the <a href=" http://staff.fnwi.uva.nl/d.elliott/wmt17/splits.zip">splits</a>.
+<p>Task 2: <a href="http://staff.fnwi.uva.nl/d.elliott/wmt16/mmt_task2.zip">Training and Validation</a>, and <a href="https://staff.fnwi.uva.nl/d.elliott/wmt16/mmt16_task2_test.tgz">2016 Test</a> sentences, and the <a href=" http://staff.fnwi.uva.nl/d.elliott/wmt16/splits.zip">splits</a>.
 
 <p><font color="red">New:</font> we will release a new test dataset of 1,000 images for each task on April 10th 2017. Note that submissions will only be evaluated against the Test 2017 data.</p>
 
@@ -182,7 +182,16 @@ the <a href=" http://staff.fnwi.uva.nl/d.elliott/wmt16/splits.zip">splits</a>.
 </div>
 </p>
 
-<p>Image features will be provided to participants, but their use is not mandatory. In particular, we will release features extracted from the <font color="magenta">VGG-19 CNN</font>, described in <a href="http://arxiv.org/abs/1409.1556">(Simonyan and Zisserman, 2015)</a> from the FC<sub>7</sub> (relu7) and CONV<sub>5_4</sub> layers using <a href="https://github.com/BVLC/caffe/releases/tag/rc2">Caffe RC2</a>.
+<br>
+<p>We also provide <b>image features</b>, although their use is not mandatory. We release ResNet features in two versions: 
+<ul>
+<li> res4_relu convolutional features: <a href="http://www-lium.univ-lemans.fr/sites/default/files/NMTPY/flickr30k_ResNets50_blck4_train.fp16.npy.xz">training [6.0GB]<a/>,  	
+ <a href="http://www-lium.univ-lemans.fr/sites/default/files/NMTPY/flickr30k_ResNets50_blck4_val.fp16.npy.xz">validation [214MB]</a> and  <a href="http://www-lium.univ-lemans.fr/sites/default/files/NMTPY/flickr30k_ResNets50_blck4_test.fp16.npy.xz">test [211MB]</a>.</li>
+<li> averaged pooled features:  <a href="http://www-lium.univ-lemans.fr/sites/default/files/NMTPY/flickr30k_ResNet50_pool5_train.zip"> training [241MB]</a>, <a href="http://www-lium.univ-lemans.fr/sites/default/files/NMTPY/flickr30k_ResNet50_pool5_val.zip"> validation [8.5MB]</a> and <a href="http://www-lium.univ-lemans.fr/sites/default/files/NMTPY/flickr30k_ResNet50_pool5_test.zip">test [8.3MB]</a>.</li>
+</ul>
+
+
+<!--<font color="magenta">VGG-19 CNN</font>, described in <a href="http://arxiv.org/abs/1409.1556">(Simonyan and Zisserman, 2015)</a> from the FC<sub>7</sub> (relu7) and CONV<sub>5_4</sub> layers using <a href="https://github.com/BVLC/caffe/releases/tag/rc2">Caffe RC2</a>.-->
 
 <!--
 <ul>
