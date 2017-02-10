@@ -61,10 +61,8 @@ variants.</p>
 
 <p>As <i><font color="green">test data</font></i>, we provide a new set of 1,000 tuples containing an English description and its corresponding image.  Gold labels will be translations in German or French. 
 
-<p><i><font color="green">Evaluation</font></i> will be performed against the German or French human translations of  the test set using standard MT evaluation metrics, with METEOR as the primary metric (lowercased text, with punctuation, tokenised). We recommend <a href="https://github.com/moses-smt/mosesdecoder/blob/master/scripts/tokenizer/normalize-punctuation.perl">normalising punctuation</a> and <a href="https://github.com/moses-smt/mosesdecoder/blob/master/scripts/tokenizer/tokenizer.perl">tokenising</a> the system submissions using these scripts. They will be used for the reference translations too. Each language will be evaluated independently.
-<!--(Here are some <a href="http://www.quest.dcs.shef.ac.uk/wmt16_files_mmt/wmt16mmt_notes_Task1">additional notes</a> on how we did the evaluation.) We may also include manual evaluation.
-<!--<p><b><font color="red">New</font></b>: The METEOR command is the following (e.g. for en-de, using <a href="https://github.com/jhclark/multeval">multeval implementation</a>): 
-<p>
+<p><i><font color="green">Evaluation</font></i> will be performed against the German or French human translations of  the test set using standard MT evaluation metrics, with METEOR (<a href="https://github.com/jhclark/multeval">multeval</a> implementation, but with METEOR 1.5) as the primary metric. The submissions and reference translations will be pre-processed to <a href="https://github.com/moses-smt/mosesdecoder/blob/master/scripts/tokenizer/lowercase.perl">lowercase</a>, <a href="https://github.com/moses-smt/mosesdecoder/blob/master/scripts/tokenizer/normalize-punctuation.perl">normalise punctuation</a> and <a href="https://github.com/moses-smt/mosesdecoder/blob/master/scripts/tokenizer/tokenizer.perl">tokenise</a> the sentences. Each language will be evaluated independently.
+<!--
 <font face="Courier New" size="2">
 ./multeval.sh eval --refs wmt2016/de_test/reference.ref --hyps-baseline baseline_model/de/generated --hyps-sys1 my_great_model/de_generated --meteor.language de
 </font>
@@ -72,16 +70,14 @@ variants.</p>
 <p><font color="magenta">For those interested in translating in the inverse direction, i.e., German into English, we can release a test set for that direction. The training and development sets will remain the same, their translation direction can simply be flipped. </font>
 -->
 
-<p>The <i><font color="green">baselines</font></i> for this task will be 
-<!--both a Moses phrase-based statistical machine translation system trained using only the textual training data provided, following the pipeline described <a href="http://www.statmt.org/moses/?n=moses.baseline">here</a>, and -->
-neural MT systems trained using only the textual training data provided and the <a href="https://github.com/rsennrich/nematus">Nematus</a> tool (details later).
+<p>The <i><font color="green">baselines</font></i> for this task will be neural MT systems trained using only the textual training data provided and the <a href="https://github.com/rsennrich/nematus">Nematus</a> tool (details later).
 </p>
 
 <hr>
 
 <!-- DESCRIPTION GENERATION-->
 
-<h3 id="task2"><font color="magenta">Task 2: Multilingual Image Description Generation</font></h3>
+<h3 id="task2"><font color="blue">Task 2: Multilingual Image Description Generation</font></h3>
 
 <div>
   <img style="width: 500px; margin-left: auto; margin-right: auto; display: block;" src="figures/mmt_task2.png"></img> 
