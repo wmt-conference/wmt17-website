@@ -12,7 +12,7 @@
     </center>
 
 <H3>OVERVIEW</H3>
-<p> The third round of the APE shared task follows the success of the success of the previous two rounds organised in 2015 and 2016. The aim is to examine <b> automatic methods for correcting errors produced by an unknown machine translation (MT) system.</b> This has to be done by exploiting knowledge acquired from human post-edits, which are provided as training material.</p>
+<p> The third round of the APE shared task follows the success of the previous two rounds organised in 2015 and 2016. The aim is to examine <b> automatic methods for correcting errors produced by an unknown machine translation (MT) system.</b> This has to be done by exploiting knowledge acquired from human post-edits, which are provided as training material.</p>
 
 <H3>Goals</H3>
 
@@ -31,20 +31,66 @@ Similar to the last round, this year the task focuses on the Information Technol
 <p>At training stage, the collected human post-edits have to be used to learn correction rules for the APE systems. At test stage they will be used for system evaluation with automatic metrics (TER and BLEU).
 </p>
 
-<H3>Data</H3>
-<p>
-Training, development and test data consist in English-German and German-English triplets (source, target and post-edit) belonging to the IT domain and <b>already tokenized.</b></p>
-<p>Training and development respectively contain &lt; X &gt; and &lt; Y &gt; triplets, while the test set &lt; Z &gt; instances. All data is provided by the EU project QT21 (<a href="http://www.qt21.eu/" target="_blank">http://www.qt21.eu/</a>).</p>
-<p><b>NOTE:</b> Any use of additional data for training your system is allowed (e.g. parallel corpora, post-edited corpora).</p>
-
 <H3>DIFFERENCES FROM THE SECOND ROUND (WMT 2016)</H3>
 <p>
 Compared to the the second round, the main differences are:
 <UL>
 <LI>Additional language direction (German-English);</LI>
+<LI>Additional domain (Medical);</LI>
 <LI>Larger data set.</LI>
 </UL>
 </p>
+
+<H3>Data</H3>
+<p>
+Training, development and test data consist in English-German and German-English triplets (source, target, and post-edit) belonging to the IT and Medical domains respectively, and are <b>already tokenized.</b> All data is provided by the EU project QT21 (<a href="http://www.qt21.eu/" target="_blank">http://www.qt21.eu/</a>).</p>
+<!-- <p>Training and development respectively contain 11K (EN-DE)/25K (De-EN) and 1,000 triplets, while the test set 2,000 instances. All data is provided by the EU project QT21 (<a href="http://www.qt21.eu/" target="_blank">http://www.qt21.eu/</a>).</p> -->
+
+<p>To download the data click on the links in the table below:(TO BE ACTIVATED)</p>
+<table border=1 cellpadding=5>
+<tr>
+  <th>Language pair</th>
+  <th>Domain</th>
+  <th>2016</th>
+  <th>2017</th>
+  <th>Additional Resource</th>
+</tr>
+<tr>
+  <th>EN-DE</th>
+  <th>IT</th>
+  <th><a href="https://lindat.mff.cuni.cz/repository/xmlui/handle/11372/LRT-1632" target="_blank" >train, dev, test</a></th>
+  <th><a href="" target="_blank" >train</a></th>
+  <th><a href="https://github.com/amunmt/amunmt/wiki/AmuNMT-for-Automatic-Post-Editing" target="_blank" style="text-decoration:none">artificial training data<sup>+</sup></a></th>
+</tr>
+<tr>
+  <th>DE-EN</th>
+  <th>Medical</th>
+  <th></th>
+  <th><a href="" target="_blank" >train, dev</a></th>
+  <th></th>
+</tr>
+</table>
+<p><sup>*</sup>: Test 2016 will be used as a progressive test set to measure the progress of the state-of-the-art systems.</p>
+<p><sup>+</sup>: This training data was created and used in <a href="http://www.aclweb.org/anthology/W16-2378" target="_blank">&quot;Log-linear Combinations of Monolingual and Bilingual Neural Machine Translation Models for Automatic Post-Editing&quot;</a></p>
+<p><b>NOTE:</b> <br>
+1) Any use of additional data for training your system is allowed (e.g. parallel corpora, post-edited corpora).<br>
+2) Please use the following citation, if you use these data sets in your publications.
+<pre>
+(TO BE ADDED)
+<!--
+@InProceedings{bojar-EtAl:2017:WMT1,
+  author    = {Bojar, Ond\v{r}ej  and  Chatterjee, Rajen  and  Federmann, Christian  and  Graham, Yvette  and  Haddow, Barry  and  Huck, Matthias  and  Jimeno Yepes, Antonio  and  Koehn, Philipp  and  Logacheva, Varvara  and  Monz, Christof  and  Negri, Matteo  and  Neveol, Aurelie  and  Neves, Mariana  and  Popel, Martin  and  Post, Matt  and  Rubino, Raphael  and  Scarton, Carolina  and  Specia, Lucia  and  Turchi, Marco  and  Verspoor, Karin  and  Zampieri, Marcos},
+  title     = {Findings of the 2017 Conference on Machine Translation},
+  booktitle = {Proceedings of the First Conference on Machine Translation},
+  month     = {August},
+  year      = {2016},
+  address   = {Berlin, Germany},
+  publisher = {Association for Computational Linguistics},
+  pages     = {131--198},
+  url       = {http://www.aclweb.org/anthology/W/W16/W16-2301}
+}
+-->
+</pre>
 
 <H3>Evaluation</H3>
 <p>Systems' performance will be evaluated with respect to their capability to reduce the distance that separates an automatic translation from its human-revised version.</p>
@@ -52,11 +98,7 @@ Compared to the the second round, the main differences are:
 <p>Also BLEU will be taken into consideration as a secondary evaluation metric. To gain further insights on final output quality, a subset of the outputs of the submitted systems will also be manually evaluated like in 2016.</p>
 <p>The submitted runs will be ranked based on the average HTER calculated on the test set by using the <a href="http://www.cs.umd.edu/~snover/tercom/" target="_blank">tercom</a> software.</p>
 <p>The HTER calculated between the raw MT output and human post-editions in the test set will be used as baseline (<i>i.e.</i> the baseline is a system that leaves all the test instances unmodified).</p>
-
-<H3>Download Links</H3>
-<p><a href="" target="_blank">Training and development data</a></p>
-<!-- <p><a href="" target="_blank">Test data </a> <b>(gold standard references are released in <a href="" target="_blank">test_pe.zip</a>)</b></p>  -->
-<p><a href="" target="_blank">Evaluation script</a></p>
+<p>The evaluation script can be downloaded <a href="https://www.dropbox.com/s/5jw5maariwey080/Evaluation_Script.tar.gz?dl=0" target="_blank">here</a> </p>
 
 <H3>Submission Format</H3>
 
@@ -96,19 +138,23 @@ Each field should be delimited by a single tab character.
 <h3>Important dates</h3>
 
     <table>
-      <tr><td>Release of training data </td><td>TBD</td></tr>
-      <tr><td>Test set distributed  </td><td>TBD</td></tr>
-      <tr><td>Submission deadline  </td><td>TBD</td></tr>
-      <tr><td>Paper submission deadline</td><td>TBD</td></tr>
+      <tr><td>Release of training data </td><td>February 16, 2017</td></tr>
+      <tr><td>Release of test data  </td><td>April 10 2017</td></tr>
+      <tr><td>Submission deadline  </td><td>May 6 2017</td></tr>
+      <tr><td>Paper submission deadline</td><td>June 2 2017</td></tr>
       <tr><td>Manual evaluation</td><td>TBD</td></tr>
-      <tr><td>Notification of acceptance</td><td>TBD</td></tr>
-      <tr><td>Camera-ready deadline</td><td>TBD</td></tr>
+      <tr><td>Notification of acceptance</td><td>June 30 2017</td></tr>
+      <tr><td>Camera-ready deadline</td><td>July 14 2017</td></tr>
     </table>
 
 <h3>Organisers</h3>
 Rajen Chatterjee (Fondazione Bruno Kessler)
 <br>
+Yvette Graham (Dublin City University)
+<br>
 Matteo Negri (Fondazione Bruno Kessler)
+<br>
+Raphael Rubino (Saarland University)
 <br>
 Marco Turchi (Fondazione Bruno Kessler)
 
