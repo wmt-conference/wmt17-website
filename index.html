@@ -51,6 +51,9 @@
     <table>
       <tr><td>Release of training data for shared tasks</td><td>January/February, 2017</td></tr>
       <tr><td>Evaluation periods for shared tasks</td><td>April/May, 2017</td></tr>
+      <tr><td>Paper submission deadline</td><td>June 9th, 2017</td></tr>
+      <tr><td>Paper notification</td><td>June 30th, 2017</td></tr>
+      <tr><td>Camera-ready version due</td><td>July 14th, 2017</td></tr>
       <tr><td>Conference in Copenhagen</td><td>September 7-8, 2017</td></tr>
     </table>
 
@@ -64,6 +67,7 @@
     <li>a quality estimation task (assess MT quality without access to any reference),
     <li>a multimodal translation task
     <li>a task dedicated to the training of neural MT systems
+    <li>a task on bandit learning for MT
 </ul>
     </p>
 
@@ -86,9 +90,8 @@
     </p>
 
     <h3>REGISTRATION</h3>
-<!--    <p>
-    Registration will be handled by <a href="http://acl2016.org/">ACL 2016</a>.
--->
+    Registration will be handled by <a href="http://emnlp2017.net/">EMNLP 2017</a>.
+
     <h3>NEWS TRANSLATION TASK</h3>
     <p>
       The first shared task which will examine translation between the
@@ -119,18 +122,21 @@
 
 <h3>BIOMEDICAL TRANSLATION TASK</h3> 
 
-<p>In this second edition of this task, we will evaluate systems for the translation of 
-clinical trials and scientific abstracts in biological and health sciences for the following languages pairs:<p>
+<p>In this second edition of this task, we will evaluate systems for the translation of biomedical documents for the following languages pairs:<p>
 
 <ul>
-<li> English-French and French-English</li>
-<li> English-Spanish and Spanish-English</li>
-<li> English-Portuguese and Portuguese-English </li>
+<li> English-Czech and Czech-English <font color=red><b>NEW</b></font></li>
+<li> English-French and French-English </li>
 <li> English-German and German-English <font color=red><b>NEW</b></font></li>
-<li> among others...</li>
+<li> English-Hungarian and Hungarian-English <font color=red><b>NEW</b></font></li>
+<li> English-Polish and Polish-English <font color=red><b>NEW</b></font></li>
+<li> English-Portuguese and Portuguese-English </li>
+<li> English-Romanian and Romanian-English <font color=red><b>NEW</b></font></li>
+<li> English-Spanish and Spanish-English </li>
+<li> English-Swedish and Swedish-English <font color=red><b>NEW</b></font></li>
 </ul>
 
-<p>Parallel corpora will be available for all language pairs but also monoligual corpora for each of the languages. 
+<p>Parallel corpora will be available for all language pairs but also monoligual corpora for some languages. 
 Evaluation will be carried out both automatically and manually.</p>
 
 <!--
@@ -177,6 +183,14 @@ Participants in the NMT training task will be given complete a Neural Monkey con
 </p>
 <p>
 The participants will be expected to submit the variables file, i.e. the trained neural network, for one or both of the translation directions. We will use the variables and a fixed revision of Neural Monkey to translate official WMT17 test set. The outputs of the various configurations of the system will be scored using the standard manual evaluation procedure.
+</p>
+
+<h3>BANDIT LEARNING TASK</h3>
+<p>Bandit Learning for MT is a framework to train and improve MT systems by learning from weak or partial feedback: Instead of a gold-standard human-generated translation, the learner only receives feedback to a single proposed translation (this is why it is called partial), in form of a translation quality judgement (which can be as weak as a binary acceptance/rejection decision).
+</p>
+<!--<p> Amazon and University of Heidelberg organize this Shared Task with a goal to encourage researchers to investigate algorithms for learning from weak user feedback instead of from human references or post-edits that require skilled translators. We are interested in finding systems that learn efficiently and effectively from this type of feedback, i.e. they learn fast and achieve high translation quality. Developing such algorithms is interesting for interactive machine learning and for human feedback in NLP in general.
+</p>-->
+<p> In this task, the user feedback will be simulated by a service hosted on Amazon Web Services (AWS), where participants can submit translations and receive feedback and use this feedback for training an MT model (German-to-English, e-commerce). Reference translations will not be revealed at any point, also evaluations are done via the service. The goal of this task is to find systems that learn efficiently and effectively from this type of feedback, i.e. they learn fast and achieve high translation quality without references.
 </p>
 
 <!--
@@ -266,9 +280,9 @@ Barry Haddow (University of Edinburgh)<br>
 Matthias Huck (University of Edinburgh)<br>
 Antonio Jimeno Yepes (IBM Research Australia)<br>
 Julia Kreutzer (Heidelberg University)<br>
-<!--Varvara Logacheva (University of Sheffield)<br>-->
+Varvara Logacheva (University of Sheffield)<br>
 Aur&eacute;lie N&eacute;v&eacute;ol (LIMSI, CNRS)<br>
-Mariana Neves (Hasso-Plattner Institute)<br>
+Mariana Neves (Hasso Plattner Institute)<br>
 Philipp Koehn (University of Edinburgh / Johns Hopkins University)<br>
 Christof Monz (University of Amsterdam)<br>
 Matteo Negri (FBK)<br>

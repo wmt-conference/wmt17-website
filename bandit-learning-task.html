@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>WMT'17 Shared Task: Bandit Learning for Machine Translation</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<style> h3 { margin-top: 2em; } </style>
+</head>
+<body>
+
+    <center>
+      <script src="http://www.statmt.org/wmt17/title.js"></script>
+      <p><h2>WMT17 Bandit Learning Task</h2></p>
+      <script src="http://www.statmt.org/wmt17/menu.js"></script>
+    </center>
+
+<h3><font color="blue">The Task: Bandit Learning for Machine Translation</font></h3>
+
+ <p>
+Bandit Learning for MT is a framework to train and improve MT 
+systems by learning from weak or partial feedback: Instead of a 
+gold-standard human-generated translation, the learner only receives 
+feedback to a single proposed translation (this is why it is called 
+partial), in form of a translation quality judgement (which can be as 
+weak as a binary acceptance/rejection decision).
+</p>
+
+<p>
+Amazon and University of Heidelberg organize this Shared Task with a goal 
+to encourage researchers to investigate algorithms for learning from weak 
+user feedback instead of from human 
+references or post-edits that require skilled translators. We are 
+interested in finding systems that learn efficiently and effectively 
+from this type of feedback, i.e. they learn fast <i>and</i> achieve high 
+translation quality. Developing such algorithms is interesting for 
+interactive machine learning and for human feedback in NLP in general.
+    </p>  
+   
+    <p>
+    In the WMT task setup, the user feedback will be simulated by a service 
+hosted on Amazon Web Services (AWS), where participants can submit translations and receive feedback 
+and use this feedback for training an MT model. Reference translations 
+will not be revealed at any point, also evaluations are done via the 
+service. 
+    </p>
+
+<hr/>
+<h3><font color="blue">Important Dates</font></h3>
+    <p>All dates are preliminary.</p>
+    <p></p>
+    <table cellspacing=5>
+      <tbody><tr><td>Registration via e-mail</td><td>till March 19, 2017</td></tr>
+      <tr><td>Access to mock service</td><td>March, 2017</td></tr>
+      <tr><td>Access to development service</td><td>March 28, 2017</td></tr>
+      <tr><td>Online learning starts</td><td>April 25, 2017</td></tr>
+  	  <tr><td>Notification of evaluation results</td><td>May 26, 2017</td></tr>
+	  <tr><td>Paper submission deadline</td><td>June 9, 2017</td></tr>
+      <tr><td>Notification of paper acceptance</td><td>June 30, 2017</td></tr>
+      <tr><td>Camera-ready deadline</td><td>July 14, 2017</td>
+	    </tr></tbody></table>
+    <hr/>
+
+    <h3><font color="blue">Why is it called Bandit Learning?</font></h3>
+        
+    <p>
+      The name bandit is inherited from a model where in each round a 
+gambler in a casino pulls an arm of a different slot machine, called 
+"one-armed bandit", with the goal of maximizing his reward relative to 
+the maximal possible reward, without apriori knowledge of the optimal 
+slot machine. In MT, pulling an arm corresponds to proposing a 
+translation; rewards correspond to user feedback on translation quality.
+ Bandit learners can be seen as one-state Markov Decision Processes 
+(MDPs), which connects them to reinforcement learning. In MT, proposing a
+ translation corresponds to choosing an action.
+    </p>
+
+    <hr/>
+    
+    <h3 id="protocol"><font color="blue">Online Learning Protocol</font></h3>
+    
+    <p>
+      Bandit learning follows an online learning protocol, where on each
+ of a sequence of iterations, the learner receives a source sentence, 
+predicts a translation, and receives a reward in form of a task loss 
+evaluation of the predicted translation. The learner does not know what 
+the correct prediction looks like, nor what would have happened if it 
+had predicted differently. 
+    </p>
+
+    <b>For t = 1, ..., T do</b>
+    <ol>
+      <li><b>Receive source sentence</b></li>
+      <li><b>Predict translation</b></li>
+      <li><b>Receive feedback to predicted translation</b></li>
+      <li><b>Update system</b></li>
+    </ol>
+
+    <p>
+    Online interaction is done via accessing an AWS-hosted service that provides 
+source sentences to the learner&nbsp;(step 1), and provides feedback&nbsp;(step 3)
+ to the translation predicted by the learner&nbsp;(step 2).  The learner 
+updates his parameters using the feedback&nbsp;(step 4) and continues to the 
+next example.
+    </p>
+    
+    <hr/>
+
+    <h3 id="data"><font color="blue">Data</font></h3>
+    
+    <p>
+    For training seed systems, out-of-domain parallel data shall be restricted to German-English Europarl, NewsCommentary, CommonCrawl and Rapid data for the <a href="http://www.statmt.org/wmt17/translation-task.html">News Translation (constrained) task</a>, monolingual English data from the constrained task is allowed. 
+It is recommended to use <a href="https://github.com/moses-smt/mosesdecoder/tree/master/scripts/tokenizer">Moses' scripts</a> for data pre-processing (normalization, tokenization, lowercasing).
+    </p>
+    
+    <p>
+    The in-domain sequence of data for online learning will be e-commerce domain provided by Amazon (pre-processed as above). These data can only be accessed via the service. No reference translations will be revealed, only feedback to submitted translations is returned from the service. 
+    </p>
+    <p></p>
+    <p>
+    Simulated <i>reward-type</i> real-valued feedback will be based on a
+ combination of several quality models, including automatic measures 
+w.r.t. human references, and will be normalized to the range&nbsp;[0,1] 
+('very bad' to 'excellent'). Feedback can only be accessed via the service. 
+Only one feedback is allowed per source sentence.
+    </p>
+
+    <hr/>
+    
+    <h3 id="services"><font color="blue">Services</font></h3>
+    Three AWS-hosted services will be provided:
+    <ol>
+    <li><b>Mock service</b> to test client API: Will sample from a tiny dataset and simply return BLEU as feedback.
+    </li><li><b>Development service</b> to tune algorithms and 
+hyperparameters: Will sample from a larger in-domain dataset. Feedback 
+will be parameterized differently from the learning service to prevent 
+learning from development data. Several runs will be allowed and 
+evaluation results will be communicated to the participants.
+    </li><li><b>Online Learning service</b>: Will sample from a very 
+large in-domain dataset. Participants will have to consume a fixed 
+number of samples during the allocated online learning period to be 
+eligible for final evaluation.
+    </li></ol>
+    <p>The respective data samples will be the same for all participants.</p>
+    <p>
+    </p>
+
+    <hr/>
+
+    <h3 id="eval"><font color="blue">Evaluation</font></h3>
+    
+    <p>
+    The following main evaluation metrics will be used:
+    </p><ul>
+      <li><b>online</b>: cumulative per-sentence reward against the number of iterations,</li>
+      <li><b>offline</b>: standard automatic MT evaluation metric on a held-out in-domain test set,</li>
+      <li><b>relative</b> to the out-of-domain starting point by doing 
+test set evaluations in the beginning and in the end of the online 
+learning sequence.</li>
+    </ul>
+    Note that all evaluations are done during online learning and not in a separate offline testing phase.
+    <p></p>
+    
+    <hr/>
+          
+    <h3 id="participation"><font color="blue">How to Participate</font></h3>
+    <p>
+    </p><ol>
+	<li>Pick your favourite MT system.
+	</li><li>Train an out-of-domain model on allowed <a href="#data">data</a>.
+    </li><li><b>Register</b> for the task via <a href="mailto:bandit_wmt@cl.uni-heidelberg.de" target="_blank">email</a> and receive further instructions on how to access the service.
+    </li><li>Wrap <b>client code snippets</b> around your MT system.
+	</li><li><b>Setup</b>: Test the in-domain-training procedure with the <b>mock service</b> and ensure that your client sends translations and receives feedback.
+	</li><li><b>Tune</b>: Find a clever strategy and good hyperparameters 
+to learn from weak feedback (e.g. by simulating weak feedback from 
+parallel data, or by using the <b>development service</b>).
+	</li><li><b>Train</b> your in-domain model by starting from your out-of-domain model, submitting translations to the <b>online learning service</b>, receiving feedback and updating your model from this feedback.
+    </li></ol>
+    <p></p>	    
+
+    <hr/>
+    
+    <h3>Organizers</h3>
+    Pavel Danchenko, Amazon Development Center Berlin, Germany
+    <br />
+    Hagen Fuerstenau, Amazon Development Center Berlin, Germany
+    <br/>
+    Julia Kreutzer, Heidelberg University, Germany
+    <br/>
+    Stefan Riezler, Heidelberg University, Germany
+    <br/>
+    Artem Sokolov, Heidelberg University and Amazon Development Center Berlin, Germany
+    <br/>
+    Kellen Sunderland, Amazon Development Center Berlin, Germany
+    <br/>
+    <!--
+    <h3>Contact</h3>
+    add contact email<p>
+    -->
+
+</body></html>
