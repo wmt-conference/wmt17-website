@@ -50,7 +50,7 @@ The training of one configuration of a neural MT system takes a few weeks and th
 
 <p>The participants are expected to train the model and submit the parameters.
 While doing so, they can
-modify the training data, training config and the training parts of the neural MT system in any possible way.</p>
+modify the training data and the training parts of the neural MT system in any possible way.</p>
 
 <p>We will use the fixed version of the NMT system to run the trained models on the official news test sets. The translations will be then manually evaluated along with the submissions to the standard News Translation Task.
 </p>
@@ -59,6 +59,31 @@ modify the training data, training config and the training parts of the neural M
 </p>
 
 <p>NMT Training Task was inspired by the past <a href="http://www.statmt.org/wmt16/tuning-task/">Tuning Tasks</a> and serves as its replacement. In the last tuning task where phase-based MT components were fixed, it turned out that the few parameters of a log-linear model do not give enough room for interesting setup differences, especially when the model components are realistically large. This is certainly not the case for a neural model.</p>
+
+<H3>Download</H3>
+
+<p>
+  The package with the pre-processed training and validation data, and instructions how to start the baseline training is available for download:
+</p>
+
+<ul>
+  <li><a href="http://ufallab.ms.mff.cuni.cz/~bojar/wmt17-nmt-training-task-package.tgz">wmt17-nmt-training-task-package.tgz</a> (1.9 GB)</li>
+</ul>
+
+<H3>Submission</H3>
+
+<p>
+  The exact submission procedure will be described here.
+</p>
+
+<p>
+  In essense, we will need your <code>variables.data</code> file that gets created in the
+  <code>output-*GB/</code> directory of Neural Monkey. Neural Monkey stores intermediate versions of the model
+there, so you will probably want to send us the one linked under the name
+  <p>variables.data.best</p>.
+</p>
+
+<p>It may be also interesting to compare the learning curves of your training runs, so if you can, please provide us also with the file <code>events.out.tfevents.*</code> created by TensorFlow during training.
 
 <H3>Other Requirements</H3>
 
