@@ -86,10 +86,12 @@ well using external information. The <b>data</b> consists of:
 
 
 </p><ul>
-<li><b>English-German</b>: segments on the IT domain translated by an in-house phrase-based SMT system and post-edited by professional translators (23,000 for training, 1,000 for dev). 
+<!--<li><b>English-German</b>: segments on the IT domain translated by an in-house phrase-based SMT system and post-edited by professional translators (23,000 for training, 1,000 for dev). 
 Download the <a href="http://www.quest.dcs.shef.ac.uk/wmt17_files_qe/task1_en-de_training-dev.tar.gz">training and development</a> data and baseline features.</li> 
-<li><b>German-English</b>: segments on the Pharmaceutical domain translated by an in-house phrase-based SMT system and post-edited by professional translators (25,000 for training, 1,000 for dev). 
-Download the <a href="http://www.quest.dcs.shef.ac.uk/wmt17_files_qe/task1_de-en_training-dev.tar.gz">training and development</a> data and baseline features.</li> 
+<li><b>German-English</b>: segments on the Pharmaceutical domain translated by an in-house phrase-based SMT system and post-edited by professional translators (25,000 for training, 1,000 for dev). Download the <a href="http://www.quest.dcs.shef.ac.uk/wmt17_files_qe/task1_de-en_training-dev.tar.gz">training and development</a> data and baseline features.</li> 
+-->
+<li><b>English-German</b>: segments on the IT domain translated by an in-house phrase-based SMT system and post-edited by professional translators (23,000 for training, 1,000 for dev). Download the <a href="https://lindat.mff.cuni.cz/repository/xmlui/handle/11372/LRT-1974">training and development</a> data and baseline features.</li> 
+<li><b>German-English</b>: segments on the Pharmaceutical domain translated by an in-house phrase-based SMT system and post-edited by professional translators (25,000 for training, 1,000 for dev). Download the <a href="https://lindat.mff.cuni.cz/repository/xmlui/handle/11372/LRT-1974">training and development</a> data and baseline features.</li> 
 </ul>
 
 <p>The data for download contains source sentences, their machine translations, their post-editions (translations), HTER as post-editing effort scores. Other scores, such as post-editing time, will be made available shortly.
@@ -97,16 +99,7 @@ Download the <a href="http://www.quest.dcs.shef.ac.uk/wmt17_files_qe/task1_de-en
 In both cases, The  <a href="https://github.com/ghpaetzold/PET">PET</a> tool was used to collect these various types of information during post-editing. HTER labels were computed using <a href="http://www.umiacs.umd.edu/%7Esnover/terp/">TER</a> (default settings: tokenised, case insensitive, exact matching only, with scores capped to 1).
 <p></p>
 
-<!--
- 
-Download the baseline features:
-</p><ul>
-<li><a href="http://www.quest.dcs.shef.ac.uk/wmt17_files_qe/task1_en-de_training.baseline17.features">English-German training</a> features.</li>
-<li><a href="http://www.quest.dcs.shef.ac.uk/wmt17_files_qe/task1_en-de_dev.baseline17.features">English-German development</a> features. </li>
-<li><a href="http://www.quest.dcs.shef.ac.uk/wmt17_files_qe/task1_de-en_training.baseline17.features">German-English training</a> features.</li>
-<li><a href="http://www.quest.dcs.shef.ac.uk/wmt17_files_qe/task1_de-en_dev.baseline17.features">German-English development</a> features. </li>
-</ul>
--->
+
 
 
 <p>As <i><font color="green">test data</font></i>, for each language pair we will provide <b>2,000</b> new sentence translations, produced by the same SMT system used for the training data for each language pair.
@@ -173,21 +166,12 @@ avoid introducing noise in the annotation.</p>
 
 As <i><font color="green">training</font></i> and <i><font color="green">development</font></i> data, we provide the tokenised translation outputs with tokens annotated with  'OK' or 'BAD' labels. Download:
 <ul> 
-<li><b>English-German</b> <a href="http://www.quest.dcs.shef.ac.uk/wmt17_files_qe/task2_en-de_training-dev.tar.gz">training and development</a> data and baseline features.</li> 
-<li><b>German-English</b> <a href="http://www.quest.dcs.shef.ac.uk/wmt17_files_qe/task2_de-en_training-dev.tar.gz">training and development</a> data and baseline features.</li> 
+<!--<li><b>English-German</b> <a href="http://www.quest.dcs.shef.ac.uk/wmt17_files_qe/task2_en-de_training-dev.tar.gz">training and development</a> data and baseline features.</li> 
+<li><b>German-English</b> <a href="http://www.quest.dcs.shef.ac.uk/wmt17_files_qe/task2_de-en_training-dev.tar.gz">training and development</a> data and baseline features.</li> -->
+<li><b>English-German</b> <a href="https://lindat.mff.cuni.cz/repository/xmlui/handle/11372/LRT-1974">training and development</a> data and baseline features.</li> 
+<li><b>German-English</b> <a href="https://lindat.mff.cuni.cz/repository/xmlui/handle/11372/LRT-1974">training and development</a> data and baseline features.</li> 
 </ul>
 
-
-<!--
-Download the baseline features:
-
-<ul>
-<li><a href="http://www.quest.dcs.shef.ac.uk/wmt17_files_qe/task2_en-de_training.baseline.features">English-German training</a> features.</li>
-<li><a href="http://www.quest.dcs.shef.ac.uk/wmt17_files_qe/task2_en-de_dev.baseline.features">English-German development</a> features. </li>
-<li><a href="http://www.quest.dcs.shef.ac.uk/wmt17_files_qe/task2_de-en_training.baseline.features">German-English training</a> features.</li>
-<li><a href="http://www.quest.dcs.shef.ac.uk/wmt17_files_qe/task2_de-en_dev.baseline.features">German-English development</a> features. </li>
-</ul>
--->
 
 <p>As <i><font color="green">test data</font></i>, for each language pair we will provide <b>2,000</b> new sentence translations, produced and annotated in the same way.  
 
@@ -196,15 +180,6 @@ Download the baseline features:
 </p><p>Submissions are <i><font color="green">evaluated</font></i> in 
 terms of classification performance via the multiplication of F1-scores 
 for the 'OK' and 'BAD' classes against the original labels, as in WMT16. 
-<!--
-F1-score for the 'BAD' class, which has been used as a primary metric in
- previous years, is biased towards 'pessimistic' labellings. In other 
-words, it favours systems which tend to label more words as 'BAD'.
-In contrast, the multiplication of F1-OK and F1-BAD has two components 
-which penalise different labellings and balance each other. 'Unfair' 
-labellings (ones where either F1-OK or F1-BAD are close to zero) will 
-have a score close to zero, and the overall score is never greater than 
-any of its components. -->
 We will also report the F1-BAD score.
 We use this <a href="https://gist.github.com/varvara-l/028e4439fb992d089935" target="_blank">evaluation script</a> for the metrics, and   
  <a href="https://gist.github.com/varvara-l/d66450db8da44b8584c02f4b6c79745c">this script</a> to compute significance levels using approximate randomisation.
@@ -244,51 +219,17 @@ segmentation for both source and machine-translated sentences. We also
 provide target-source phrase alignments and phrase-level labels.
 Download:
 <ul> 
-<li><b>English-German</b> <a href="http://www.quest.dcs.shef.ac.uk/wmt17_files_qe/task3_en-de_training-dev.tar.gz">training and development</a> data and baseline features.</li> 
-<li><b>German-English</b> <a href="http://www.quest.dcs.shef.ac.uk/wmt17_files_qe/task3_de-en_training-dev.tar.gz">training and development</a> data and baseline features.</li> 
+<li><b>English-German</b> <a href="https://lindat.mff.cuni.cz/repository/xmlui/handle/11372/LRT-1974">training and development</a> data and baseline features.</li> 
+<li><b>German-English</b> <a href="https://lindat.mff.cuni.cz/repository/xmlui/handle/11372/LRT-1974">training and development</a> data and baseline features.</li> 
+
 </ul>
 
-<!--
-Download the baseline features:
-
-
-</p><ul>
-<li><a href="http://www.quest.dcs.shef.ac.uk/wmt17_files_qe/task3_en-de_training.baseline.features">English-German training</a> features.</li>
-<li><a href="http://www.quest.dcs.shef.ac.uk/wmt17_files_qe/task3_en-de_dev.baseline.features">English-German development</a> features. </li>
-<li><a href="http://www.quest.dcs.shef.ac.uk/wmt17_files_qe/task3_de-en_training.baseline.features">German-English training</a> features.</li>
-<li><a href="http://www.quest.dcs.shef.ac.uk/wmt17_files_qe/task3_de-en_dev.baseline.features">German-English development</a> features. </li>
-</ul>
-
--->
 <p>The baseline phrase-level system is analogous to last year's system: it uses a set of <a href="http://www.quest.dcs.shef.ac.uk/wmt17_files_qe/task3_en-de_baseline.feature.list">baseline features</a> (based on black-box sentence-level features) extracted with the <a href="https://github.com/qe-team/marmot">Marmot</a> tool and is trained with the <a href="http://www.chokkan.org/software/crfsuite/">CRFSuite</a> tool.</p>
 
 <p>As <i><font color="green">test data</font></i>,  for each language pair we will provide <b>2,000</b> new sentence translations, produced and annotated in the same way.  
-<!--<a href="http://www.quest.dcs.shef.ac.uk/wmt16_files_qe/task2_en-de_test.tar.gz" target="_blank">Download test data (and baseline features)</a>. -->
 </p>
 
 <p>Submissions will be <i><font color="green">evaluated</font></i> in terms of the multiplication of <b>phrase-level</b> F1-OK and F1-BAD. </p>
-
-<!--p>We will use the test set labelled at the word level, but its 
-labels will be converted in order to agree with phrase boundaries: if a 
-phrase has at least one 'BAD' word, all its labels are replaced with 
-'BAD'.</p>
-For example, the sequence: 
-
-	<p style="text-indent:25px">OK OK || BAD OK OK || OK || BAD OK || OK OK </p>
-
-will be converted to:
-
-	<p style="text-indent:25px">OK OK || BAD BAD BAD || OK || BAD BAD || OK OK </p>
-</p-->
-<!--p>As <b>baseline system</b> for word and phrase-level, we will use the baseline features provided above to train a CRF model with CRFSuite tool. </p-->
-
-
-<!--font color="red">Check this - will it be the case or evaluate as 
-phrase. Maybe have both if want to measure progress from last year - but
- indicate which one is main only (then evaluate other internally)</font-->
-
-
-
 
 <hr>
 
