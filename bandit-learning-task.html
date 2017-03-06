@@ -108,6 +108,7 @@ next example.
     
     <p>
     For training seed systems, out-of-domain parallel data shall be restricted to German-English Europarl, NewsCommentary, CommonCrawl and Rapid data for the <a href="http://www.statmt.org/wmt17/translation-task.html">News Translation (constrained) task</a>, monolingual English data from the constrained task is allowed. 
+Tuning of the out-of-domain system should be done on the newstest2016-deen development set.
 It is recommended to use <a href="https://github.com/moses-smt/mosesdecoder/tree/master/scripts/tokenizer">Moses' scripts</a> for data pre-processing (normalization, tokenization, lowercasing).
     </p>
     
@@ -174,7 +175,6 @@ to learn from weak feedback (e.g. by simulating weak feedback from
 parallel data, or by using the <b>development service</b>).
 	</li><li><b>Train</b> your in-domain model by starting from your out-of-domain model, submitting translations to the <b>online learning service</b>, receiving feedback and updating your model from this feedback.
     </li></ol>
-    <p></p>	    
 
     <hr/>
     
@@ -190,6 +190,8 @@ parallel data, or by using the <b>development service</b>).
     Artem Sokolov, Heidelberg University and Amazon Development Center Berlin, Germany
     <br/>
     Kellen Sunderland, Amazon Development Center Berlin, Germany
+    <br/>
+    Witold Szymaniak, Amazon Development Center Berlin, Germany
     <br/>
     <!--
     <h3>Contact</h3>
