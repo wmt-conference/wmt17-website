@@ -105,40 +105,29 @@ next example.
     <hr/>
 
     <h3 id="data"><font color="blue">Data</font></h3>
-    
-    <p>
-    For training seed systems, out-of-domain parallel data shall be restricted to German-English Europarl, NewsCommentary, CommonCrawl and Rapid data for the <a href="http://www.statmt.org/wmt17/translation-task.html">News Translation (constrained) task</a>, monolingual English data from the constrained task is allowed. 
-Tuning of the out-of-domain system should be done on the newstest2016-deen development set.
-It is recommended to use <a href="https://github.com/moses-smt/mosesdecoder/tree/master/scripts/tokenizer">Moses' scripts</a> for data pre-processing (normalization, tokenization, lowercasing).
-    </p>
-    
-    <p>
-    The in-domain sequence of data for online learning will be e-commerce domain provided by Amazon (pre-processed as above). These data can only be accessed via the service. No reference translations will be revealed, only feedback to submitted translations is returned from the service. 
-    </p>
-    <p></p>
-    <p>
-    Simulated <i>reward-type</i> real-valued feedback will be based on a
- combination of several quality models, including automatic measures 
-w.r.t. human references, and will be normalized to the range&nbsp;[0,1] 
-('very bad' to 'excellent'). Feedback can only be accessed via the service. 
-Only one feedback is allowed per source sentence.
-    </p>
 
+<p>For training seed systems, out-of-domain parallel data shall be restricted to German-English Europarl, NewsCommentary, CommonCrawl and Rapid data for the <a href="http://www.statmt.org/wmt17/translation-task.html">News Translation (constrained) task</a>; monolingual English data from the constrained task is allowed. Tuning of the out-of-domain system should be done on the 'newstest2016-deen' development set. It is recommended to use the same pre-processing as for the in-domain data (see below).</p>
+
+<p>The in-domain sequence of data for online learning will be e-commerce domain provided by Amazon, pre-processed with <a href="http://www.statmt.org/wmt17/translation-task.html">Moses' scripts</a> (removing non-printing characters, replacing and normalizing unicode punctuation, lowercasing, pre-tokenizing and tokenizing). 
+Since the data comes from a substantially different domain, expect a large number of out-of-vocabulary terms.  
+These data can only be accessed via the service. No reference translations will be revealed, only feedback to submitted translations is returned from the service.</p>
+
+<p>Simulated reward-type real-valued feedback will be based on a combination of several quality models, including automatic measures with respect to human references (pre-processed in the same way), and will be normalized to the range&nbsp;[0,1]&nbsp;('very bad' to 'excellent'). Feedback can only be accessed via the service. Only one feedback is allowed per source sentence.</p>
+    
     <hr/>
     
     <h3 id="services"><font color="blue">Services</font></h3>
     Three AWS-hosted services will be provided:
     <ol>
-    <li><b>Mock service</b> to test client API: Will sample from a tiny dataset and simply return BLEU as feedback.
+    <li><b>Mock service</b> to test client API: Will sample from a tiny in-domain dataset and simply return BLEU as feedback.
     </li><li><b>Development service</b> to tune algorithms and 
-hyperparameters: Will sample from a larger in-domain dataset. Feedback 
-will be parameterized differently from the learning service to prevent 
-learning from development data. Several runs will be allowed and 
-evaluation results will be communicated to the participants.
+hyperparameters: Will sample from a larger in-domain dataset.  
+Several runs will be allowed and evaluation results will be communicated to the participants.
     </li><li><b>Online Learning service</b>: Will sample from a very 
 large in-domain dataset. Participants will have to consume a fixed 
 number of samples during the allocated online learning period to be 
 eligible for final evaluation.
+  Feedback will be parameterized differently from the development service. 
     </li></ol>
     <p>The respective data samples will be the same for all participants.</p>
     <p>
@@ -168,14 +157,18 @@ learning sequence.</li>
 	<li>Pick your favourite MT system.
 	</li><li>Train an out-of-domain model on allowed <a href="#data">data</a>.
     </li><li><b>Register</b> for the task via <a href="mailto:bandit_wmt@cl.uni-heidelberg.de" target="_blank">email</a> and receive further instructions on how to access the service.
-    </li><li>Wrap <b>client code snippets</b> around your MT system.
+    </li><li>Wrap <b>client code snippets</b> around your MT system (all registered participant receive access to a GitHub repository with code examples).
 	</li><li><b>Setup</b>: Test the in-domain-training procedure with the <b>mock service</b> and ensure that your client sends translations and receives feedback.
 	</li><li><b>Tune</b>: Find a clever strategy and good hyperparameters 
 to learn from weak feedback (e.g. by simulating weak feedback from 
 parallel data, or by using the <b>development service</b>).
 	</li><li><b>Train</b> your in-domain model by starting from your out-of-domain model, submitting translations to the <b>online learning service</b>, receiving feedback and updating your model from this feedback.
     </li></ol>
-
+    <hr>
+    <h3 id="questions"><font color="blue">Contact  / Questions</font></h3>
+    Feel free to contact us with any questions about the task or API at
+    bandit_wmt@cl.uni-heidelberg.de. We also encourage participants to raise
+    technical issues or general questions via the repository's issues page 
     <hr/>
     
     <h3>Organizers</h3>
@@ -193,9 +186,5 @@ parallel data, or by using the <b>development service</b>).
     <br/>
     Witold Szymaniak, Amazon Development Center Berlin, Germany
     <br/>
-    <!--
-    <h3>Contact</h3>
-    add contact email<p>
-    -->
 
 </body></html>
