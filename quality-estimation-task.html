@@ -187,6 +187,10 @@ We use this <a href="https://gist.github.com/varvara-l/028e4439fb992d089935" tar
 <p><b><font color="red">NEW</font></b>:  Submissions to the word-level task will also be <font color="green">evaluated</font> in terms of their performance at sentence level. The motivation for that is that we found that sometimes predictions at word level can work well as sentence-level predictors: the percentage of words labelled as 'BAD' in a sentence should essentially be similar to a sentence-level HTER score. 
 All submissions for Task 2 will automatically be evaluated analogously to the sentence-level scoring task: using Pearson correlation (primary metric), MAE and RMSE scores. Participants aiming to optimise their models against sentence-level metrics can submit one additional system per language pair if they wish so, using the submission format of Task 2. The binary word-level predictions will be used to compute the sentence-level score: number of words with 'BAD' label over the length of sentence.</p>
 
+<br>
+<hr>
+
+
 <!-- BEGIN PHRASE-LEVEL-->
 
 </p><h3><font color="blue">Task 3: Phrase-level QE</font></h3>
@@ -246,7 +250,7 @@ Download:
 <p>As <i><font color="green">test data</font></i>, we will provide <b>306</b> new sentence translations, produced and annotated in the same way.  
 </p>
 
-
+<br>
 <hr>
 
 
@@ -276,56 +280,6 @@ other resources/info from the MT system, let us know:
 </ul>
 
 
-<!--
-
-<p>We also suggest the following <b><font color="green">interesting resources</font></b> that can be used as additional data for training (notice the difference in language pairs and/or text domains and/or MT systems):
-<ul>
-<li><a href="http://www.statmt.org/wmt15/quality-estimation-task.html">WMT15</a>, <a href="http://www.statmt.org/wmt14/quality-estimation-task.html">WMT14</a>, <a href="http://www.statmt.org/wmt13/quality-estimation-task.html">WMT13</a>, <a href="http://www.statmt.org/wmt12/quality-estimation-task.html">WMT12</a> Quality Estimation shared-task datasets.</li></li>
-<li><a href="http://www-clips.imag.fr/geod/User/marion.potet/index.php?page=download">LIG corpus</a> of 10,881 French-English SMT translations and their human post-editions (HTER scores can be easily derived). <a href="http://www.lrec-conf.org/proceedings/lrec2012/pdf/506_Paper.pdf">Description</a>.</li></li>
-<li><a href="http://anrtrace.limsi.fr/trace_postedit.tar.bz2">LISMI's TRACE corpora</a> of approximately 7,000 French-English and 7,000 English-French translations by different MT systems, for various text domains, and their post-editions by professionals translators. <a href="http://www.mtsummit2013.info/files/proceedings/main/mt-summit-2013-wisniewski-et-al.pdf">Description</a>.</li>
-<li><a href="http://bridge.cbs.dk/platform/?q=CRITT_TPR-db">CRITT Translation Process Research Database<a> with user activity data of translators behavior collected in several translation studies with Translog-II and with the CASMACAT workbench.</li>
-</ul>
-
-<p>These are the resources we have used to extract the baseline features in Tasks 1 and 3:
-
-<p>
-<b>English</b>
-<lu>
-<li>English <a href="http://www.quest.dcs.shef.ac.uk/quest_files/europarl-nc.en">source training corpus</a></li>
-<li>English <a href="http://www.quest.dcs.shef.ac.uk/quest_files/lm.europarl-nc.en">language model</a></li>
-<li>English <a href="http://www.quest.dcs.shef.ac.uk/quest_files/nc.pos.1.en.lm">language model of POS tags</a></li>
-<li>English <a href="http://www.quest.dcs.shef.ac.uk/quest_files/ngram-counts.europarl-nc.en.proc">n-gram counts</a></li>
-<li>English <a href="http://www.quest.dcs.shef.ac.uk/quest_files/truecase-model.en">truecase model</a></li>
-</lu>
-
-<p><b>Spanish</b>
-<lu>
-<li>Spanish <a href="http://www.quest.dcs.shef.ac.uk/quest_files/training.es">source training corpus</a></li>
-<li>Spanish <a href="http://www.quest.dcs.shef.ac.uk/quest_files/lm.europarl-interpolated-nc.es">language model</a></li>
-<li>Spanish <a href="http://www.quest.dcs.shef.ac.uk/quest_files/pos_lm.es">language model of POS tags</a></li>
-<li>Spanish <a href="http://www.quest.dcs.shef.ac.uk/quest_files/ngram-counts.europarl-nc.es">n-gram counts</a></li>
-<li>Spanish <a href="http://www.quest.dcs.shef.ac.uk/quest_files/truecase-model.es">truecase model</a></li>
-</lu>
-
-<p><b>German</b>
-<lu>
-<li>German <a href="http://www.quest.dcs.shef.ac.uk/quest_files/source_corpus.de">source training corpus</a></li>
-<li>German <a href="http://www.quest.dcs.shef.ac.uk/quest_files/news.3gram.de.lm">language model</a></li>
-<li>German <a href="http://www.quest.dcs.shef.ac.uk/quest_files/corpus.de.pos.lm">language model of POS tags</a></li>
-<li>German <a href="http://www.quest.dcs.shef.ac.uk/quest_files/news.3gram.de.counts.proc">n-gram counts</a></li>
-<li>German <a href="http://www.quest.dcs.shef.ac.uk/quest_files/truecase-model.de">truecase model</a></li>
-</lu>
-
-
-<p><b>Giza tables</b>
-<lu>
-<li>English-Spanish <a href="http://www.quest.dcs.shef.ac.uk/quest_files/lex.e2s">Lexical translation table src-tgt</a></li>
-<li>English-German <a href="http://www.quest.dcs.shef.ac.uk/quest_files/lex.de-en">Lexical translation table src-tgt</a></li>
-<li>Spanish-English <a href="http://www.quest.dcs.shef.ac.uk/quest_files/lex.s2e">Lexical translation table src-tgt</a></li>
-<li>German-English <a href="http://www.quest.dcs.shef.ac.uk/quest_files/lex.de-en">Lexical translation table src-tgt</a></li>
-</lu>
-
--->
 
 <p><br></p><hr>
 
@@ -461,12 +415,10 @@ Specia <a href="mailto:lspecia@gmail.com" target="_blank">lspecia@gmail.com</a>.
 </p>
 
 <p align="right">
-Supported by the European Commission under the
-<a href="http://www.qt21.eu/"><img src="figures/qt21.png" height="40" width="100" border="0" align="right"></a> and <a href="http://cracker-project.eu/"><img src="figures/cracker-logo-no-tag-large.png" height="40" width="100" border="0" align="right"></a>
-<br>projects </p><p>
-&nbsp;
-
-
-
+Supported by the European Commission under the projects 
+<br>
+<a href="http://www.qt21.eu/"><img src="figures/qt21.png" height="40" width="100" border="0" align="right"></a>
+<a href="http://cracker-project.eu/"><img src="figures/cracker-logo-no-tag-large.png" height="40" width="100" border="0" align="right"></a>
+</p>
 
 </p></li></body></html>
