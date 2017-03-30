@@ -200,7 +200,6 @@ All submissions for Task 2 will automatically be evaluated analogously to the se
 
 For this task, given a 'phrase' (segmentation as given by the SMT 
 decoder), participants are required to label it as 'OK' or 'BAD'. Errors
- 
 made by MT engines are interdependent and one incorrectly chosen word 
 can cause more errors, especially in its local context. Phrases as 
 produced by SMT decoders can be seen as a representation of this local 
@@ -221,7 +220,6 @@ Download:
 <ul> 
 <li><b>English-German</b> <a href="https://lindat.mff.cuni.cz/repository/xmlui/handle/11372/LRT-1974">training and development</a> data and baseline features.</li> 
 <li><b>German-English</b> <a href="https://lindat.mff.cuni.cz/repository/xmlui/handle/11372/LRT-1974">training and development</a> data and baseline features.</li> 
-
 </ul>
 
 <p>The baseline phrase-level system is analogous to last year's system: it uses a set of <a href="http://www.quest.dcs.shef.ac.uk/wmt17_files_qe/task3_en-de_baseline.feature.list">baseline features</a> (based on black-box sentence-level features) extracted with the <a href="https://github.com/qe-team/marmot">Marmot</a> tool and is trained with the <a href="http://www.chokkan.org/software/crfsuite/">CRFSuite</a> tool.</p>
@@ -230,6 +228,24 @@ Download:
 </p>
 
 <p>Submissions will be <i><font color="green">evaluated</font></i> in terms of the multiplication of <b>phrase-level</b> F1-OK and F1-BAD. </p>
+
+<!---- TASK 3B -->
+
+</p><h3><font color="blue">Task 3b: Phrase-level QE with human annotation</font></h3>
+
+This task uses a subset of the data in Task 3 (German-English only) where each phrase has been annotated (as a phrase) by humans with three labels: 'OK', 'BAD' (as before) and 'BAD_word_order', which is a specific type of error where the phrase is in an incorrect position in the sentence. 
+
+<p>The <i><font color="green">training</font></i> and <i><font color="green">development</font></i> data follow the same structure as for Task 3, but it is smaller (124 and 3,769, respectively).
+Download:
+<ul> 
+<li><b>German-English</b> <a href="https://lindat.mff.cuni.cz/repository/xmlui/handle/11372/LRT-1974">training and development</a> data and baseline features.</li> 
+</ul>
+
+<p>The baseline phrase-level system and evaluation procedures are the same as for Task 3. 
+
+<p>As <i><font color="green">test data</font></i>, we will provide <b>306</b> new sentence translations, produced and annotated in the same way.  
+</p>
+
 
 <hr>
 
@@ -446,8 +462,8 @@ Specia <a href="mailto:lspecia@gmail.com" target="_blank">lspecia@gmail.com</a>.
 
 <p align="right">
 Supported by the European Commission under the
-<a href="http://www.qt21.eu/"><img src="Translation%20Task%20-%202017%20Second%20Conference%20on%20Machine%20Translation%20%28WMT17%29_files/qt21.png" height="40" width="100" border="0" align="right"></a>
-<br>projects (grant number 645452) </p><p>
+<a href="http://www.qt21.eu/"><img src="figures/qt21.png" height="40" width="100" border="0" align="right"></a> and <a href="http://cracker-project.eu/"><img src="figures/cracker-logo-no-tag-large.png height="40" width="100" border="0" align="right"></a>
+<br>projects </p><p>
 &nbsp;
 
 
