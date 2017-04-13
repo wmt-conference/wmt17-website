@@ -42,7 +42,7 @@ has been previously under-explored.</p>
     <table>
       <tr><td>Release of training data </td><td>February 8, 2017</td></tr>
       <tr><td>Release of test data </td><td>April 10 2017</td></tr>
-      <tr><td>Results submission deadline  </td><td>May 6 2017</td></tr>
+      <tr><td>Results submission deadline  </td><td>May 9 2017</td></tr>
       <tr><td>Paper submission deadline</td><td>June 2 2017</td></tr>
       <tr><td>Notification of acceptance</td><td>June 30 2017</td></tr>
       <tr><td>Camera-ready deadline</td><td>July 14 2017</td></tr>
@@ -126,14 +126,25 @@ target language data.</p>
 
 We provide training and test datasets for both variants of the task and also allow participants to use external data and resources (constrained vs unconstrained submissions). The data to be used for both tasks is an extended version of the <a href="http://shannon.cs.illinois.edu/DenotationGraph/">Flickr30K</a> dataset. The original dataset contains 31,783 images from Flickr on various topics and five crowdsourced English descriptions per image, totalling 158,915 English descriptions.
 
-<p>Task 1: <a href="http://www.quest.dcs.shef.ac.uk/wmt17_files_mmt/	mmt_task1_training.tar.gz">Training</a>, 
+<p>Task 1: <a href="http://www.quest.dcs.shef.ac.uk/wmt17_files_mmt/mmt_task1_training.tar.gz">Training</a>, 
 <a href="http://www.quest.dcs.shef.ac.uk/wmt17_files_mmt/mmt_task1_validation.tar.gz">Validation</a>, and 
 <a href="http://www.quest.dcs.shef.ac.uk/wmt17_files_mmt/mmt_task1_test2016.tar.gz">2016 Test</a> sentences, and 
-the <a href=" http://staff.fnwi.uva.nl/d.elliott/wmt16/splits.zip">splits</a>.
+the <a href=" http://staff.fnwi.uva.nl/d.elliott/wmt16/splits.zip">splits</a>. 
+
+<p><font color="red"><b>TEST SET: </b></font>We release two 2017 test sets for Task 1: </p>
+<ul>
+<li>An <i>in-domain</i> (Flickr) test set with 1,000 images. Download the <a href="http://www.quest.dcs.shef.ac.uk/wmt17_files_mmt/source_flickr.task1">source segments</a>, the <a href="http://www.quest.dcs.shef.ac.uk/wmt17_files_mmt/images_flickr.task1.tar.gz">images</a> -- which were used in this <a href="http://www.quest.dcs.shef.ac.uk/wmt17_files_mmt/image_ids_flickr.task1">order</a> -- and the <a href="http://www-lium.univ-lemans.fr/sites/default/files/NMTPY/test2017/task1_ResNet50_res4fx_test2017.fp16.npy.gz">res4_relu convolutional features</a> [260MB] and <a href="http://www-lium.univ-lemans.fr/sites/default/files/NMTPY/test2017/task1_ResNet50_pool5_test2017.mat.zip">averaged pooled features</a> [8.2MB]. 
+ </li>
+<li>An <i>out-of-domain</i> (MSCOCO) test set with 461 images whose captions were selected to contain ambiguous verbs. Download the <a href="http://www.quest.dcs.shef.ac.uk/wmt17_files_mmt/source_mscoco.task1">source segments</a>, the <a href="http://www.quest.dcs.shef.ac.uk/wmt17_files_mmt/images_mscoco.task1.tar.gz">images</a> -- which were used in this <a href="http://www.quest.dcs.shef.ac.uk/wmt17_files_mmt/image_ids_mscoco.task1">order</a> --  and the <a href="http://www-lium.univ-lemans.fr/sites/default/files/NMTPY/test2017/msCOCO_ResNet50_res4fx_ambiguous_dataset.fp16.npy.gz">res4_relu convolutional features<a/> [110MB] and <a href="http://www-lium.univ-lemans.fr/sites/default/files/NMTPY/test2017/msCOCO_ResNet50_pool5_ambiguous_dataset.mat.zip">averaged pooled features</a> [3.9MB]. </li>
+</ul>
+
+<p>The primary evaluation dataset will be the in-domain (Flickr) test set.
+
 
 <p>Task 2: <a href="http://staff.fnwi.uva.nl/d.elliott/wmt16/mmt_task2.zip">Training and Validation</a>, and <a href="https://staff.fnwi.uva.nl/d.elliott/wmt16/mmt16_task2_test.tgz">2016 Test</a> sentences, and the <a href=" http://staff.fnwi.uva.nl/d.elliott/wmt16/splits.zip">splits</a>.
 
-<p><font color="red">New:</font> we will release a new test dataset of 1,000 images for each task on April 10th 2017. Note that submissions will only be evaluated against the Test 2017 data.</p>
+
+<p><font color="red"><b>TEST SET: </b></font>We release the following 2017 test set for Task 2: an in-domain test set with 1,071 images (note that these are different from the images in Task 1). Download the <a href="http://www.quest.dcs.shef.ac.uk/wmt17_files_mmt/images_flickr.task2.tar.gz">images</a> -- which were used in this <a href="http://www.quest.dcs.shef.ac.uk/wmt17_files_mmt/image_ids_flickr.task2">order</a> --  and the <a href="http://www-lium.univ-lemans.fr/sites/default/files/NMTPY/test2017/task2_ResNet50_res4fx_test2017.fp16.npy.gz">res4_relu convolutional features </a> [234MB] and <a href="http://www-lium.univ-lemans.fr/sites/default/files/NMTPY/test2017/task2_ResNet50_pool5_test2017.mat.zip">averaged pooled features</a> [8.8MB].</p>
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -142,7 +153,7 @@ the <a href=" http://staff.fnwi.uva.nl/d.elliott/wmt16/splits.zip">splits</a>.
 .tg .tg-baqh{text-align:center;vertical-align:top}
 .tg .tg-yw4l{vertical-align:top}
 </style>
-<p>
+<p><b>Summary of the datasets:</b> 
 <div>
 <table class="tg" style="margin-left: auto; margin-right: auto; display:block;">
   <tr>
@@ -150,12 +161,15 @@ the <a href=" http://staff.fnwi.uva.nl/d.elliott/wmt16/splits.zip">splits</a>.
     <th class="tg-baqh" colspan="2">Training</th>
     <th class="tg-baqh" colspan="2">Validation</th>
     <th class="tg-baqh" colspan="2">Test 2016</th>
-    <th class="tg-baqh" colspan="2">Test 2017</th>
+    <th class="tg-baqh" colspan="2">Test 2017 - Flickr</th>
+    <th class="tg-baqh" colspan="2">Test 2017 - MSCOCO</th>
   </tr>
   <tr>
     <td class="tg-031e"></td>
     <td class="tg-031e">Images</td>
     <td class="tg-031e">Sentences</td>
+    <td class="tg-031e">Images</td>
+    <td class="tg-yw4l">Sentences</td>
     <td class="tg-031e">Images</td>
     <td class="tg-yw4l">Sentences</td>
     <td class="tg-031e">Images</td>
@@ -171,25 +185,31 @@ the <a href=" http://staff.fnwi.uva.nl/d.elliott/wmt16/splits.zip">splits</a>.
     <td class="tg-yw4l">1,014</td>
     <td class="tg-031e" rowspan="2">1,000</td>
     <td class="tg-yw4l">1,000</td>
-    <td class="tg-031e" rowspan="2">1,000</td>
+    <td class="tg-031e" rowspan="1">1,000</td>
     <td class="tg-yw4l">1,000</td>
+    <td class="tg-yw4l">461</td>
+    <td class="tg-yw4l">461</td>
   </tr>
   <tr>
     <td class="tg-031e">Task 2</td>
     <td class="tg-031e">145,000</td>
     <td class="tg-yw4l">5,070</td>
     <td class="tg-yw4l">5,000</td>
-    <td class="tg-yw4l">5,000</td>
-  </tr>
+    <td class="tg-yw4l">1,071</td>
+    <td class="tg-yw4l">5,355</td>
+    <td class="tg-yw4l">-</td>  
+    <td class="tg-yw4l">-</td>  
+</tr>
 </table>
 </div>
 </p>
 
 <br>
-<p>We also provide <b>image features</b>, although their use is not mandatory. We release ResNet features in two versions: 
+<p>We also provide <b>image features</b>, although their use is not mandatory. <font color="red">WARNING: the features previously provided had an issue - columns and rows were inverted.</font> Please download the corrected version of the ResNet features in two versions: 
 <ul>
-<li> res4_relu convolutional features: <a href="http://www-lium.univ-lemans.fr/sites/default/files/NMTPY/flickr30k_ResNets50_blck4_train.fp16.npy.xz">training [6.0GB]<a/>,  	
- <a href="http://www-lium.univ-lemans.fr/sites/default/files/NMTPY/flickr30k_ResNets50_blck4_val.fp16.npy.xz">validation [214MB]</a> and  <a href="http://www-lium.univ-lemans.fr/sites/default/files/NMTPY/flickr30k_ResNets50_blck4_test.fp16.npy.xz">test2016 [211MB]</a>.</li>
+<li> res4_relu convolutional features: <a href="http://www-lium.univ-lemans.fr/sites/default/files/NMTPY/transpose-fix/flickr30k_ResNets50_blck4_train.fp16.npy.gz">training [6.8GB]<a/>,  
+ <a href="http://www-lium.univ-lemans.fr/sites/default/files/NMTPY/transpose-fix/flickr30k_ResNets50_blck4_val.fp16.npy.gz ">validation [242MB]</a> and  <a href="http://www-lium.univ-lemans.fr/sites/default/files/NMTPY/transpose-fix/flickr30k_ResNets50_blck4_test.fp16.npy.gz">test2016 [238MB]</a>.</li>
+
 <li> averaged pooled features:  <a href="http://www-lium.univ-lemans.fr/sites/default/files/NMTPY/flickr30k_ResNet50_pool5_train.zip"> training [241MB]</a>, <a href="http://www-lium.univ-lemans.fr/sites/default/files/NMTPY/flickr30k_ResNet50_pool5_val.zip"> validation [8.5MB]</a> and <a href="http://www-lium.univ-lemans.fr/sites/default/files/NMTPY/flickr30k_ResNet50_pool5_test.zip">test2016 [8.3MB]</a>.</li>
 </ul>
 
