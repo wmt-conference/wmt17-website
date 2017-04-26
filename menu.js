@@ -6,7 +6,7 @@ TRANSLATION TASKS: \
   [<A HREF="/wmt17/biomedical-translation-task.html">BIOMEDICAL</A>] \
   [<A HREF="/wmt17/multimodal-task.html">MULTIMODAL</A>] \
 <br> EVALUATION TASKS: \
-  [<A HREF="/wmt17/index.html">METRICS</A>] \
+  [<A HREF="/wmt17/metrics-task.html">METRICS</A>] \
   [<A HREF="/wmt17/quality-estimation-task.html">QUALITY ESTIMATION</A>]   \
 <br> OTHER TASKS: \
   [<A HREF="/wmt17/ape-task.html">AUTOMATIC POST-EDITING</A>] \
