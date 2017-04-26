@@ -73,8 +73,12 @@ modify the training data and the training parts of the neural MT system in any p
 <H3>Submission</H3>
 
 <p>
-  The exact submission procedure will be described here.
-</p>
+There are two possible configurations (“tracks” of the task) to choose from,
+depending on the size of GPU memory you can use: 4GB (the common size of
+GeForce GTX 980) and 8GB (the common size of GeForce GTX 1080).
+There are two versions of the main configuration file: <code>config_{4,8}GB.ini</code>.
+The submissions will be evaluated with Neural Monkey 0.1.0 (included in the
+package above).</p>
 
 <p>
   In essense, we will need your <code>variables.data</code> file that gets created in the
@@ -83,7 +87,33 @@ there, so you will probably want to send us the one linked under the name
   <code>variables.data.best</code>.
 </p>
 
-<p>It may be also interesting to compare the learning curves of your training runs, so if you can, please provide us also with the file <code>events.out.tfevents.*</code> created by TensorFlow during training.
+<p>It may be also interesting to compare the learning curves of your training
+runs, so if you can, please provide us also with the file
+<code>events.out.tfevents.*</code> created by TensorFlow during training.</p>
+
+<p> To make a submission, upload your <code>variable.data</code> file (and
+optionaly <code>events.out.tfevents.*</code> as well) somewhere, where it can
+be downloaded from. Send the location of your variable files in an e-mail with
+subject “NMT Training Task Submission” to both <code>bojar@ufal.mff.cuni.cz</code> and <code>musil@ufal.mff.cuni.cz</code>.
+The e-mail should also contain the name under which the submission will be
+published (eg. “Charles University, 4G Glove Embeddings”). If you want, you can
+also include any information you find relevant for meta-analysis of the task.
+</p>
+
+<p>To sum up, your e-mail should contain:
+<ul>
+	<li>your submission name (required)
+	<li>is it primary or secondary submission (required)
+	<li>variables.data.best (required)
+	<li>events.out.tfevents.* (nice to have)
+</ul>
+
+<p>Submission deadline is May 1, 2017, before Training Task test sets are released.</p>
+
+<p>Number of submissions is not limited, but participants are required to contribute to the evalution process (see below). If you want to submit more models without having to work on the evaluation, you can submit some of your models as secondary (indicate that in your e-mail). Secondary submissions will only be evaluated automaticaly, not manualy.</p>
+
+<p>Preliminary qualitative result will be published on this site, few days after the
+submission deadline. Participants will be informed via e-mail.</p>
 
 <H3>Other Requirements</H3>
 
