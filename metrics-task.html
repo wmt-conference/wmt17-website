@@ -395,7 +395,8 @@ Each field should be delimited by a single tab character.
 </p>
 <p>Timestamps should be in Epoch seconds, ie. using the "date +%s" command (Linux) or equivalent. We will use the two timestamps to work out the rough 
 total duration in seconds for your metric to produce scores for the system-level submissions. To avoid inconsistencies across submissions, we request
-timestamps at the very beginning (and end) of processing the raw data, i.e. <b>before all preprocessing</b> such as tokenization so that this is consistently
+timestamps at the very beginning (and end) of processing the raw data, i.e. <b>before all preprocessing</b> such as tokenization 
+	(for both MT output and reference translations) so that this is consistently
 included in durations for all metrics.</p>
 
 <H4>Output file format for segment-level rankings</H4>
