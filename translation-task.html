@@ -698,6 +698,10 @@
       required by the NIST BLEU scorer, and then upload it to the
       website <A HREF="http://matrix.statmt.org/">matrix.statmt.org</A>.
     </p>
+    <p>
+      For Chinese output, you should submit unsegmented text, since our primary measure is human evaluation. For automatic scoring (in the matrix) 
+      we use BLEU4 computed on characters, scoring with v1.3 of the NIST scorer only. A script to convert a Chinese SGM file to characters can be found <a href="tokenizeChinese.py">here</a>.
+    </p>
 
     <H4 id="sgml">SGML Format</H4>
 
