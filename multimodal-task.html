@@ -2,6 +2,37 @@
 <html>
   <HEAD>
     <title>Multimodal Translation Task - 2017 Second Conference on Machine Translation (WMT17)</title>
+<style type="text/css">
+div.results {
+  width: 70%;
+}
+
+table.results {
+  width: 70%;
+}
+
+tr.results {
+  vertical-align: top;
+}
+
+div.table {
+  text-align: center;
+}
+
+tr.data-header {
+  font-size: 16px;
+}
+
+td.data-position {
+  font-size: 12px;
+  text-align: right;
+  width: 10px;
+}
+
+table.google-visualization-table-table {
+	  font-size: 14px;
+}
+</style>
   </HEAD>
   <body>
 
@@ -10,6 +41,168 @@
       <p><h2>Shared Task: Multimodal Machine Translation</h2></p>
       <script src="menu.js"></script>
     </center>
+
+<script src="https://www.google.com/jsapi?.js"></script>
+<script type="text/javascript">
+
+function return_data() {
+	  // En-De Flickr 2017
+	  var data = google.visualization.arrayToDataTable([
+			      ['Submission Name', 'BLEU','Meteor', 'TER'],
+			         ['AFRL_OSU-MULTIMODAL',6.5,20.2,87.4],
+				 ['CUNI_NeuralMonkeyMultimodalMT_C',25.8,47.1,56.3],
+				 ['CUNI_NeuralMonkeyMultimodalMT_U',29.5,50.2,52.5],
+				 ['CUNI_NeuralMonkeyTextualMT_C',28.5,49.2,54.3],
+				 ['CUNI_NeuralMonkeyTextualMT_U',31.1,51.0,50.7],
+				 ['DCU-ADAPT_MultiMT_C',29.8,50.5,52.3],
+				 ['LIUMCVC_MNMT_C',33.4,54.0,48.5],
+				 ['LIUMCVC_NMT_C',33.2,53.8,48.2],
+				 ['NICT_NMTrerank_C',31.9,53.9,48.1],
+				 ['OSU_1NeuralTranslation_C',29.7,48.9,51.6],
+				 ['OSU_2NeuralTranslation_C',31.0,50.6,50.7],
+				 ['SHEF_ShefClassInitDec_C',25.0,44.5,53.8],
+				 ['SHEF_ShefClassProj_C',24.2,43.4,55.9],
+				 ['UvA-TiCC_IMAGINATION_C',30.2,51.2,50.8],
+				 ['UvA-TiCC_IMAGINATION_U',33.3,53.5,47.5],
+				   ]);
+
+	  // En-De COCO 2017
+	  var data2 = google.visualization.arrayToDataTable([
+			      ['Submission Name', 'BLEU','Meteor', 'TER'],
+			      ['CUNI_NeuralMonkeyMultimodalMT_C',22.4,42.7,60.1],
+			      ['CUNI_NeuralMonkeyMultimodalMT_U',25.7,45.6,55.7],
+			      ['CUNI_NeuralMonkeyTextualMT_C',23.2,43.8,59.8],
+			      ['CUNI_NeuralMonkeyTextualMT_U',26.6,46.0,54.8],
+			      ['DCU-ADAPT_MultiMT_C',26.4,46.8,54.5],
+			      ['LIUMCVC_MNMT_C',28.5,48.8,53.4],
+			      ['LIUMCVC_NMT_C',28.7,48.9,52.5],
+			      ['NICT_1_NMTrerank_C',28.1,48.5,52.9],
+			      ['OSU_1NeuralTranslation_C',27.4,46.5,52.3],
+			      ['OSU_2NeuralTranslation_C',26.1,45.7,55.9],
+			      ['SHEF_ShefClassInitDec_C',21.4,40.7,56.5],
+			      ['SHEF_ShefClassProj_C',21.0,40.0,57.8],
+			      ['UvA-TiCC_IMAGINATION_C',26.4,45.8,55.4],
+			      ['UvA-TiCC_IMAGINATION_U',28.0,48.1,52.4]
+				   ]);
+
+	  // En-Fr Flickr 2017
+	  var data3 = google.visualization.arrayToDataTable([
+			      ['Submission Name', 'BLEU','Meteor', 'TER'],
+			      ['CUNI_NeuralMonkeyMultimodalMT_C',49.9,67.2,34.3],
+			      ['CUNI_NeuralMonkeyTextualMT_C',50.3,67.0,33.6],
+			      ['DCU-ADAPT_MultiMT_C',54.1,70.1,30.0],
+			      ['LIUMCVC_MNMT_C',55.9,72.1,28.4],
+			      ['LIUMCVC_NMT_C',53.3,70.1,31.7],
+			      ['NICT_NMTrerank_C',55.3,72.0,28.4],
+			      ['OSU_1NeuralTranslation_C',51.0,67.2,33.6],
+			      ['OSU_2NeuralTranslation_C',51.9,68.3,32.7],
+			      ['SHEF_ShefClassInitDec_C',45.0,62.8,38.4],
+			      ['SHEF_ShefClassProj_C',43.6,61.5,40.5]
+				   ]);
+
+	  // En-Fr COCO 2017
+	  var data4 = google.visualization.arrayToDataTable([
+			      ['Submission Name', 'BLEU','Meteor', 'TER'],
+	  ['CUNI_NeuralMonkeyMultimodalMT_C',42.9,62.5,38.2],
+	  ['CUNI_NeuralMonkeyTexutalMT_C',43.0,62.5,38.2],
+	  ['DCU-ADAPT_MultiMT_C',44.5,64.1,35.2],
+	  ['LIUMCVC_MNMT_C',45.9,65.9,34.2],
+	  ['LIUMCVC_NMT_C',43.6,63.4,37.4],
+	  ['NICT_NMTrerank_C',45.1,65.6,34.7],
+	  ['OSU_1NeuralTranslation_C',41.2,61.6,37.8],
+	  ['OSU_2NeuralTranslation_C',44.1,63.8,36.7],
+	  ['SHEF_ShefClassInitDec_C',37.2,57.3,42.4],
+	  ['SHEF_ShefClassProj_C',36.8,57.0,44.5],
+				   ]);
+
+	  // En-De Task 2 Flickr 2017
+	  var data5 = google.visualization.arrayToDataTable([
+	  ['Submission Name', 'BLEU','Meteor', 'TER'],
+	  ['Baseline',9.1,23.4,91.4],
+	  ['CMU_NeuralEncoderDecoder_C',9.1,19.8,63.3],
+	  ['CUNI_NeuralMonkeyBilingual_C',2.3,17.6,112.6],
+	  ['CUNI_NeuralMonkeyCaptionAndMT_C',4.2,22.1,133.6],
+	  ['CUNI_NeuralMonkeyCaptionAndMT_U',6.5,20.6,91.7],
+				   ]);
+
+	  return [data, data2, data3, data4, data5]
+}
+
+
+function drawVisualization() {
+	  // Prepare the data
+	  data = return_data();
+	  data1 = data[0];
+	  data2 = data[1];
+	  data3 = data[2];
+	  data4 = data[3];
+	  data5 = data[4];
+      	  var cssClassNames = {
+		    'headerRow': 'data-header',
+		    'rowNumberCell': 'data-position'
+		  	    };
+
+	  //draw the Flick 2017 En-De data table
+	  var table = new google.visualization.Table(document.getElementById('rawDataTable'));
+ 	  var view = new google.visualization.DataView(data1);
+	  view.setColumns([0,1,2,3])
+	  table.draw(view, {
+		        showRowNumber: true,
+		        width: '50%',
+			height: '100%',
+			cssClassNames: cssClassNames,
+			});
+
+	  //draw the MS COCO 2017 En-De data table
+	  var table2 = new google.visualization.Table(document.getElementById('rawDataTable2'));
+ 	  var view2 = new google.visualization.DataView(data2);
+	  view2.setColumns([0,1,2,3])
+	  table2.draw(view2, {
+		        showRowNumber: true,
+		        width: '50%',
+			height: '100%',
+			cssClassNames: cssClassNames,
+			});
+
+	  //draw the Flickr 2017 En-Fr data table
+	  var table3 = new google.visualization.Table(document.getElementById('rawDataTable3'));
+ 	  var view3 = new google.visualization.DataView(data3);
+	  view3.setColumns([0,1,2,3])
+	  table3.draw(view3, {
+		        showRowNumber: true,
+		        width: '50%',
+			height: '80%',
+			cssClassNames: cssClassNames,
+			});
+
+	  //draw the COCO 2017 En-Fr data table
+	  var table4 = new google.visualization.Table(document.getElementById('rawDataTable4'));
+ 	  var view4 = new google.visualization.DataView(data4);
+	  view4.setColumns([0,1,2,3])
+	  table4.draw(view4, {
+		        showRowNumber: true,
+		        width: '50%',
+			height: '80%',
+			cssClassNames: cssClassNames,
+			});
+
+	  //draw the Task 2 Flickr 2017 En-De data table
+	  var table5 = new google.visualization.Table(document.getElementById('rawDataTable5'));
+ 	  var view5 = new google.visualization.DataView(data5);
+	  view5.setColumns([0,1,2,3])
+	  table5.draw(view5, {
+		        showRowNumber: true,
+		        width: '50%',
+			height: '40%',
+			cssClassNames: cssClassNames,
+			});
+}
+
+google.load('visualization', '1', {
+	  packages: ['corechart', 'controls', 'table'],
+	    callback: drawVisualization
+});
+</script>
 
 <p>This is shared task is aimed at the generation of image descriptions in a target language. The task can be addressed from two different perspectives:
 <ul>
@@ -76,6 +269,16 @@ has been previously under-explored.</p>
 <p>The <i><font color="green">baselines</font></i> for this task will be neural MT systems trained using only the textual training data provided and the <a href="https://github.com/rsennrich/nematus">Nematus</a> tool (details later).
 </p>
 
+<h3 id="task1_results" style="text-align: center;"><font color="blue">En-De Flickr 2017 Results:</font></h3>
+<p style="text-align: center; margin-top: -16px;">(click header to sort)</p>
+<div id="rawDataTable" class="table"></div>
+<h3 id="task1_results" style="text-align: center;"><font color="blue">En-De COCO 2017 Results:</font></h3>
+<div id="rawDataTable2" class="table"></div>
+<h3 id="task1_results" style="text-align: center;"><font color="blue">En-Fr Flickr 2017 Results:</font></h3>
+<div id="rawDataTable3" class="table"></div>
+<h3 id="task1_results" style="text-align: center;"><font color="blue">En-Fr COCO 2017 Results:</font></h3>
+<div id="rawDataTable4" class="table"></div>
+
 <hr>
 
 <!-- DESCRIPTION GENERATION-->
@@ -119,6 +322,9 @@ be the image description model by <a
                 et al. (2015)</a> trained over only the German
 target language data.</p>
 </p>
+
+<h3 id="task1_results" style="text-align: center;"><font color="blue">En-De Flickr 2017 Results:</font></h3>
+<div id="rawDataTable5" class="table"></div>
 
 <hr>
 
