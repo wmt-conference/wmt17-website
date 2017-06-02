@@ -16,7 +16,7 @@
 <h3>Metrics Task Important Dates</h3>
 
 <table>
-<tr><td>System outputs ready to download</td><td>May 14th, 2017</td></tr>
+<tr><td>System outputs ready to download</td><td><strike>May 14th, 2017</strike> June 3rd, 2017</td></tr>
 <tr><td>Start of manual evaluation period</td><td>May 15th, 2017</td></tr>
 <tr><td>End of manual evaluation (provisional)</td><td>June 4th, 2017</td></tr>
 	<tr><td>Paper submission deadline</td><td><strike>June 9th, 2017</strike> extended to June 15th, 2017</td></tr>
@@ -113,8 +113,16 @@ Metrics Task goes crazy this year. The good news is that if you do not aim at bl
 <H3>Task Description</H3>
 
 <p>We will provide you with the output of machine translation systems and reference translations for language pairs involving English and the following languages
-in the news domain:
-Chinese, Czech, Finnish, German, Latvian, Russian, Turkish.</p>
+
+<ul>
+<li>
+in the news domain: Chinese, Czech, Finnish, German, Latvian, Russian, Turkish (newstest2017)
+</li>
+<li>
+in a mix of news and medical domains: Czech, German, Polish and Romanian (himltest17). <b>WARNING: This testset includes sentences from WMT16 newstest.</b> If your metric is trained and you included WMT16 newstest in your training data, please let us know.
+</li>
+</ul>
+</p>
 
 <!--<p>
 French, 
@@ -197,9 +205,15 @@ you are free to assign scores only where you can.</p>
   </tr>
   <tr num='6'>
     <td num='1'>HUMEseg  </td>
-    <td num='2'>(consumer) medical, from <a href="http://www.himl.eu/">HimL</a>   </td>
+    <td num='2'>mix of (consumer) medical from <a href="http://www.himl.eu/">HimL</a> and news (<b>WARNING:</b> <a href="http://www.statmt.org/wmt16/translation-task.html">WMT16 news task</a>) </td>
     <td num='3'>segment-level</td>
     <td num='4'>correctness of translation of all semantic nodes</td>
+  </tr>
+  <tr num='6'>
+    <td num='1'>HUMEsys  </td>
+    <td num='2'>mix of (consumer) medical from <a href="http://www.himl.eu/">HimL</a> and news (<b>WARNING:</b> <a href="http://www.statmt.org/wmt16/translation-task.html">WMT16 news task</a>) </td>
+    <td num='3'>system-level</td>
+    <td num='4'>aggregate correctness of translation of all semantic nodes</td>
   </tr>
 </table>
 </p>
@@ -222,19 +236,35 @@ describing your metric that we can cite in the overview paper.</p>
 
 <h4>Test Sets (Evaluation Data)</h4>
  
+<!-- 
 <p>Once we receive the system outputs from the translation task we will post
 all of the system outputs for you to score with your metric.  The translations
 will be distributed as plain text files with one translation per line.  </p>
+     -->
 
-<!-- 
 
-<p>WMT17 metrics task test sets are ready. Since we are trying to establish better confidence intervals for system-level evaluation, we have more than 10k system outputs per language pair and test set, so the packages are quite big.</p>
+<p>WMT17 metrics task test sets are ready. Since we are trying to establish better confidence intervals for system-level evaluation, we have more than 10k system outputs per language pair and test set, so the package is quite big.</p>
 
-<p>See the <a href="https://docs.google.com/spreadsheets/d/1adIMumREPd2xL-phZDCJFgFc3cX_crZTuWvyghDq47I/edit#gid=0">Google sheet</a> if you want to take part in only some of the languages or tracks and do not want to download more than needed.</p>
+<p>We have changed the format of hybrid systems inputs, see the file <code>wmt17-metrics-task/hybrids/hybrid-instructions</code> in the package for description. We plan to provide a wrapper for TXT format to run your metric on the hybrid systems.</p>
+
+<p>If possible, please submit results for all systems, including the hybrids. If you <em>know</em> you won't have the resources to run the hybrids, you can use the smaller package:</p>
+
+<ul>
+<li>
+<a href="http://ufallab.ms.mff.cuni.cz/~bojar/wmt17-metrics-task.tgz">wmt17-metrics-task.tgz</a> (248MB)
+</li>
+<li>
+<a href="http://ufallab.ms.mff.cuni.cz/~bojar/wmt17-metrics-task-no-hybrids.tgz">wmt17-metrics-task-no-hybrids.tgz</a> (46MB; please do not use unless inevitable)
+</li>
+</ul>
 
 <p>Note that the actual sets of sentences differ across test sets (that's natural) but they also <em>differ across language pairs</em>. So always use the triple {test set name, source language, target language} to identify the test set source, reference and a system output.</p>
 
-<p>There are <em>two references</em> for English-to-Finnish newstest: <code>newstest2016-enfi-ref.fi</code> and <code>newstest2016-enfi-ref.fi<b>B</b></code>. You are free to use both; if you use only one, please pick former variant.</p>
+<p>There are <em>two references</em> for English-to-Finnish newstest: <code>newstest2017-enfi-ref.fi</code> and <code>newstest<b>B</b>2017-enfi-ref.fi</code>. You are free to use both; if you use only one, please pick former variant.</p>
+
+<!-- 
+<p>See the <a href="https://docs.google.com/spreadsheets/d/1adIMumREPd2xL-phZDCJFgFc3cX_crZTuWvyghDq47I/edit#gid=0">Google sheet</a> if you want to take part in only some of the languages or tracks and do not want to download more than needed.</p>
+
 
 <h5>Packages per Language Pair</h5>
 
