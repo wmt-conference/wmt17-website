@@ -330,7 +330,7 @@ will be distributed as plain text files with one translation per line.  </p>
 </p>
 
 <p>For <b>segment-level</b>, there are two past development sets available covering 
-<li><a href="http://www.computing.dcu.ie/~ygraham/DAseg-wmt-newstest2016.tar.gz">DAseg-wmt-newstest2016.tar.gz</a>: 7 language pairs (sampled from newstest2016, tr-en fi-en cs-en ro-en ru-en en-ru de-en; always 560 sentence pairs) </li>. 
+<li><a href="http://www.computing.dcu.ie/~ygraham/DAseg-wmt-newstest2016.tar.gz">DAseg-wmt-newstest2016.tar.gz</a>: 7 language pairs (sampled from newstest2016, tr-en fi-en cs-en ro-en ru-en en-ru de-en; always 560 sentence pairs) </li> 
 <li><a href="http://www.computing.dcu.ie/~ygraham/DAseg-wmt-newstest2015.tar.gz">DAseg-wmt-newstest2015.tar.gz</a>: 5 language pairs (sampled from newstest2015, en-ru de-en ru-en fi-en cs-en; always 500 sentence pairs) </li> 
 </p>
 <p>Each dataset contains:
@@ -357,7 +357,14 @@ will be distributed as plain text files with one translation per line.  </p>
 <h5>HUMEseg</h5>
 
 <p>For HUMEseg training data see last year's metrics task results 
-<li>WMT16: <a href="http://www.statmt.org/wmt16/results.html">http://www.statmt.org/wmt16/results.html</a></li>  .</p>
+<li>WMT16: <a href="http://www.statmt.org/wmt16/results.html">http://www.statmt.org/wmt16/results.html</a>, the package called "Metrics Task data and results" with these files:
+<ul>
+<li>800 segments of source English: <code>wmt16-metrics-results/seg-level-results/hume-files/inputs/HUMEseg/source</code></li>
+<li>800 segments of candidate and reference translations (one system per language): <code>wmt16-metrics-results/seg-level-results/hume-files/inputs/HUMEseg/{cs,de,pl,ro}.{hyp,ref}</code></li>
+<li>330-349 segments with manual score: <code>wmt16-metrics-results/seg-level-results/hume-files/hume-human/hume.himl.en-{cs,de,pl,ro}.csv</code>; each of each of the file shows segment index (indexed hopefully from 1) and the HUME score for that segment</li>
+</ul>
+</li>
+</p>
 
 <p>For HUMEseg, golden truth segment-level scores are constructed from manual annotations indicating if each node in the semantic tree of the source sentence was translated correctly. The underlying semantic representation is <a href="http://homepages.inf.ed.ac.uk/oabend/ucca.html">UCCA</a>.</p>
 
