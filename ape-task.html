@@ -13,7 +13,7 @@
 
 <font size="5" color="red"><b>NEWS!!!</b></font>
 <br>
-<font size="5" color="red">The paper submission deadline has been extended to 9 June, 2017</font>
+<font size="5" color="red">Official results of the APE shared task are available (scroll down).</font>
 
 
 <H3>OVERVIEW</H3>
@@ -108,6 +108,145 @@ Training, development and test data consist in English-German and German-English
 <p>The submitted runs will be ranked based on the average HTER calculated on the test set by using the <a href="http://www.cs.umd.edu/~snover/tercom/" target="_blank">tercom</a> software.</p>
 <p>The HTER calculated between the raw MT output and human post-editions in the test set will be used as baseline (<i>i.e.</i> the baseline is a system that leaves all the test instances unmodified).</p>
 <p>The evaluation script can be downloaded <a href="https://www.dropbox.com/s/5jw5maariwey080/Evaluation_Script.tar.gz?dl=0" target="_blank">here</a> </p>
+
+<H3><font color="green">Results for EN-DE on 2017 test set</font></H3>
+<table border="1" cellspacing="0" cellpadding="5">
+<tr>
+  <th>Systems</th>
+  <th>TER</th>
+  <th>BLEU</th>
+</tr>
+<tr>
+  <td>FBK_EnsembleRerank_Primary</td>
+  <td>19.6<sup>^</sup></td>
+  <td>70.07<sup>^</sup></td>
+</tr>
+<tr>
+  <td>AMU_multi-transducer-composed_PRIMARY</td>
+  <td>19.77<sup>^</sup></td>
+  <td>69.5<sup>^</sup></td>
+</tr>
+<tr>
+  <td>AMU.multi-transducer.SECONDARY</td>
+  <td>19.83<sup>^</sup></td>
+  <td>69.38<sup>^</sup></td>
+</tr>
+<tr>
+  <td>DCU_FRANKENAPE-TUNED_PRIMARY</td>
+  <td>20.11<sup>^</sup></td>
+  <td>69.19<sup>^</sup></td>
+</tr>
+<tr>
+  <td>DCU_FRANKENAPE-TUNED_CONTRASTIVE</td>
+  <td>20.25<sup>^</sup></td>
+  <td>69.33<sup>^</sup></td>
+</tr>
+<tr>
+  <td>FBK_SingleModelRerank_Contrastive</td>
+  <td>20.3<sup>^</sup></td>
+  <td>69.11<sup>^</sup></td>
+</tr>
+<tr>
+  <td>FBK_USAARRerankStatFeat_Contrastive</td>
+  <td>21.55<sup>^</sup></td>
+  <td>67.28<sup>^</sup></td>
+</tr>
+<tr>
+  <td>USAAR_NMT-OSM_PRIMARY</td>
+  <td>23.05<sup>^</sup></td>
+  <td>65.01<sup>^</sup></td>
+</tr>
+<tr>
+  <td>LIG_chained_syn_PRIMARY</td>
+  <td>23.22<sup>^</sup></td>
+  <td>65.12<sup>^</sup></td>
+</tr>
+<tr>
+  <td>JXNU_JXNU_EDITFreq_PRIMARY</td>
+  <td>23.31<sup>^</sup></td>
+  <td>65.66<sup>^</sup></td>
+</tr>
+<tr>
+  <td>LIG_forced_CONTRASTIVE</td>
+  <td>23.51<sup>^</sup></td>
+  <td>64.52<sup>^</sup></td>
+</tr>
+<tr>
+  <td>LIG_chained_CONTRASTIVE</td>
+  <td>23.66<sup>^</sup></td>
+  <td>64.46<sup>^</sup></td>
+</tr>
+<tr>
+  <td>CUNI_char_conv_rnn_beam_PRIMARY</td>
+  <td>24.03</td>
+  <td>64.28<sup>^</sup></td>
+</tr>
+<tr>
+  <td>USAAR_OSM_CONTRASTIVE</td>
+  <td>24.17<sup>^</sup></td>
+  <td>63.55<sup>^</sup></td>
+</tr>
+<tr bgcolor="#DCDCDC">
+  <td>Official Baseline (MT)</td>
+  <td>24.48</td>
+  <td>62.49</td>
+</tr>
+<tr bgcolor="#DCDCDC">
+  <td>Baseline_2 (Statistical phrase-based APE)</td>
+  <td>24.69<sup>^</sup></td>
+  <td>62.97<sup>^</sup></td>
+</tr>
+<tr>
+  <td>CUNI_char_conv_rnn_greedy_CONTRASTIVE</td>
+  <td>25.94<sup>^</sup></td>
+  <td>61.65<sup>^</sup></td>
+</tr>
+</table>
+<sup>^</sup>: indicates the score is statistically significant wrt. official baseline (MT)
+
+<H3><font color="green">Results for DE-EN on 2017 test set</font></H3>
+<table border="1" cellspacing="0" cellpadding="5">
+<tr>
+  <th>Systems</th>
+  <th>TER</th>
+  <th>BLEU</th>
+</tr>
+<tr>
+  <td>FBK_EnsembleRerank_Primary</td>
+  <td>15.29<sup>^</sup></td>
+  <td>79.82<sup>^</sup></td>
+</tr>
+<tr>
+  <td>FBK_SingleModelRerank_Contrastive</td>
+  <td>15.31<sup>^</sup></td>
+  <td>79.64</td>
+</tr>
+<tr>
+  <td>LIG_chained_syn_PRIMARY</td>
+  <td>15.53</td>
+  <td>79.49</td>
+</tr>
+<tr bgcolor="#DCDCDC">
+  <td>Official Baseline (MT)</td>
+  <td>15.55</td>
+  <td>79.54</td>
+</tr>
+<tr>
+  <td>LIG_forced_CONTRASTIVE</td>
+  <td>15.62</td>
+  <td>79.48</td>
+</tr>
+<tr>
+  <td>LIG_chained_CONTRASTIVE</td>
+  <td>15.68<sup>^</sup></td>
+  <td>79.35<sup>^</sup></td>
+</tr>
+<tr bgcolor="#DCDCDC">
+  <td>Baseline_2 (Statistical phrase-based APE)</td>
+  <td>15.74<sup>^</sup></td>
+  <td>79.28</td>
+</tr>
+</table>
 
 <H3>Submission Format</H3>
 
