@@ -23,40 +23,48 @@ This year, the biomedical translation task will address the following language p
 <li> English-Czech <font color=red><b>NEW</b></font></li>
 <li> English-French and French-English </li>
 <li> English-German <font color=red><b>NEW</b></font></li>
-<li> English-Hungarian and Hungarian-English <font color=red><b>NEW</b></font></li>
+<li> English-Hungarian <font color=red><b>NEW</b></font></li>
 <li> English-Polish <font color=red><b>NEW</b></font></li>
 <li> English-Portuguese and Portuguese-English </li>
 <li> English-Romanian <font color=red><b>NEW</b></font></li>
 <li> English-Spanish and Spanish-English </li>
-<li> English-Swedish and Swedish-English <font color=red><b>NEW</b></font></li>
+<li> English-Swedish <font color=red><b>NEW</b></font></li>
 </ul>
 
 <h3>Data</h3>
 
-Our training data comes from various sources, as listed below:
+Our training and development data comes from various sources, as listed below:
   
 <ul>
-  <li> The <a href="https://github.com/biomedical-translation-corpora/wmt-task">Biomedical Translation</a> repository includes scientific publications (FR/EN, PT/EN, ES/PT) and clinical trials (PT/EN).</li>
-  <li> <a href="https://ufal.mff.cuni.cz/ufal_medical_corpus">UFAL Medical Corpus</a> (formerly HimLCorpus) includes medical text from various sources for the following language pairs: CS/EN, DE/EN, PL/EN, RO/EN (and more). <a href="http://www.himl.eu/test-sets">HimL test sets</a> should be used as the development sets for these language pairs.</li>
+  <li> The <a href="https://github.com/biomedical-translation-corpora/wmt-task">Biomedical Translation</a> repository includes 
+    scientific publications (FR/EN, PT/EN, ES/PT) and clinical trials (PT/EN).</li>
+  <li> <a href="https://ufal.mff.cuni.cz/ufal_medical_corpus">UFAL Medical Corpus</a> (formerly HimLCorpus) includes medical text 
+    from various sources for the following language pairs: CS/EN, DE/EN, PL/EN, RO/EN (and more). 
+    <a href="http://www.himl.eu/test-sets">HimL test sets</a> should be used as the development sets for these language pairs.</li>
+  <li> The <a href="https://lindat.mff.cuni.cz/repository/xmlui/handle/11234/1-2122">Khresmoi development data</a> 
+    for FR/EN, HU/EN, ES/EN and SV/EN.
 </ul>
 
 <h3>Evaluation</h3>
 
 Evaluation will be carried out both automatically and manually.
 Automatic evaluation will make use of standard machine translation metrics, such as BLEU.
-Native speakers in each of the languages will manually check the quality of the translation for a small sample of the submissions.
+Native speakers of each of the languages will manually check the quality of the translation for a small sample of the submissions.
 
 We plan to release test sets for the following language pairs and sources:
 
 <ul>
   <li> FR/EN (both directions): scientific publications </li>
-  <li> PT/EN (both directions): scientific publications and clinical trials </li>
+  <li> PT/EN (both directions): scientific publications </li>
   <li> ES/EN (both directions): scientific publications </li>
   <li> EN to CS: health information texts </li>
   <li> EN to DE: health information texts </li>
+  <li> EN to FR: health information texts </li>
+  <li> EN to HU: health information texts </li>
   <li> EN to PL: health information texts </li>
   <li> EN to RO: health information texts </li>
-  <li> (more coming soon) </li>
+  <li> EN to ES: health information texts </li>
+  <li> EN to SV: health information texts </li>
 </ul>
   
 <h3>Submission format</h3>
@@ -65,14 +73,48 @@ The various datasets come in different formats, please check details on the Web 
 
 <h3>Submission Requirements</h3>
 
-(coming soon)
+<p>Please register your team using this <a href="https://script.google.com/macros/s/AKfycbw6nOhAIfspG-a4Nxc-VZO0CJytlAcJoC1YZFoSy92VPsmwq5S3/exec">form</a>. You will receive a mail with the confirmation of your registration. 
+The link for submission is informed in this mail.
 
+<p>The test files are available in the 
+  <a href="https://drive.google.com/drive/folders/0B3UxRWA52hBjMVpfbE14RlRPTXc?usp=sharing">WMT'17 biomedical task Google Drive folder</a>.
+There are three folders: </p>
+
+  <ul>
+  <li> Scielo datasets: ES/EN and PT/EN (both directions)</li>
+  <li> EDP dataset: FR/EN (both directions)</li>
+  <li> HimL-KConnect datasets: EN to CS, EN to DE, EN to FR, EN to HU, EN to PL, EN to RO, EN to ES, EN to SV</li>
+  </ul>
+  
+<p>The format for the submission files should included the original test file name preceded by the team identifier 
+  (as registered in the form above) and the run number, following this example: </p>
+  
+  <ul>
+  <li>The submission file for run 1 of the "HPI" team for the Scielo dataset for English to Spanish should be called 
+    "HPI_run1_scielo_en2es_es.xml".</li>
+  <li>The submission file for run 1 of the "HPI" team for the UFAL Cochrane dataset for English to German should be called 
+    "HPI_run1_cochrane_de.sgm".</li>
+  </ul>
+  
+<p>Each team is allowed to submit up to 3 runs per test file.</p>
+  
+<p>Please check the submission format of each dataset. The UFAL datasets (Cochrane and NHS) follow the format of 
+  the corresponding <a href="https://ufal.mff.cuni.cz/ufal_medical_corpus">UFAL corpus</a> while the Scielo and the EDP 
+  datasets follow the BioC format of the <a href="https://github.com/biomedical-translation-corpora/scielo">Scielo dataset</a>.</p>
+
+<h3>Results</h3>  
+  
+<p><a href="wmt-2017-biomedical.pdf">Results for the biomedical task</a> are available.</p>
+    
+<p>The gold standard files are available in the 
+  <a href="https://drive.google.com/drive/folders/0B3UxRWA52hBjMVpfbE14RlRPTXc?usp=sharing">WMT'17 biomedical task Google Drive folder</a>.</p>
+  
 <h3>Important dates</h3>
 
 <table>
 <tr><td>Release of training data</td><td>end of January 2017</td></tr>
 <tr><td>Release of test data</td><td>May 2, 2017</td></tr>
-<tr><td>Results submission deadline</td><td>May 8, 2017</td></tr>
+<tr><td>Results submission deadline</td><td><s>May 8, 2017</s> May 12, 2017</td></tr>
 </table>
 
 <h3>Organisers</h3>
@@ -80,7 +122,7 @@ The various datasets come in different formats, please check details on the Web 
 Ondrej Bojar (Charles University in Prague, Czech Republic)<br>
 Antonio Jimeno Yepes (IBM Research Australia)<br>
 Aur&eacute;lie N&eacute;v&eacute;ol (LIMSI, CNRS, France)<br>
-Mariana Neves (Hasso Plattner Institute, Germany)<br>
+Mariana Neves (Federal Institute for Risk Assessment / Hasso Plattner Institute, Germany)<br>
 Pavel Pecina (Charles University in Prague, Czech Republic)<br>
 Karin Verspoor (University of Melbourne, Australia)<br>
 

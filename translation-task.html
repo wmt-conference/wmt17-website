@@ -52,8 +52,9 @@
 
     <table>
       <tr><td>Release of training data for shared tasks</td><td>January, 2017</td></tr>
-      <tr><td>Test data released</td><td>May 2, 2017</td></tr>
+      <tr><td>Test data released (except zh-en/en-zh)</td><td>May 2, 2017</td></tr>
       <tr><td>Translation submission deadline</td><td>May 8, 2017</td></tr>
+      <tr><td>Test week for en-zh/zh-en</td><td>May 15-22, 2017</td></tr>
       <tr><td>Start of manual evaluation</td><td>May 15, 2017</td></tr>
       <tr><td>End of manual evaluation (provisional)</td><td>June 4, 2017</td></tr>
       <!-- <tr><td>Papers available online</td><td>TBA</td></tr> -->
@@ -678,7 +679,9 @@
       </table>
       <p>The Common Crawl monolingual data is hosted by Amazon Web Services as a <a href="https://aws.amazon.com/public-data-sets/">public data set</a>.  The underlying S3 URL is <code>s3://web-language-models/wmt16/deduped</code>.</p>
       <LI><A HREF="http://data.statmt.org/wmt17/translation-task/dev.tgz">Development sets</A> (27 MB) 
-      <!-- <LI><font color=red><b>NEW: </b></font> <A HREF="http://data.statmt.org/wmt16/translation-task/test.tgz">Test sets</A> (3.4 MB) Test sets (source and references)  </li> -->
+      <LI><A HREF="http://data.statmt.org/wmt17/translation-task/test.tgz">Test sets</A> Test sets (source)  </li>
+      <LI><font color=red><b>NEW: </b></font> <A HREF="http://wmt.ufal.cz">All submissions (in MT-ComparEval analysis tool)</A> </li>
+      <LI><font color=red><b>NEW: </b></font> <A HREF="http://data.statmt.org/wmt17/translation-task/wmt17-submitted-data-v1.0.tgz">All submissions (tarball) </A> </li>
 
     <H3><a name="preproc">PREPROCESSED DATA</a></H3>
     <font color="red">New for 2017.</font><br>
@@ -696,6 +699,10 @@
       To submit your results, please first convert into into SGML format as
       required by the NIST BLEU scorer, and then upload it to the
       website <A HREF="http://matrix.statmt.org/">matrix.statmt.org</A>.
+    </p>
+    <p>
+      For Chinese output, you should submit unsegmented text, since our primary measure is human evaluation. For automatic scoring (in the matrix) 
+      we use BLEU4 computed on characters, scoring with v1.3 of the NIST scorer only. A script to convert a Chinese SGM file to characters can be found <a href="tokenizeChinese.py">here</a>.
     </p>
 
     <H4 id="sgml">SGML Format</H4>

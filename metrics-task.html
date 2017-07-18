@@ -1,0 +1,489 @@
+<html>
+  <head>
+    <title>EMNLP 2017 Second Conference on Machine Translation (WMT17s)</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <style> h3 { margin-top: 2em; } </style>
+  </head>
+  <body>
+
+    <center>
+      <script src="http://www.statmt.org/wmt17/title.js"></script>
+      <p><h2>Shared Task: Metrics </h2></p>
+      <script src="http://www.statmt.org/wmt17/menu.js"></script>
+    </center>
+
+
+<h3>Metrics Task Important Dates</h3>
+
+<table>
+<tr><td>System outputs ready to download</td><td><strike>May 14th, 2017</strike> June 3rd, 2017</td></tr>
+<tr><td>Start of manual evaluation period</td><td><strike>May 15th, 2017</strike> June 16th, 2017</td></tr>
+<tr><td>End of manual evaluation (provisional)</td><td><strike>June 4th, 2017</strike> June 23rd, 2017</td></tr>
+	<tr><td>Paper submission deadline</td><td><strike>June 9th, 2017</strike> extended to <b>June 17th, 2017</b> (AoE)</td></tr>
+<tr><td>Submission deadline for metrics task</td><td><strike>June 15th, 2017</strike> extended to <b>June 21, 2017</b> (AoE, indeed later than the paper)</td></tr>
+      <tr><td>Notification of acceptance</td><td>June 30th, 2017</td></tr>
+      <tr><td>Camera-ready deadline</td><td>July 14th, 2017</td></tr>
+      <tr><td>Conference in Copenhagen</td><td>September 7-8, 2017</td></tr>
+</table>
+
+<h3>Metrics Task Overview</h3>
+
+<p>This shared task will examine automatic evaluation metrics for machine
+translation. We will provide you with all of the translations produced in the
+<a href="translation-task.html">translation task</a> along with the 
+human reference translations. You will return your automatic metric scores for 
+translations at the system-level and/or at the sentence-level. We will
+calculate the system-level and sentence-level correlations of your scores
+with WMT17 human judgements once the manual evaluation has been completed.
+</p>
+
+
+<H3>Goals</H3>
+
+<p>
+The goals of the shared metrics task are:
+<UL>
+<LI>To achieve the strongest correlation with human judgement of translation quality;</LI>
+<LI>To illustrate the suitability of an automatic evaluation metric as a surrogate for human evaluation;</LI>
+<LI>To address problems associated with comparison with a single reference translation;</LI>
+<LI>To move automatic evaluation beyond system-level ranking to finer-grained sentence-level ranking.</LI>
+</UL>
+</p>
+
+	 
+<H3>Changes This Year</H3> 
+
+<p>Submissions to this year's metrics task should include in each submission: </p>
+<ul>
+<li> Metric Speed (system-level only): A start and end timestamp 
+should be provided for submissions to facilitate analysis of metrics ability to
+achieve a strong correlation with human assessment and the possible trade-off in terms of 
+reduction in speed. Inclusion of timestamps will allow a rough analysis of this relationship
+for metric submissions.
+Precisely how to include the timestamps in your submission files is provided below. </li>
+
+<li> Ensemble information (system and sentence-level): this year there will be a distinction between metrics that
+employ at least one other existing metric in their formulation (ensemble)
+and metrics that do not employ any other existing metric (non-ensemble). </li>
+
+<li> There will also be a distinction between metrics that are freely available and those that are not.
+We ask that you submit the appropriate URL in the case of availability.</li>
+
+</ul>
+
+
+<p>As trialed in WMT16, the system-level evaluation will optionally include evaluation of metrics with reference 
+to large sets of 10k MT hybrid systems.</p>
+
+<p>We will also include a medical domain evaluation of metrics on the sentence-level via HUME manual 
+evaluation based on UCCA. </p>
+
+
+<!-- 
+<p>
+Metrics Task goes crazy this year. The good news is that if you do not aim at bleeding edge performance, you will be affected minimally:
+</p>
+
+<ul>
+<li>The set of MT systems in each language pair will be much much larger. (Expect 10k systems, not just 20 per language pair).</li>
+<li>The set of language pairs will be larger.</li>
+<li>The set of test sets (underlying sets of sentences) will be larger and more varied.</li>
+</ul>
+
+<p>File formats are <em>not changed</em> (see <a href="#file-formats">below</a>).</p>
+
+<p>If you <em>do want</em> to provide bleeding-edge results, you may want to know a bit more about the composition of the test sets, system sets, ways of evaluation and the training data we provide.</p>
+
+<p>In short, we are adding "tracks" to cover:</p>
+
+<ul>
+<li>a new domain (IT) with "traditional" golden annotations (relative ranking)</li>
+<li>a new style of golden annotations for system-level as well as for segment-level judgements (“direct assessment”)</li>
+<li>a new domain (medical) and a new golden annotations for this domain</li>
+</ul>
+
+<p>The madness is fully summarized in a <a href="https://docs.google.com/spreadsheets/d/1adIMumREPd2xL-phZDCJFgFc3cX_crZTuWvyghDq47I/edit#gid=0">live Google sheet</a>.</p>
+
+<p>You can easily identify the track by the test set label (e.g. “<code>RRsegNews+</code>”) and based on that, you may want to use a variant of your metric adapted for the task, e.g. tuned on a different development set. <a href="#training-data">Training data</a> are listed below.</p>
+
+<p>Remember to describe the exact setup of your metric used for each of the tracks in your metric paper.</p>
+ -->
+
+
+<H3>Task Description</H3>
+
+<p>We will provide you with the output of machine translation systems and reference translations for language pairs involving English and the following languages
+
+<ul>
+<li>
+in the news domain: Chinese, Czech, Finnish, German, Latvian, Russian, Turkish (newstest2017)
+</li>
+<li>
+in a mix of news and medical domains: Czech, German, Polish and Romanian (himltest17). <b>WARNING: This testset includes sentences from WMT16 newstest.</b> If your metric is trained and you included WMT16 newstest in your training data, please let us know.
+</li>
+</ul>
+</p>
+
+<!--<p>
+French, 
+Hungarian, 
+Polish, 
+Portuguese, 
+Romanian, 
+Spanish, Swedish.</p>-->
+
+<p>You will compute scores for each of the outputs at
+the system-level and/or the sentence-level. If your automatic metric does not
+produce  sentence-level scores, you can participate in just the system-level
+ranking.  If your automatic metric uses linguistic annotation and supports only some language pairs, 
+you are free to assign scores only where you can.</p> 
+
+<p>We will assess automatic evaluation metrics in the following ways:</p> 
+
+<UL>
+    <li> 
+
+        <p><b>System-level correlation:</b> We will use absolute Pearson correlation
+        coefficient to measure the correlation of the automatic metric scores
+        with official human scores as computed in the translation task.
+        Direct Assessment will be the official human evaluation, see last year's 
+        <a href="http://www.statmt.org/wmt16/pdf/W16-2302.pdf">results</a> for further details.
+        </p>
+
+    </li>
+    <li>
+
+        <p><b>Sentence-level correlation:</b> There will be two types of golden truths in segment/sentence-level 
+        evaluation. 
+<!--"Relative ranking" will use the same method as last year, a variation on Kendall's tau counting 
+        pairs of sentences ranked the same way by humans and your metric (concordant pairs). -->
+        "Direct Assessment" will use the Pearson correlation of your scores with human judgements of 
+        translation quality for translations in the news domain. "HUME" will employ the Pearson correlation of your segment-level scores 
+        with human judgments of semantic nodes, aggregated over each sentence, for translations in 
+        the medical domain.
+	</p>
+
+    </li>
+</UL>
+
+<a name="tracks"/>
+<h4>Summary of Tracks</h4>
+
+<p>The following table summarizes the planned evaluation methods and text domains of each evaluation track.</p>
+
+<p>
+<table border='1' cellspacing=0 cellpadding=10>
+  <tr num='1'>
+    <th num='1'>Track        </th>
+    <th num='2'>Text Domain                                                      </th>
+    <th num='3'>Level        </th>
+    <th num='4'>Golden Truth Source</th>
+  </tr>
+<!--  <tr num='2'>
+    <td num='1'>RRsysNews</td>
+    <td num='2'>news, from <a href="../translation-task.html">WMT17 news task</a></td>
+    <td num='3'>system-level </td>
+    <td num='4'>relative ranking</td>
+  </tr>-->
+  <tr num='2'>
+    <td num='1'>DAsys</td>
+    <td num='2'>news, from <a href="translation-task.html">WMT17 news task</a></td>
+    <td num='3'>system-level </td>
+    <td num='4'>direct assessment</td>
+  </tr>
+<!--  <tr num='4'>
+    <td num='1'>RRsegNews</td>
+    <td num='2'>news, from <a href="../translation-task.html">WMT17 news task</a></td>
+    <td num='3'>segment-level</td>
+    <td num='4'>relative ranking</td>
+  </tr>-->
+  <tr num='3'>
+    <td num='1'>DAseg</td>
+    <td num='2'>news, from <a href="translation-task.html">WMT17 news task</a></td>
+    <td num='3'>segment-level</td>
+    <td num='4'>direct assessment</td>
+  </tr>
+  <tr num='6'>
+    <td num='1'>HUMEseg  </td>
+    <td num='2'>mix of (consumer) medical from <a href="http://www.himl.eu/">HimL</a> and news (<b>WARNING:</b> <a href="http://www.statmt.org/wmt16/translation-task.html">WMT16 news task</a>) </td>
+    <td num='3'>segment-level</td>
+    <td num='4'>correctness of translation of all semantic nodes</td>
+  </tr>
+  <tr num='6'>
+    <td num='1'>HUMEsys  </td>
+    <td num='2'>mix of (consumer) medical from <a href="http://www.himl.eu/">HimL</a> and news (<b>WARNING:</b> <a href="http://www.statmt.org/wmt16/translation-task.html">WMT16 news task</a>) </td>
+    <td num='3'>system-level</td>
+    <td num='4'>aggregate correctness of translation of all semantic nodes</td>
+  </tr>
+</table>
+</p>
+
+<H3>Other Requirements</H3>
+
+<p>If you participate in the metrics task, we ask you to commit about
+8 hours of time to do the manual evaluation. The evaluation will be done with
+an online tool.</p>
+
+<p>You are invited to submit a short paper (4 to 6 pages) describing your
+automatic evaluation metric.  You are not required to submit a paper if you do
+not want to. If you don't, we ask that you give an appropriate reference
+describing your metric that we can cite in the overview paper.</p>
+
+
+
+<a name="download"/>
+<H3>Download</H3>
+
+<h4>Test Sets (Evaluation Data)</h4>
+ 
+<!-- 
+<p>Once we receive the system outputs from the translation task we will post
+all of the system outputs for you to score with your metric.  The translations
+will be distributed as plain text files with one translation per line.  </p>
+     -->
+
+
+<p>WMT17 metrics task test sets are ready. Since we are trying to establish better confidence intervals for system-level evaluation, we have more than 10k system outputs per language pair and test set, so the package is quite big.</p>
+
+<p>We have changed the format of hybrid systems inputs, see the file <code>wmt17-metrics-task/hybrids/hybrid-instructions</code> in the package for description. We plan to provide a wrapper for TXT format to run your metric on the hybrid systems.</p>
+
+<p>If possible, please submit results for all systems, including the hybrids. If you <em>know</em> you won't have the resources to run the hybrids, you can use the smaller package:</p>
+
+<ul>
+<li>
+<a href="http://ufallab.ms.mff.cuni.cz/~bojar/wmt17-metrics-task.tgz">wmt17-metrics-task.tgz</a> (248MB)
+</li>
+<li>
+<a href="http://ufallab.ms.mff.cuni.cz/~bojar/wmt17-metrics-task-no-hybrids.tgz">wmt17-metrics-task-no-hybrids.tgz</a> (46MB; please do not use unless inevitable)
+</li>
+</ul>
+
+<p>Note that the actual sets of sentences differ across test sets (that's natural) but they also <em>differ across language pairs</em>. So always use the triple {test set name, source language, target language} to identify the test set source, reference and a system output.</p>
+
+<p>There are <em>two references</em> for English-to-Finnish newstest: <code>newstest2017-enfi-ref.fi</code> and <code>newstest<b>B</b>2017-enfi-ref.fi</code>. You are free to use both; if you use only one, please pick former variant.</p>
+
+<!-- 
+<p>See the <a href="https://docs.google.com/spreadsheets/d/1adIMumREPd2xL-phZDCJFgFc3cX_crZTuWvyghDq47I/edit#gid=0">Google sheet</a> if you want to take part in only some of the languages or tracks and do not want to download more than needed.</p>
+
+
+<h5>Packages per Language Pair</h5>
+
+<p>To take part in a particular language pair (seg-level or sys-level), download the package for the language pair (as we are adding them):</p>
+
+<ul>
+<li><a href="http://ufallab.ms.mff.cuni.cz/~bojar/wmt16-metrics-task-data/wmt16-metrics-inputs-for-cs-en.tar.bz2">wmt16-metrics-inputs-for-cs-en.tar.bz2</a> (741M)</li>
+<li><a href="http://ufallab.ms.mff.cuni.cz/~bojar/wmt16-metrics-task-data/wmt16-metrics-inputs-for-de-en.tar.bz2">wmt16-metrics-inputs-for-de-en.tar.bz2</a> (759M)</li>
+<li><a href="http://ufallab.ms.mff.cuni.cz/~bojar/wmt16-metrics-task-data/wmt16-metrics-inputs-for-en-bg.tar.bz2">wmt16-metrics-inputs-for-en-bg.tar.bz2</a> (157M)</li>
+<li><a href="http://ufallab.ms.mff.cuni.cz/~bojar/wmt16-metrics-task-data/wmt16-metrics-inputs-for-en-cs.tar.bz2">wmt16-metrics-inputs-for-en-cs.tar.bz2</a> (963M)</li>
+<li><a href="http://ufallab.ms.mff.cuni.cz/~bojar/wmt16-metrics-task-data/wmt16-metrics-inputs-for-en-de.tar.bz2">wmt16-metrics-inputs-for-en-de.tar.bz2</a> (1.1G)</li>
+<li><a href="http://ufallab.ms.mff.cuni.cz/~bojar/wmt16-metrics-task-data/wmt16-metrics-inputs-for-en-es.tar.bz2">wmt16-metrics-inputs-for-en-es.tar.bz2</a> (151M)</li>
+<li><a href="http://ufallab.ms.mff.cuni.cz/~bojar/wmt16-metrics-task-data/wmt16-metrics-inputs-for-en-eu.tar.bz2">wmt16-metrics-inputs-for-en-eu.tar.bz2</a> (108M)</li>
+<li><a href="http://ufallab.ms.mff.cuni.cz/~bojar/wmt16-metrics-task-data/wmt16-metrics-inputs-for-en-fi.tar.bz2">wmt16-metrics-inputs-for-en-fi.tar.bz2</a> (809M)</li>
+<li><a href="http://ufallab.ms.mff.cuni.cz/~bojar/wmt16-metrics-task-data/wmt16-metrics-inputs-for-en-nl.tar.bz2">wmt16-metrics-inputs-for-en-nl.tar.bz2</a> (146M)</li>
+<li><a href="http://ufallab.ms.mff.cuni.cz/~bojar/wmt16-metrics-task-data/wmt16-metrics-inputs-for-en-pl.tar.bz2">wmt16-metrics-inputs-for-en-pl.tar.bz2</a> (77K)</li>
+<li><a href="http://ufallab.ms.mff.cuni.cz/~bojar/wmt16-metrics-task-data/wmt16-metrics-inputs-for-en-pt.tar.bz2">wmt16-metrics-inputs-for-en-pt.tar.bz2</a> (146M)</li>
+<li><a href="http://ufallab.ms.mff.cuni.cz/~bojar/wmt16-metrics-task-data/wmt16-metrics-inputs-for-en-ro.tar.bz2">wmt16-metrics-inputs-for-en-ro.tar.bz2</a> (565M)</li>
+<li><a href="http://ufallab.ms.mff.cuni.cz/~bojar/wmt16-metrics-task-data/wmt16-metrics-inputs-for-en-ru.tar.bz2">wmt16-metrics-inputs-for-en-ru.tar.bz2</a> (1.1G)</li>
+<li><a href="http://ufallab.ms.mff.cuni.cz/~bojar/wmt16-metrics-task-data/wmt16-metrics-inputs-for-en-tr.tar.bz2">wmt16-metrics-inputs-for-en-tr.tar.bz2</a> (825M)</li>
+<li><a href="http://ufallab.ms.mff.cuni.cz/~bojar/wmt16-metrics-task-data/wmt16-metrics-inputs-for-fi-en.tar.bz2">wmt16-metrics-inputs-for-fi-en.tar.bz2</a> (798M)</li>
+<li><a href="http://ufallab.ms.mff.cuni.cz/~bojar/wmt16-metrics-task-data/wmt16-metrics-inputs-for-ro-en.tar.bz2">wmt16-metrics-inputs-for-ro-en.tar.bz2</a> (480M)</li>
+<li><a href="http://ufallab.ms.mff.cuni.cz/~bojar/wmt16-metrics-task-data/wmt16-metrics-inputs-for-ru-en.tar.bz2">wmt16-metrics-inputs-for-ru-en.tar.bz2</a> (841M)</li>
+<li><a href="http://ufallab.ms.mff.cuni.cz/~bojar/wmt16-metrics-task-data/wmt16-metrics-inputs-for-tr-en.tar.bz2">wmt16-metrics-inputs-for-tr-en.tar.bz2</a> (245M)</li>
+</ul>
+
+<p>This loop downloads all the packages (10 GB): <code>for lp in cs-en de-en en-bg en-cs en-de en-es en-eu en-fi en-nl en-pl en-pt en-ro en-ru en-tr fi-en ro-en ru-en tr-en; do wget http://ufallab.ms.mff.cuni.cz/~bojar/wmt16-metrics-task-data/wmt16-metrics-inputs-for-$lp.tar.bz2; done</code></p>
+
+<p>By downloading the above packages, you have everything for that language pair.</p>
+
+<p>Each package contains one or more test sets (their source, e.g. <code>newstest2016-csen-src.cs</code>, reference <code>newstest2016-csen-ref.en</code>) and system outputs for each of the test sets (e.g. <code>newstest2016.online-B.0.cs-en</code>). Along with the normal MT systems, there are 10k hybrid systems for the newstest2016 stored in the directories <code>H0</code> through <code>H9</code> and/or 10k hybrid systems for the ittest2016 stored in the directories <code>I0</code> through <code>I9</code>.</p>
+
+<p>The filename of each system follows the pattern <code>TESTSET.SYSTEMNAME.SYSTEMID.SRC-TGT</code>, including the hybrids which differ only in their IDs. All filenames across the whole metrics task are unique, but do not put more than 10k files in a directory.</p>
+
+<p>For system-level evaluation, you need to score <em>all systems, including the hybrid ones</em>. For segment-level evaluation, you need to score only the normal systems and you can ignore the <code>[HI]*</code> directories.</p>
+
+<h5>Package for Segment-Level Metrics Only</h5>
+
+<p>If you want to participate only in segment-level metrics, we do not need the 10k extra systems, so the package is smaller and includes all languages:</p>
+
+<ul>
+<li><a href="http://ufallab.ms.mff.cuni.cz/~bojar/wmt16-metrics-task-data/wmt16-metrics-inputs-for-seg-level-only.tar.bz2">wmt16-metrics-inputs-for-seg-level-only.tar.bz2</a>(16M)</li>
+</ul>
+
+<!--
+<p>All WMT16 translation task submissions, including systems from the tuning task are available here:
+</p>
+
+<ul>
+<li><a href="wmt16-metrics-task.tar.gz">WMT15 system outputs incl. sources and references (29 MB)</a></li>
+</ul>
+     -->
+
+<a name="training-data"/>
+<H4>Training Data</H4>
+
+<p>You may want to use some of the following data to tune or train your metric.</p>
+
+<h5>DA (Direct Assessment) Development/Training Data</h5>
+
+<p> For <b> system-level</b>, see last year's results
+<li>WMT16: <a href="http://www.statmt.org/wmt16/results.html">http://www.statmt.org/wmt16/results.html</a></li>
+</p>
+
+<p>For <b>segment-level</b>, there are two past development sets available covering 
+<li><a href="http://www.computing.dcu.ie/~ygraham/DAseg-wmt-newstest2016.tar.gz">DAseg-wmt-newstest2016.tar.gz</a>: 7 language pairs (sampled from newstest2016, tr-en fi-en cs-en ro-en ru-en en-ru de-en; always 560 sentence pairs) </li> 
+<li><a href="http://www.computing.dcu.ie/~ygraham/DAseg-wmt-newstest2015.tar.gz">DAseg-wmt-newstest2015.tar.gz</a>: 5 language pairs (sampled from newstest2015, en-ru de-en ru-en fi-en cs-en; always 500 sentence pairs) </li> 
+</p>
+<p>Each dataset contains:
+
+<ul>
+<li>the source sentence</li>
+<li>MT output (blind, no identification of the actual system that produced it)</li>
+<li>the reference translation</li>
+<li>human score (a real number between -Inf and +Inf)</li>
+</ul>
+</p>
+
+<!--<p>The package will be available soon.</p>-->
+<!-- 
+<p>The package is available here:
+<ul>
+<li><strike><a href="wmt2017-seg-metric-dev.tar.gz">wmt2017-seg-metric-dev.tar.gz</a> (312KB)</strike></li>
+<li><a href="wmt2017-seg-metric-dev-5lps.tar.gz">wmt2017-seg-metric-dev-5lps.tar.gz</a> (412KB)</li>
+</ul>
+</p>
+<p>There are some direct assessments judgements for <b>system-level</b> English&lt;-&gt;Spanish, but this language pairs is not among the tested pairs this year. Contact Yvette Graham if you are interested in this dataset.</p>
+-->
+
+<h5>HUMEseg</h5>
+
+<p>For HUMEseg training data see last year's metrics task results 
+<li>WMT16: <a href="http://www.statmt.org/wmt16/results.html">http://www.statmt.org/wmt16/results.html</a>, the package called "Metrics Task data and results" with these files:
+<ul>
+<li>800 segments of source English: <code>wmt16-metrics-results/seg-level-results/hume-files/inputs/HUMEseg/source</code></li>
+<li>800 segments of candidate and reference translations (one system per language): <code>wmt16-metrics-results/seg-level-results/hume-files/inputs/HUMEseg/{cs,de,pl,ro}.{hyp,ref}</code></li>
+<li>330-349 segments with manual score: <code>wmt16-metrics-results/seg-level-results/hume-files/hume-human/hume.himl.en-{cs,de,pl,ro}.csv</code>; each of each of the file shows segment index (indexed hopefully from 1) and the HUME score for that segment</li>
+</ul>
+</li>
+</p>
+
+<p>For HUMEseg, golden truth segment-level scores are constructed from manual annotations indicating if each node in the semantic tree of the source sentence was translated correctly. The underlying semantic representation is <a href="http://homepages.inf.ed.ac.uk/oabend/ucca.html">UCCA</a>.</p>
+
+<p>In contrast to previous year, there will be a handful of system outputs per segment. (A different set of systems for each language pair.)</p>
+
+<h5>RR (Relative Ranking) from Past Years</h5>
+
+<p>Although RR is no longer the manual evaluation employed in the metrics task,
+human judgments from the previous year's data sets may still prove useful:</p>
+
+<ul>
+<li>WMT16: <a href="http://www.statmt.org/wmt16/results.html">http://www.statmt.org/wmt16/results.html</a></li>
+<li>WMT15: <a href="http://www.statmt.org/wmt15/results.html">http://www.statmt.org/wmt15/results.html</a></li>
+<li>WMT14: <a href="http://www.statmt.org/wmt14/results.html">http://www.statmt.org/wmt14/results.html</a></li>
+<li>WMT13: <a href="http://www.statmt.org/wmt13/results.html">http://www.statmt.org/wmt13/results.html</a></li>
+<li>WMT12: <a href="http://www.statmt.org/wmt12/results.html">http://www.statmt.org/wmt12/results.html</a></li>
+<li>WMT11: <a href="http://www.statmt.org/wmt11/results.html">http://www.statmt.org/wmt11/results.html</a></li>
+<li>WMT10: <a href="http://www.statmt.org/wmt10/results.html">http://www.statmt.org/wmt10/results.html</a></li>
+<li>WMT09: <a href="http://www.statmt.org/wmt09/results.html">http://www.statmt.org/wmt09/results.html</a></li>
+<li>WMT08: <a href="http://www.statmt.org/wmt08/results.html">http://www.statmt.org/wmt08/results.html</a></li>
+</ul>
+
+<p>You can use any past year's data to tune your metric's free parameters if it has 
+any for this year's submission.  Additionally, you can use any past data as a test set
+to compare the performance of your metric against published results from past years
+metric participants.</p>
+
+<p>Last year's data contains all of the system's translations, the source
+documents and human reference translations and the human judgments of the
+translation quality. </p>
+
+<a name="file-formats"/>
+<H3>Submission Format</H3>
+
+<p> The output of your software should produce scores for the translations
+either at the <i>system-level</i> or the <i>segment-level</i> (or preferably
+both).</p>
+
+<p>If you have a single setup for all domains and evaluation tracks, simply report the test set name (<code>newstest2017</code> and <code>himltest</code>) with your scores as usual and described below. We will evaluate your outputs in all applicable tracks.</p>
+
+<p>If your setups differ based on the provided training data or domain knowledge, please <em>include evaluation track name</em> as a part of the test set name. Valid track names are: <code>DAsys</code>, <code>DAseg</code> and <code>HUMEseg</code>; see <a href="#tracks">above</a>.</p>
+
+
+<H4>Output file format for system-level rankings</H4>
+
+<p>
+The output files for system-level rankings should be called <code><b>YOURMETRIC.sys.score.gz</b></code> and formatted in the following way:
+<pre>
+&lt;METRIC NAME&gt;   &lt;LANG-PAIR&gt;   &lt;TEST SET&gt;   &lt;SYSTEM&gt;   &lt;SYSTEM LEVEL SCORE&gt; &lt;BEGIN TIMESTAMP&gt;   &lt;END TIMESTAMP&gt; &lt;ENSEMBLE&gt;   &lt;AVAILABLE&gt;
+</pre>
+
+Where:
+<ul>
+<li><code>METRIC NAME</code> is the name of your automatic evaluation metric.</li>
+<li><code>LANG-PAIR</code> is the language pair using two letter abbreviations for the languages (<code>de-en</code> for German-English, for example).  
+<li><code>TEST SET</code> is the ID of the test set optionally including the evaluation track (<code>DAsys+newstest2017</code> for example).</li>
+<li><code>SYSTEM</code> is the ID of system being scored (given by the part of the filename for the plain text file, <code>uedin-syntax.3866</code> for example).</li>
+<li><code>SYSTEM LEVEL SCORE</code> is the overall system level score that your metric is predicting.
+<li><code>BEGIN TIMESTAMP</code> is the time at which your metric began processing the raw test data in Epoch seconds (<code>1493196388</code> for a start time was 26 Apr 2017 08:46:28 GMT, for example).
+<li><code>END TIMESTAMP</code> is the time at which your metric finished processing the raw test data in Epoch seconds(<code>1493196486</code> for an end time of 26 Apr 2017 08:48:06 GMT).
+<li><code>ENSEMBLE</code> information about whether or not your metric employs any other existing metric or not (<code>ensemble</code> if yes, <code>non-ensemble</code> if not).
+<li><code>AVAILABLE</code> public availability information for your metric (the appropriate url, <code>https://github.com/jhclark/multeval</code> for example or <code>no</code> if if it's not available yet.
+</ul>
+Each field should be delimited by a single tab character.
+</p>
+<p>Timestamps should be in Epoch seconds, ie. using the "date +%s" command (Linux) or equivalent. We will use the two timestamps to work out the rough 
+total duration in seconds for your metric to produce scores for the system-level submissions. To avoid inconsistencies across submissions, we request
+timestamps at the very beginning (and end) of processing the raw data, i.e. <b>before all preprocessing</b> such as tokenization 
+	(for both MT output and reference translations) so that this is consistently
+included in durations for all metrics.</p>
+
+<H4>Output file format for segment-level rankings</H4>
+
+<p>
+The output files for segment-level rankings should be called <code><b>YOURMETRIC.seg.score.gz</b></code> and formatted in the following way:
+<pre>
+&lt;METRIC NAME&gt;   &lt;LANG-PAIR&gt;   &lt;TEST SET&gt;   &lt;SYSTEM&gt;   &lt;SEGMENT NUMBER&gt;   &lt;SEGMENT SCORE&gt; &lt;ENSEMBLE&gt;   &lt;AVAILABLE&gt;
+</pre>
+Where:
+<ul>
+<li><code>METRIC NAME</code> is the name of your automatic evaluation metric.</li>
+<li><code>LANG-PAIR</code> is the language pair using two letter abbreviations for the languages (<code>de-en</code> for German-English, for example).  
+<li><code>TEST SET</code> is the ID of the test set optionally including the evaluation track (<code>DAsegNews+newstest2017</code> for example).</li>
+<li><code>SYSTEM</code> is the ID of system being scored (given by the part of the filename for the plain text file, <code>uedin-syntax.3866</code> for example).</li>
+<li><code>SEGMENT NUMBER</code> is the line number starting from 1 of the plain text input files.</li>
+<li><code>SEGMENT SCORE</code> is the score your metric predicts for the particular segment.</li>
+<li><code>ENSEMBLE</code> information about whether or not your metric employs any other existing metric or not (<code>ensemble</code> if yes, <code>non-ensemble</code> if not).
+<li><code>AVAILABLE</code> public availability information for your metric (the appropriate url, <code>https://github.com/jhclark/multeval</code> for example or <code>no</code> if if it's not available yet.
+</ul>
+Each field should be delimited by a single tab character.
+</p>
+
+<p>Note: fields <code>ENSEMBLE</code> and <code>AVAILABLE</code> should be filled with the same value in every line of
+the submission file for a given metric. Inclusion in this format involves some redundancy but avoids adding extra files 
+to the submission requirements.</p>
+
+<H4>How to submit</H4>
+<!--
+<p>
+Submissions should be posted on  <a href="https://groups.google.com/forum/#!forum/wmt-metrics-submissions">the google group dedicated to the metrics task.</a>
+</p>
+-->
+<p>
+Submissions should be sent as an e-mail to <a href="wmt-metrics-submissions@googlegroups.com">wmt-metrics-submissions@googlegroups.com</a>.
+</p>
+
+<p>In case the above e-mail doesn't work for you (Google seems to prevent non-member postings despite we set it so), please contact us directly.</p>
+
+
+<h3>Metrics Task Organizers</h3>
+Ond&#345;ej Bojar (Charles University in Prague)<br/>
+Yvette Graham (Dublin City University)<br/>
+Amir Kamran (University of Amsterdam, ILLC)<br/>
+
+<h3>Acknowledgement</h3>
+<p>
+Supported by the European Commission under the
+<a href="http://www.qt21.eu/"><img src="figures/qt21.png" border=0 width=105 height=45 alt="QT 21"></a> project (grant number 645452) <p>
+
+  
+  </body>
+</html>

@@ -73,28 +73,110 @@ modify the training data and the training parts of the neural MT system in any p
 <H3>Submission</H3>
 
 <p>
-  The exact submission procedure will be described here.
-</p>
+There are two possible configurations (“tracks” of the task) to choose from,
+depending on the size of GPU memory you can use: 4GB (the common size of
+GeForce GTX 980) and 8GB (the common size of GeForce GTX 1080).
+There are two versions of the main configuration file: <code>config_{4,8}GB.ini</code>.
+The submissions will be evaluated with Neural Monkey 0.1.0 (included in the
+package above).</p>
 
 <p>
-  In essense, we will need your <code>variables.data</code> file that gets created in the
+  In essence, we will need your <code>variables.data</code> file that gets created in the
   <code>output-*GB/</code> directory of Neural Monkey. Neural Monkey stores intermediate versions of the model
 there, so you will probably want to send us the one linked under the name
   <code>variables.data.best</code>.
+It may be also interesting to compare the learning curves of your training
+runs, so if you can, please provide us also with the file
+<code>events.out.tfevents.*</code> created by TensorFlow during training.</p>
+
+<p> To make a submission, upload your <code>variable.data</code> file (and
+optionaly <code>events.out.tfevents.*</code> as well) somewhere, where it can
+be downloaded from. Send the location of your variable files in an e-mail with
+subject “<b>NMT Training Task Submission</b>” to both <code>bojar@ufal.mff.cuni.cz</code> and <code>musil@ufal.mff.cuni.cz</code>.
+The e-mail should also contain the name under which the submission will be
+published (eg. “Charles University, Glove Embeddings”). If you want, you can
+also include any information you find relevant for meta-analysis of the task.
 </p>
 
-<p>It may be also interesting to compare the learning curves of your training runs, so if you can, please provide us also with the file <code>events.out.tfevents.*</code> created by TensorFlow during training.
+<p>To sum up, your e-mail should contain for each submission you are making:
+<ul>
+  <li>download link of your submission (required)</li>
+	<li>your submission short name (required, e.g. “cuni-glove”)
+	<li>your submission name (required, e.g. “Charles University, Glove Embeddings”)
+	<li>is it a primary or secondary submission (required, see below)
+	<li>variables.data.best (required)
+	<li>events.out.tfevents.* (nice to have)
+</ul>
 
+<p><b>Submission deadline is May 1, 2017</b>, before Training Task test sets are released.</p>
+
+<p>The number of submissions you can make is not limited, but participants are
+required to contribute to the evalution process (see below). If you want to
+submit more models without increasing your commitments for the evaluation, you
+can submit some of your models as secondary. Secondary submissions will only be
+evaluated automatically, not manually.</p>
+
+<p>Preliminary results:</p>
+
+<table>
+	<tr>
+		<th>name</th>
+		<th>BLEU-dev</th>
+		<th>BLEU-test</th>
+	</tr>
+	<tr>
+		<th>4 GB</th>
+	</tr>
+	<tr>
+		<th>pavel-denisov</th>
+		<th>15.98</th>
+		<th>13.63</th>
+	</tr>
+	<tr>
+		<th>ufal</th>
+		<th>16.24</th>
+		<th>14.07</th>
+	</tr>
+	<tr>
+		<th>baseline</th>
+		<th>16.74</th>
+		<th>14.74</th>
+	</tr>
+	<tr>
+		<th>AFRL</th>
+		<th>17.58</th>
+		<th>15.25</th>
+	</tr>
+	<tr>
+		<th>8 GB</th>
+	</tr>
+	<tr>
+		<th>baseline</th>
+		<th>17.47</th>
+		<th>14.87</th>
+	</tr>
+	<tr>
+		<th>AFRL</th>
+		<th>18.15</th>
+		<th>15.81</th>
+	</tr>
+	<tr>
+		<th>ufal</th>
+		<th>19.18</th>
+		<th>16.45</th>
+	</tr>
+</table>
+	
 <H3>Other Requirements</H3>
 
 <p>
-For each run submitted to the tuning task, the team promises to join the
+For each <em>primary</em> run submitted to the training task, the team promises to join the
 WMT manual evaluation and annotate at a share of the items. The exact involvement will be determined later but usually ranges from 4 to 8 hours of work. This contribution to the manual evaluation can be done in
 whichever language
 pair you can evaluate and is needed most.
 </p>
 
-<!--<p>No registration is needed for the participation in the tuning task, unless you would like to make use of our manual judgements of Czech, see <a href="#maneval">Complimentary Manual Evaluation</a> below.</p>-->
+<!--<p>No registration is needed for the participation in the training task, unless you would like to make use of our manual judgements of Czech, see <a href="#maneval">Complimentary Manual Evaluation</a> below.</p>-->
 
 <p>You are invited to submit a short paper (4 to 6 pages) describing your
 NMT training technique. You are not required to submit a paper if you do

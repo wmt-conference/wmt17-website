@@ -11,6 +11,11 @@
       <script src="menu.js"></script>
     </center>
 
+<font size="5" color="red"><b>NEWS!!!</b></font>
+<br>
+<font size="5" color="red">Official results of the APE shared task are available (scroll down).</font>
+
+
 <H3>OVERVIEW</H3>
 <p> The third round of the APE shared task follows the success of the previous two rounds organised in 2015 and 2016. The aim is to examine <b> automatic methods for correcting errors produced by an unknown machine translation (MT) system.</b> This has to be done by exploiting knowledge acquired from human post-edits, which are provided as training material.</p>
 
@@ -104,6 +109,145 @@ Training, development and test data consist in English-German and German-English
 <p>The HTER calculated between the raw MT output and human post-editions in the test set will be used as baseline (<i>i.e.</i> the baseline is a system that leaves all the test instances unmodified).</p>
 <p>The evaluation script can be downloaded <a href="https://www.dropbox.com/s/5jw5maariwey080/Evaluation_Script.tar.gz?dl=0" target="_blank">here</a> </p>
 
+<H3><font color="green">Results for EN-DE on 2017 test set</font></H3>
+<table border="1" cellspacing="0" cellpadding="5">
+<tr>
+  <th>Systems</th>
+  <th>TER</th>
+  <th>BLEU</th>
+</tr>
+<tr>
+  <td>FBK_EnsembleRerank_Primary</td>
+  <td>19.6<sup>^</sup></td>
+  <td>70.07<sup>^</sup></td>
+</tr>
+<tr>
+  <td>AMU_multi-transducer-composed_PRIMARY</td>
+  <td>19.77<sup>^</sup></td>
+  <td>69.5<sup>^</sup></td>
+</tr>
+<tr>
+  <td>AMU.multi-transducer.SECONDARY</td>
+  <td>19.83<sup>^</sup></td>
+  <td>69.38<sup>^</sup></td>
+</tr>
+<tr>
+  <td>DCU_FRANKENAPE-TUNED_PRIMARY</td>
+  <td>20.11<sup>^</sup></td>
+  <td>69.19<sup>^</sup></td>
+</tr>
+<tr>
+  <td>DCU_FRANKENAPE-TUNED_CONTRASTIVE</td>
+  <td>20.25<sup>^</sup></td>
+  <td>69.33<sup>^</sup></td>
+</tr>
+<tr>
+  <td>FBK_SingleModelRerank_Contrastive</td>
+  <td>20.3<sup>^</sup></td>
+  <td>69.11<sup>^</sup></td>
+</tr>
+<tr>
+  <td>FBK_USAARRerankStatFeat_Contrastive</td>
+  <td>21.55<sup>^</sup></td>
+  <td>67.28<sup>^</sup></td>
+</tr>
+<tr>
+  <td>USAAR_NMT-OSM_PRIMARY</td>
+  <td>23.05<sup>^</sup></td>
+  <td>65.01<sup>^</sup></td>
+</tr>
+<tr>
+  <td>LIG_chained_syn_PRIMARY</td>
+  <td>23.22<sup>^</sup></td>
+  <td>65.12<sup>^</sup></td>
+</tr>
+<tr>
+  <td>JXNU_JXNU_EDITFreq_PRIMARY</td>
+  <td>23.31<sup>^</sup></td>
+  <td>65.66<sup>^</sup></td>
+</tr>
+<tr>
+  <td>LIG_forced_CONTRASTIVE</td>
+  <td>23.51<sup>^</sup></td>
+  <td>64.52<sup>^</sup></td>
+</tr>
+<tr>
+  <td>LIG_chained_CONTRASTIVE</td>
+  <td>23.66<sup>^</sup></td>
+  <td>64.46<sup>^</sup></td>
+</tr>
+<tr>
+  <td>CUNI_char_conv_rnn_beam_PRIMARY</td>
+  <td>24.03</td>
+  <td>64.28<sup>^</sup></td>
+</tr>
+<tr>
+  <td>USAAR_OSM_CONTRASTIVE</td>
+  <td>24.17<sup>^</sup></td>
+  <td>63.55<sup>^</sup></td>
+</tr>
+<tr bgcolor="#DCDCDC">
+  <td>Official Baseline (MT)</td>
+  <td>24.48</td>
+  <td>62.49</td>
+</tr>
+<tr bgcolor="#DCDCDC">
+  <td>Baseline_2 (Statistical phrase-based APE)</td>
+  <td>24.69<sup>^</sup></td>
+  <td>62.97<sup>^</sup></td>
+</tr>
+<tr>
+  <td>CUNI_char_conv_rnn_greedy_CONTRASTIVE</td>
+  <td>25.94<sup>^</sup></td>
+  <td>61.65<sup>^</sup></td>
+</tr>
+</table>
+<sup>^</sup>: indicates the score is statistically significant wrt. official baseline (MT)
+
+<H3><font color="green">Results for DE-EN on 2017 test set</font></H3>
+<table border="1" cellspacing="0" cellpadding="5">
+<tr>
+  <th>Systems</th>
+  <th>TER</th>
+  <th>BLEU</th>
+</tr>
+<tr>
+  <td>FBK_EnsembleRerank_Primary</td>
+  <td>15.29<sup>^</sup></td>
+  <td>79.82<sup>^</sup></td>
+</tr>
+<tr>
+  <td>FBK_SingleModelRerank_Contrastive</td>
+  <td>15.31<sup>^</sup></td>
+  <td>79.64</td>
+</tr>
+<tr>
+  <td>LIG_chained_syn_PRIMARY</td>
+  <td>15.53</td>
+  <td>79.49</td>
+</tr>
+<tr bgcolor="#DCDCDC">
+  <td>Official Baseline (MT)</td>
+  <td>15.55</td>
+  <td>79.54</td>
+</tr>
+<tr>
+  <td>LIG_forced_CONTRASTIVE</td>
+  <td>15.62</td>
+  <td>79.48</td>
+</tr>
+<tr>
+  <td>LIG_chained_CONTRASTIVE</td>
+  <td>15.68<sup>^</sup></td>
+  <td>79.35<sup>^</sup></td>
+</tr>
+<tr bgcolor="#DCDCDC">
+  <td>Baseline_2 (Statistical phrase-based APE)</td>
+  <td>15.74<sup>^</sup></td>
+  <td>79.28</td>
+</tr>
+</table>
+
 <H3>Submission Format</H3>
 
 <p>
@@ -144,8 +288,8 @@ Each field should be delimited by a single tab character.
     <table>
       <tr><td>Release of training data </td><td>February 16, 2017</td></tr>
       <tr><td>Release of test data  </td><td>April 10 2017</td></tr>
-      <tr><td>Submission deadline  </td><td>May 6 2017</td></tr>
-      <tr><td>Paper submission deadline</td><td>June 2 2017</td></tr>
+      <tr><td>Submission deadline  </td><td><strike>May 6 2017</strike> May 13 2017</td></tr>
+      <tr><td>Paper submission deadline</td><td><strike>June 2 2017</strike> June 9 2017</td></tr>
       <tr><td>Manual evaluation</td><td>TBD</td></tr>
       <tr><td>Notification of acceptance</td><td>June 30 2017</td></tr>
       <tr><td>Camera-ready deadline</td><td>July 14 2017</td></tr>
