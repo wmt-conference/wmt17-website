@@ -1,724 +1,445 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<head>
-<!--  EDIT FROM HERE -->
-<title>Proceedings of the Second Conference on Machine Translation</title>
-<!--  EDIT TO HERE -->
-<link rel="stylesheet" rev="stylesheet" href="../standard.css">
-</head>
-<body bgcolor="white">
+  <head>
+    <title>2017 Second Conference  on  Machine Translation (WMT17)</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <style> h3 { margin-top: 2em; } </style>
+  </head>
+  <body>
 
-<center>
-<table cellspacing="0" cellpadding="0" border="0">
-	
-	<tr>
-		<td colspan="3"><a href="../index.html">ACL 2010 CD</a> | <a href="http://www.statmt.org/wmt17/">Workshop ONLINE</a> | <a href="http://acl2010.org/">ACL 2010 ONLINE</a> | <a href="http://www.aclweb.org/">ACL ONLINE</a></td>
-	</tr>
-</table>
-<br>
+    <center>
+      <script src="title.js"></script>
+      <p><h2>Home</h2></p>
+      <script src="menu.js"></script>
+    </center>
 
-<h2>Proceedings of the Second Conference on Machine Translation</h2>
-<p><b>Chairs</b><br>
-Ond&Aring;�ej Bojar (Charles University in Prague)<BR>
-Christian Buck (University of Edinburgh)<BR>
-Rajen Chatterjee (FBK)<BR>
-Christian Federmann (MSR)<BR>
-Yvette Graham (DCU)<BR>
-Barry Haddow (University of Edinburgh)<BR>
-Matthias Huck (University of Edinburgh)<BR>
-Antonio Jimeno Yepes (IBM Research Australia)<BR>
-Philipp Koehn (University of Edinburgh / Johns Hopkins University)<BR>
-Julia Kreutzer (Heidelberg University)<BR>
+   <p>
+
+      This conference builds on a series of annual workshops and conferences on statistical machine
+      translation, going back to 2006:
+
+      <UL id="">
+        <LI>the <a href="http://www.statmt.org/wmt06/">NAACL-2006 Workshop on
+            Statistical Machine Translation</a>,
+        <LI>the <a href="http://www.statmt.org/wmt07/">ACL-2007 Workshop on Statistical
+            Machine Translation</a>, 
+        <LI>the <a href="http://www.statmt.org/wmt08/">ACL-2008
+            Workshop on Statistical Machine Translation</a>, 
+        <LI> the <a href="http://www.statmt.org/wmt09/">EACL-2009 Workshop on
+            Statistical Machine Translation</a>,
+        <LI> the <a href="http://www.statmt.org/wmt10/">ACL-2010 Workshop on
+            Statistical Machine Translation</a>
+        <LI> the <a href="http://www.statmt.org/wmt11/">EMNLP-2011 Workshop on
+            Statistical Machine Translation</a>,
+        <LI> the <a href="http://www.statmt.org/wmt12/">NAACL-2012 Workshop on
+            Statistical Machine Translation</a>, 
+        <LI> the <a href="http://www.statmt.org/wmt13/">ACL-2013 Workshop on
+            Statistical Machine Translation</a>,
+        <LI> the <a href="http://www.statmt.org/wmt14/">ACL-2014 Workshop on
+            Statistical Machine Translation</a>, 
+        <LI> the <a href="http://www.statmt.org/wmt15/">EMNLP-2015 Workshop on
+            Statistical Machine Translation</a>,
+        <LI> the <a href="http://www.statmt.org/wmt16/">First Conference on
+            Machine Translation (at ACL-2016)</a>.
+      </UL>
+    </p>
+ 
+    <h3>IMPORTANT DATES</h3>
+    <table>
+      <tr><td>Release of training data for shared tasks</td><td>January/February, 2017</td></tr>
+      <tr><td>Evaluation periods for shared tasks</td><td>April/May, 2017</td></tr>
+      <tr><td>Paper submission deadline</td><td>June 9th, 2017 (Midnight, UTC -11)</td></tr>
+      <tr><td>Paper notification</td><td>June 30th, 2017</td></tr>
+      <tr><td>Camera-ready version due</td><td>July 14th, 2017</td></tr>
+      <tr><td>Conference in Copenhagen</td><td>September 7-8, 2017</td></tr>
+    </table>
+
+    <h3>OVERVIEW</h3>
+    <p>
+      This year's conference will feature the following shared tasks: 
+<ul><li>a news  translation task,
+    <li>a biomedical translation task ,
+    <li>an  automatic post-editing task,
+    <li>a metrics task (assess MT quality given reference translation).
+    <li>a quality estimation task (assess MT quality without access to any reference),
+    <li>a multimodal translation task
+    <li>a task dedicated to the training of neural MT systems
+    <li>a task on bandit learning for MT
+</ul>
+    </p>
+
+    <p>
+      In addition to the shared tasks, the conference will also feature scientific papers on topics related to MT.
+      Topics of interest include, but are not limited to:
+      <ul>
+        <li> word-based, phrase-based, syntax-based, semantics-based SMT</li>
+        <li> neural machine translation</li>
+        <li> using comparable corpora for SMT</li>
+        <li> incorporating linguistic information into SMT</li>
+        <li> decoding</li>
+        <li> system combination</li>
+        <li> error analysis</li>
+        <li> manual and automatic method for evaluating MT</li>
+        <li> scaling MT to very large data sets</li>
+      </ul>
+      We encourage authors to evaluate their approaches to the above topics
+      using the common data sets created for the shared tasks.
+    </p>
+
+    <h3>REGISTRATION</h3>
+    Registration will be handled by <a href="http://emnlp2017.net/">EMNLP 2017</a>.
+
+    <h3>NEWS TRANSLATION TASK</h3>
+    <p>
+      The first shared task which will examine translation between the
+      following language pairs:
+      <ul>
+	      <li> English-Chinese and Chinese-English <font color=red><b>NEW</b></font> </li>
+        <li> English-Czech and Czech-English</li>
+        <li> English-Finnish and Finnish-English </li>
+        <li> English-German and German-English</li>
+	      <li> English-Latvian and Latvian-English <font color=red><b>NEW</b></font></li>
+	      <li> English-Russian and Russian-English </li>
+	      <li> English-Turkish and Turkish-English </li>
+      </ul>
+      The text for all the test sets will be drawn from news articles.
+      Participants may submit translations for any or all of the language
+      directions. In addition to the common test sets the conference organizers
+      will provide optional training resources.
+    </p>
+
+    <p>
+      All participants who submit entries will have their translations
+      evaluated. We will evaluate translation performance by human judgment. To
+      facilitate the human evaluation we will require participants in the
+      shared tasks to manually judge some of the submitted translations. For each team,
+      this will amount
+      to ranking 300 sets of 5 translations, per language pair submitted.
+    </p>
+
+<h3>BIOMEDICAL TRANSLATION TASK</h3> 
+
+<p>In this second edition of this task, we will evaluate systems for the translation of biomedical documents for the following languages pairs:<p>
+
+<ul>
+<li> English-Czech and Czech-English <font color=red><b>NEW</b></font></li>
+<li> English-French and French-English </li>
+<li> English-German and German-English <font color=red><b>NEW</b></font></li>
+<li> English-Hungarian and Hungarian-English <font color=red><b>NEW</b></font></li>
+<li> English-Polish and Polish-English <font color=red><b>NEW</b></font></li>
+<li> English-Portuguese and Portuguese-English </li>
+<li> English-Romanian and Romanian-English <font color=red><b>NEW</b></font></li>
+<li> English-Spanish and Spanish-English </li>
+<li> English-Swedish and Swedish-English <font color=red><b>NEW</b></font></li>
+</ul>
+
+<p>Parallel corpora will be available for all language pairs but also monoligual corpora for some languages. 
+Evaluation will be carried out both automatically and manually.</p>
 
 
+
+	<h3>AUTOMATIC POST-EDITING TASK</h3>
+<p>This shared task will examine automatic methods for correcting errors produced by machine translation (MT) systems.  Automatic Post-editing (APE) aims at improving MT output in black box scenarios, in which the MT system is used "as is" and cannot be modified.
+From the application point of view APE components would make it possible to:</p>
+<ul>
+<li> Cope with systematic errors of an MT system whose decoding process is not accessible </li>
+<li> Provide professional translators with improved MT output quality to reduce (human) post-editing effort </li>
+</ul>
+
+<p>In this third edition of the task, the evaluation will focus on English-German (IT domain) and German-English (Medical domain)</p>
+
+
+    <h3>METRICS TASK</h3>
+<p>The metrics task (also called evaluation task) will assess automatic evaluation metrics' ability to:
 </p>
-<table cellspacing="0" cellpadding="5" border="1">
-	<tr class="bg1">
-		<td><table cellspacing="0" cellpadding="5" border="0">
 
-			<tr align=center>
-				<td><b><a href="WMT-2017.pdf">Full proceedings volume</a> (PDF)</b></td>
-			</tr>
+<ul>
+<li> Evaluate systems on their overall performance on the test set </li>
+<li> Evaluate systems on a sentence by sentence level </li>
+</ul>
 
-			<tr align=center>
-				<td><a href="program.html">Schedule</a> and <a href="authors.html">author index</a> (HTML)</td>
-                        </tr>
+<p>
+Participants in the shared evaluation task will use their automatic evaluation metrics to score the output from the translation task and the NMT training task.  In addition to MT outputs from the other two tasks, the participants will be provided with reference translations.   We will measure the correlation of automatic evaluation metrics with the human judgments.  
+</p>
 
-			<tr align=center>
-				<td><a href="WMT-2017.bib">Bibliography</a> (BibTeX)</td>
+<!--
+    <h3>QUALITY ESTIMATION TASK</h3>
 
-			</tr>
+<p> Quality estimation systems aim at producing an estimate on the quality of a given translation at system run-time, without access to a reference translation. This topic is particularly relevant from a user perspective. Among other applications, it can (i) help decide whether a given translation is good enough for publishing as is; (ii) filter out sentences that are not good enough for post-editing; (iii) select the best translation among options from multiple MT and/or translation memory systems; (iv) inform readers of the target language of whether or not they can rely on a translation; and (v) spot parts (words or phrases) of a translation that are potentially incorrect.</p>
 
-			<tr align=center>
-				<td><a href="http://www.statmt.org/wmt17/">Live website</a></td>
-			</tr>
+    <p>Research on this topic has been showing promising results in the last couple of years. Building on the last three years' experience, the Quality-Estimation track of the WMT15 workshop and shared-task will focus on English, Spanish and German as languages and provide new training and test sets, along with evaluation metrics and baseline systems for variants of the task at three different levels of prediction: word, sentence, and document.
 
-			</table>
-		</td>
-	</tr>
+-->
+    <h3>NEURAL MT TRAINING TASK (NMT TRAINING TASK)</h3>
+
+This task will assess your team's ability to <b>train a fixed neural MT model</b> given fixed data.
+
+<p>
+Participants in the NMT training task will be given complete a Neural Monkey configuration file which describes the neural model. Training and validation data with fixed pre-processing scheme will be also given (English-to-Czech and Czech-to-English translation).
+</p>
+<p>
+The participants will be expected to submit the variables file, i.e. the trained neural network, for one or both of the translation directions. We will use the variables and a fixed revision of Neural Monkey to translate official WMT17 test set. The outputs of the various configurations of the system will be scored using the standard manual evaluation procedure.
+</p>
+
+<h3>BANDIT LEARNING TASK</h3>
+<p>Bandit Learning for MT is a framework to train and improve MT systems by learning from weak or partial feedback: Instead of a gold-standard human-generated translation, the learner only receives feedback to a single proposed translation (this is why it is called partial), in form of a translation quality judgement (which can be as weak as a binary acceptance/rejection decision).
+</p>
+<!--<p> Amazon and University of Heidelberg organize this Shared Task with a goal to encourage researchers to investigate algorithms for learning from weak user feedback instead of from human references or post-edits that require skilled translators. We are interested in finding systems that learn efficiently and effectively from this type of feedback, i.e. they learn fast and achieve high translation quality. Developing such algorithms is interesting for interactive machine learning and for human feedback in NLP in general.
+</p>-->
+<p> In this task, the user feedback will be simulated by a service hosted on Amazon Web Services (AWS), where participants can submit translations and receive feedback and use this feedback for training an MT model (German-to-English, e-commerce). Reference translations will not be revealed at any point, also evaluations are done via the service. The goal of this task is to find systems that learn efficiently and effectively from this type of feedback, i.e. they learn fast and achieve high translation quality without references.
+</p>
+
+<!--
+<h3>CROSS-LINGUAL PRONOUN PREDICTION TASK</h3>
+<p>Pronoun translation poses a problem for current state-of-the-art SMT systems as pronoun systems do not map well across languages, e.g., due to differences in gender, number, case, formality, or humanness, and to differences in where pronouns may be used. Translation divergences typically lead to mistakes in SMT, as when translating the English "it" into French ("il", "elle", or "cela"?) or into German ("er", "sie", or "es"?). One way to model pronoun translation is to treat it as a cross-lingual pronoun prediction task.</p>
+
+    <p>We propose such a task, which asks participants to predict a target-language pronoun given a source-language pronoun in the context of a sentence. We further provide a lemmatised target-language human-authored translation of the source sentence, and automatic word alignments between the source sentence words and the target-language lemmata. In the translation, the words aligned to a subset of the source-language third-person pronouns are substituted by placeholders. The aim of the task is to predict, for each placeholder, the word that should replace it from a small, closed set of classes, using any type of information that can be extracted from the documents.</p>
+
+    <p>The cross-lingual pronoun prediction task will be similar to the task of the same name at DiscoMT 2015:</p>
+
+	<a href="http://www.idiap.ch/workshop/DiscoMT/shared-task">http://www.idiap.ch/workshop/DiscoMT/shared-task</a>
+
+    <p>Participants are invited to submit systems for the English-French and English-German language pairs, for both directions.</p>
+
+<h3>BILINGUAL DOCUMENT ALIGNMENT TASK</h3>
+Details TBC
+
+<h3>MULTIMODAL TRANSLATION TASK</h3>
+
+This is a new task where participants are requested to generate a description for an image in a target language, given the image itself and one or more descriptions in a different (source) language. 
+
+-->
+
+    <h3>PAPER SUBMISSION INFORMATION</h3>
+
+    <p>
+      Submissions will consist of regular full papers of 6-10 pages, plus
+      additional pages for references, formatted following the 
+      <a href="http://emnlp2017.net/call-for-papers.html">EMNLP 2017
+      guidelines</a>. In addition, shared task participants will be invited to
+      submit short papers (suggested length: 4-6 pages, plus references) describing their systems or their
+      evaluation metrics. Both submission and review processes will be handled
+      <a href="https://www.softconf.com/emnlp2017/wmt/">electronically</a>.
+      Note that regular papers must be anonymized, while system descriptions 
+      do not need to be.
+    </p>
+
+    <p>
+    Research papers that have been or will be submitted to other meetings or publications must indicate this at submission time, and must be withdrawn from the other venues if accepted and  published at WMT 2017. 
+    We will not accept for publication papers that overlap significantly in content or results with papers that have been or will be published elsewhere.
+    It is acceptable to submit work that has been made available as a technical report (or similar, e.g. in arXiv) without citing it.
+    This double submission policy only applies to research papers, so system papers can have significant overlap with other published work, if it is relevant to the system description.
+    </p>
+
+    <p>
+      We encourage individuals who are submitting research papers to evaluate
+      their approaches using the training resources provided by this conference
+      and past workshops, so that their experiments can be repeated by others
+      using these publicly available corpora.
+    </p>
+
+<h3>POSTER FORMAT</h3>
+
+A0 Landscape.
+
+<h3>ANNOUNCEMENTS</h3>
+
+<table border=0 cellspacing=0>
+  <tr><td style="padding-left: 5px">
+  Subscribe to to the announcement list for WMT by entering your e-mail address below.  This list will be used to announce when the test sets are released, to indicate any corrections to the training sets, and to amend the deadlines as needed.  
+  </td></tr>
+  <form action="http://groups.google.com/group/wmt-tasks/boxsubscribe">
+  <tr><td style="padding-left: 5px;">
+  Email: <input type=text name=email>
+  <input type=submit name="sub" value="Subscribe">
+  </td></tr>
+</form>
+<tr>
+<td>
 </table>
 
-<br></br>
-
-<table cellspacing="0" cellpadding="5" border="1">
-
-		<tr class="bg1">
-			<td valign="top"><a href="pdf/WMT00.pdf">pdf</a></td>
-			<!--<td valign="top"><a href="ps/WMT00.ps">ps</a></td>-->
-			<td valign="top"><a href="bib/WMT00.bib">bib</a></td>
-			<td valign="top"><a href="pdf/WMT00.pdf"><b>Front matter<b></a></td>
-			<td valign="top">pages</td>
-		</tr>
-
-		<tr class="bg2">
-			<td valign="top"><a href="pdf/WMT01.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT01.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT01.pdf"><i>Sense-Aware Statistical Machine Translation using Adaptive Context-Dependent Clustering</i></a><br> Xiao  Pu,  Nikolaos  Pappas and  Andrei  Popescu-Belis </td>
-			<td valign="top" align="left"><a name="1">pp.&nbsp;1&#8211;10</a></td>
-		</tr>
-
-
-		<tr class="bg1">
-			<td valign="top"><a href="pdf/WMT02.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT02.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT02.pdf"><i>Improving Word Sense Disambiguation in Neural Machine Translation with Sense Embeddings</i></a><br> Annette  Rios Gonzales,  Laura  Mascarell and  Rico  Sennrich </td>
-			<td valign="top" align="left"><a name="11">pp.&nbsp;11&#8211;19</a></td>
-		</tr>
-
-
-		<tr class="bg2">
-			<td valign="top"><a href="pdf/WMT03.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT03.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT03.pdf"><i>Word Representations in Factored Neural Machine Translation</i></a><br> Franck  Burlot,  Mercedes  Garc&iacute;a-Mart&iacute;nez,  Lo&iuml;c  Barrault,  Fethi  Bougares and  Fran&ccedil;ois  Yvon </td>
-			<td valign="top" align="left"><a name="20">pp.&nbsp;20&#8211;31</a></td>
-		</tr>
-
-
-		<tr class="bg1">
-			<td valign="top"><a href="pdf/WMT04.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT04.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT04.pdf"><i>Modeling Target-Side Inflection in Neural Machine Translation</i></a><br> Ale&#353;  Tamchyna,  Marion  Weller-Di Marco and  Alexander  Fraser </td>
-			<td valign="top" align="left"><a name="32">pp.&nbsp;32&#8211;42</a></td>
-		</tr>
-
-
-		<tr class="bg2">
-			<td valign="top"><a href="pdf/WMT05.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT05.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT05.pdf"><i>Evaluating the morphological competence of Machine Translation Systems</i></a><br> Franck  Burlot and  Fran&ccedil;ois  Yvon </td>
-			<td valign="top" align="left"><a name="43">pp.&nbsp;43&#8211;55</a></td>
-		</tr>
-
-
-		<tr class="bg1">
-			<td valign="top"><a href="pdf/WMT06.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT06.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT06.pdf"><i>Target-side Word Segmentation Strategies for Neural Machine Translation</i></a><br> Matthias  Huck,  Simon  Riess and  Alexander  Fraser </td>
-			<td valign="top" align="left"><a name="56">pp.&nbsp;56&#8211;67</a></td>
-		</tr>
-
-
-		<tr class="bg2">
-			<td valign="top"><a href="pdf/WMT07.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT07.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT07.pdf"><i>Predicting Target Language CCG Supertags Improves Neural Machine Translation</i></a><br> Maria  Nadejde,  Siva  Reddy,  Rico  Sennrich,  Tomasz  Dwojak,  Marcin  Junczys-Dowmunt,  Philipp  Koehn and  Alexandra  Birch </td>
-			<td valign="top" align="left"><a name="68">pp.&nbsp;68&#8211;79</a></td>
-		</tr>
-
-
-		<tr class="bg1">
-			<td valign="top"><a href="pdf/WMT08.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT08.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT08.pdf"><i>Exploiting Linguistic Resources for Neural Machine Translation Using Multi-task Learning</i></a><br> Jan  Niehues and  Eunah  Cho </td>
-			<td valign="top" align="left"><a name="80">pp.&nbsp;80&#8211;89</a></td>
-		</tr>
-
-
-		<tr class="bg2">
-			<td valign="top"><a href="pdf/WMT09.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT09.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT09.pdf"><i>Tree as a Pivot: Syntactic Matching Methods in Pivot Translation</i></a><br> Akiva  Miura,  Graham  Neubig,  Katsuhito  Sudoh and  Satoshi  Nakamura </td>
-			<td valign="top" align="left"><a name="90">pp.&nbsp;90&#8211;98</a></td>
-		</tr>
-
-
-		<tr class="bg1">
-			<td valign="top"><a href="pdf/WMT10.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT10.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT10.pdf"><i>Deep architectures for Neural Machine Translation</i></a><br> Antonio Valerio  Miceli Barone,  Jind&#345;ich  Helcl,  Rico  Sennrich,  Barry  Haddow and  Alexandra  Birch </td>
-			<td valign="top" align="left"><a name="99">pp.&nbsp;99&#8211;107</a></td>
-		</tr>
-
-
-		<tr class="bg2">
-			<td valign="top"><a href="pdf/WMT11.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT11.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT11.pdf"><i>Biasing Attention-Based Recurrent Neural Networks Using External Alignment Information</i></a><br> Tamer  Alkhouli and  Hermann  Ney </td>
-			<td valign="top" align="left"><a name="108">pp.&nbsp;108&#8211;117</a></td>
-		</tr>
-
-
-		<tr class="bg1">
-			<td valign="top"><a href="pdf/WMT12.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT12.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT12.pdf"><i>Effective Domain Mixing for Neural Machine Translation</i></a><br> Denny  Britz,  Quoc  Le and  Reid  Pryzant </td>
-			<td valign="top" align="left"><a name="118">pp.&nbsp;118&#8211;126</a></td>
-		</tr>
-
-
-		<tr class="bg2">
-			<td valign="top"><a href="pdf/WMT13.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT13.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT13.pdf"><i>Multi-Domain Neural Machine Translation through Unsupervised Adaptation</i></a><br> M. Amin  Farajian,  Marco  Turchi,  Matteo  Negri and  Marcello  Federico </td>
-			<td valign="top" align="left"><a name="127">pp.&nbsp;127&#8211;137</a></td>
-		</tr>
-
-
-		<tr class="bg1">
-			<td valign="top"><a href="pdf/WMT14.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT14.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT14.pdf"><i>Adapting Neural Machine Translation with Parallel Synthetic Data</i></a><br> Mara  Chinea-Rios,  &Aacute;lvaro  Peris and  Francisco  Casacuberta </td>
-			<td valign="top" align="left"><a name="138">pp.&nbsp;138&#8211;147</a></td>
-		</tr>
-
-
-		<tr class="bg2">
-			<td valign="top"><a href="pdf/WMT15.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT15.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT15.pdf"><i>Copied Monolingual Data Improves Low-Resource Neural Machine Translation</i></a><br> Anna  Currey,  Antonio Valerio  Miceli Barone and  Kenneth  Heafield </td>
-			<td valign="top" align="left"><a name="148">pp.&nbsp;148&#8211;156</a></td>
-		</tr>
-
-
-		<tr class="bg1">
-			<td valign="top"><a href="pdf/WMT16.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT16.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT16.pdf"><i>Guiding Neural Machine Translation Decoding with External Knowledge</i></a><br> Rajen  Chatterjee,  Matteo  Negri,  Marco  Turchi,  Marcello  Federico,  Lucia  Specia and  Fr&eacute;d&eacute;ric  Blain </td>
-			<td valign="top" align="left"><a name="157">pp.&nbsp;157&#8211;168</a></td>
-		</tr>
-
-
-		<tr class="bg2">
-			<td valign="top"><a href="pdf/WMT17.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT17.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT17.pdf"><i>Findings of the 2017 Conference on Machine Translation (WMT17)</i></a><br> Ond&#345;ej  Bojar,  Rajen  Chatterjee,  Christian  Federmann,  Yvette  Graham,  Barry  Haddow,  Shujian  Huang,  Matthias  Huck,  Philipp  Koehn,  Qun  Liu,  Varvara  Logacheva,  Christof  Monz,  Matteo  Negri,  Matt  Post,  Raphael  Rubino,  Lucia  Specia and  Marco  Turchi </td>
-			<td valign="top" align="left"><a name="169">pp.&nbsp;169&#8211;214</a></td>
-		</tr>
-
-
-		<tr class="bg1">
-			<td valign="top"><a href="pdf/WMT18.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT18.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT18.pdf"><i>Findings of the Second Shared Task on Multimodal Machine Translation and Multilingual Image Description</i></a><br> Desmond  Elliott,  Stella  Frank,  Lo&iuml;c  Barrault,  Fethi  Bougares and  Lucia  Specia </td>
-			<td valign="top" align="left"><a name="215">pp.&nbsp;215&#8211;233</a></td>
-		</tr>
-
-
-		<tr class="bg2">
-			<td valign="top"><a href="pdf/WMT19.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT19.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT19.pdf"><i>Findings of the WMT 2017 Biomedical Translation Shared Task</i></a><br> Antonio  Jimeno Yepes,  Aurelie  Neveol,  Mariana  Neves,  Karin  Verspoor,  Ondrej  Bojar,  Arthur  Boyer,  Cristian  Grozea,  Barry  Haddow,  Madeleine  Kittner,  Yvonne  Lichtblau,  Pavel  Pecina,  Roland  Roller,  Rudolf  Rosa,  Amy  Siu,  Philippe  Thomas and  Saskia  Trescher </td>
-			<td valign="top" align="left"><a name="234">pp.&nbsp;234&#8211;247</a></td>
-		</tr>
-
-
-		<tr class="bg1">
-			<td valign="top"><a href="pdf/WMT20.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT20.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT20.pdf"><i>CUNI submission in WMT17: Chimera goes neural</i></a><br> Roman  Sudarikov,  David  Mare&#269;ek,  Tom  Kocmi,  Dusan  Varis and  Ond&#345;ej  Bojar </td>
-			<td valign="top" align="left"><a name="248">pp.&nbsp;248&#8211;256</a></td>
-		</tr>
-
-
-		<tr class="bg2">
-			<td valign="top"><a href="pdf/WMT21.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT21.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT21.pdf"><i>LIMSI@WMT&rsquo;17</i></a><br> Franck  Burlot,  Pooyan  Safari,  Matthieu  Labeau,  Alexandre  Allauzen and  Fran&ccedil;ois  Yvon </td>
-			<td valign="top" align="left"><a name="257">pp.&nbsp;257&#8211;264</a></td>
-		</tr>
-
-
-		<tr class="bg1">
-			<td valign="top"><a href="pdf/WMT22.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT22.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT22.pdf"><i>SYSTRAN Purely Neural MT Engines for WMT2017</i></a><br> Yongchao  Deng,  Jungi  Kim,  Guillaume  Klein,  Catherine  KOBUS,  Natalia  Segal,  Christophe  Servan,  Bo  Wang,  Dakun  Zhang,  Josep  Crego and  Jean  Senellart </td>
-			<td valign="top" align="left"><a name="265">pp.&nbsp;265&#8211;270</a></td>
-		</tr>
-
-
-		<tr class="bg2">
-			<td valign="top"><a href="pdf/WMT23.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT23.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT23.pdf"><i>FBK's Participation to the English-to-German News Translation Task of WMT 2017</i></a><br> Mattia Antonino  Di Gangi,  Nicola  Bertoldi and  Marcello  Federico </td>
-			<td valign="top" align="left"><a name="271">pp.&nbsp;271&#8211;275</a></td>
-		</tr>
-
-
-		<tr class="bg1">
-			<td valign="top"><a href="pdf/WMT24.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT24.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT24.pdf"><i>The JHU Machine Translation Systems for WMT 2017</i></a><br> Shuoyang  Ding,  Huda  Khayrallah,  Philipp  Koehn,  Matt  Post,  Gaurav  Kumar and  Kevin  Duh </td>
-			<td valign="top" align="left"><a name="276">pp.&nbsp;276&#8211;282</a></td>
-		</tr>
-
-
-		<tr class="bg2">
-			<td valign="top"><a href="pdf/WMT25.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT25.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT25.pdf"><i>The TALP-UPC Neural Machine Translation System for German/Finnish-English Using the Inverse Direction Model in Rescoring</i></a><br> Carlos  Escolano,  Marta R.  Costa-juss&agrave; and  Jos&eacute; A. R.  Fonollosa </td>
-			<td valign="top" align="left"><a name="283">pp.&nbsp;283&#8211;287</a></td>
-		</tr>
-
-
-		<tr class="bg1">
-			<td valign="top"><a href="pdf/WMT26.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT26.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT26.pdf"><i>LIUM Machine Translation Systems for WMT17 News Translation Task</i></a><br> Mercedes  Garc&iacute;a-Mart&iacute;nez,  Ozan  Caglayan,  Walid  Aransa,  Adrien  Bardet,  Fethi  Bougares and  Lo&iuml;c  Barrault </td>
-			<td valign="top" align="left"><a name="288">pp.&nbsp;288&#8211;295</a></td>
-		</tr>
-
-
-		<tr class="bg2">
-			<td valign="top"><a href="pdf/WMT27.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT27.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT27.pdf"><i>Extending hybrid word-character neural machine translation with multi-task learning of morphological analysis</i></a><br> Stig-Arne  Gr&ouml;nroos,  Sami  Virpioja and  Mikko  Kurimo </td>
-			<td valign="top" align="left"><a name="296">pp.&nbsp;296&#8211;302</a></td>
-		</tr>
-
-
-		<tr class="bg1">
-			<td valign="top"><a href="pdf/WMT28.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT28.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT28.pdf"><i>The AFRL-MITLL WMT17 Systems: Old, New, Borrowed, BLEU</i></a><br> Jeremy  Gwinnup,  Timothy  Anderson,  Grant  Erdmann,  Katherine  Young,  Michaeel  Kazi,  Elizabeth  Salesky,  Brian  Thompson and  Jonathan  Taylor </td>
-			<td valign="top" align="left"><a name="303">pp.&nbsp;303&#8211;309</a></td>
-		</tr>
-
-
-		<tr class="bg2">
-			<td valign="top"><a href="pdf/WMT29.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT29.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT29.pdf"><i>University of Rochester WMT 2017 NMT System Submission</i></a><br> Chester  Holtz,  Chuyang  Ke and  Daniel  Gildea </td>
-			<td valign="top" align="left"><a name="310">pp.&nbsp;310&#8211;314</a></td>
-		</tr>
-
-
-		<tr class="bg1">
-			<td valign="top"><a href="pdf/WMT30.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT30.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT30.pdf"><i>LMU Munich&rsquo;s Neural Machine Translation Systems for News Articles and Health Information Texts</i></a><br> Matthias  Huck,  Fabienne  Braune and  Alexander  Fraser </td>
-			<td valign="top" align="left"><a name="315">pp.&nbsp;315&#8211;322</a></td>
-		</tr>
-
-
-		<tr class="bg2">
-			<td valign="top"><a href="pdf/WMT31.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT31.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT31.pdf"><i>Rule-based Machine translation from English to Finnish</i></a><br> Arvi  Hurskainen and  J&ouml;rg  Tiedemann </td>
-			<td valign="top" align="left"><a name="323">pp.&nbsp;323&#8211;329</a></td>
-		</tr>
-
-
-		<tr class="bg1">
-			<td valign="top"><a href="pdf/WMT32.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT32.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT32.pdf"><i>NRC Machine Translation System for WMT 2017</i></a><br> Chi-kiu  Lo,  Boxing  Chen,  Colin  Cherry,  George  Foster,  Samuel  Larkin,  Darlene  Stewart and  Roland  Kuhn </td>
-			<td valign="top" align="left"><a name="330">pp.&nbsp;330&#8211;337</a></td>
-		</tr>
-
-
-		<tr class="bg2">
-			<td valign="top"><a href="pdf/WMT33.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT33.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT33.pdf"><i>The Helsinki Neural Machine Translation System</i></a><br> Robert  &Ouml;stling,  Yves  Scherrer,  J&ouml;rg  Tiedemann,  Gongbo  Tang and  Tommi  Nieminen </td>
-			<td valign="top" align="left"><a name="338">pp.&nbsp;338&#8211;347</a></td>
-		</tr>
-
-
-		<tr class="bg1">
-			<td valign="top"><a href="pdf/WMT34.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT34.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT34.pdf"><i>The QT21 Combined Machine Translation System for English to Latvian</i></a><br> Jan-Thorsten  Peter,  Hermann  Ney,  Ond&#345;ej  Bojar,  Ngoc-Quan  Pham,  Jan  Niehues,  Alex  Waibel,  Franck  Burlot,  Fran&ccedil;ois  Yvon,  M&#257;rcis  Pinnis,  Valters  Sics,  Joost  Bastings,  Miguel  Rios,  Wilker  Aziz,  Philip  Williams,  Fr&eacute;d&eacute;ric  Blain and  Lucia  Specia </td>
-			<td valign="top" align="left"><a name="348">pp.&nbsp;348&#8211;357</a></td>
-		</tr>
-
-
-		<tr class="bg2">
-			<td valign="top"><a href="pdf/WMT35.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT35.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT35.pdf"><i>The RWTH Aachen University English-German and German-English Machine Translation System for WMT 2017</i></a><br> Jan-Thorsten  Peter,  Andreas  Guta,  Tamer  Alkhouli,  Parnia  Bahar,  Jan  Rosendahl,  Nick  Rossenbach,  Miguel  Gra&ccedil;a and  Hermann  Ney </td>
-			<td valign="top" align="left"><a name="358">pp.&nbsp;358&#8211;365</a></td>
-		</tr>
-
-
-		<tr class="bg1">
-			<td valign="top"><a href="pdf/WMT36.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT36.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT36.pdf"><i>The Karlsruhe Institute of Technology Systems for the News Translation Task in WMT 2017</i></a><br> Ngoc-Quan  Pham,  Jan  Niehues,  Thanh-Le  Ha,  Eunah  Cho,  Matthias  Sperber and  Alexander  Waibel </td>
-			<td valign="top" align="left"><a name="366">pp.&nbsp;366&#8211;373</a></td>
-		</tr>
-
-
-		<tr class="bg2">
-			<td valign="top"><a href="pdf/WMT37.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT37.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT37.pdf"><i>Tilde&rsquo;s Machine Translation Systems for WMT 2017</i></a><br> M&#257;rcis  Pinnis,  Rihards  Kri&#353;lauks,  Toms  Miks,  Daiga  Deksne and  Valters  &#352;ics </td>
-			<td valign="top" align="left"><a name="374">pp.&nbsp;374&#8211;381</a></td>
-		</tr>
-
-
-		<tr class="bg1">
-			<td valign="top"><a href="pdf/WMT38.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT38.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT38.pdf"><i>C-3MA: Tartu-Riga-Zurich Translation Systems for WMT17</i></a><br> Mat&#299;ss  Rikters,  Chantal  Amrhein,  Maksym  Del and  Mark  Fishel </td>
-			<td valign="top" align="left"><a name="382">pp.&nbsp;382&#8211;388</a></td>
-		</tr>
-
-
-		<tr class="bg2">
-			<td valign="top"><a href="pdf/WMT39.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT39.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT39.pdf"><i>The University of Edinburgh&rsquo;s Neural MT Systems for WMT17</i></a><br> Rico  Sennrich,  Alexandra  Birch,  Anna  Currey,  Ulrich  Germann,  Barry  Haddow,  Kenneth  Heafield,  Antonio Valerio  Miceli Barone and  Philip  Williams </td>
-			<td valign="top" align="left"><a name="389">pp.&nbsp;389&#8211;399</a></td>
-		</tr>
-
-
-		<tr class="bg1">
-			<td valign="top"><a href="pdf/WMT40.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT40.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT40.pdf"><i>XMU Neural Machine Translation Systems for WMT 17</i></a><br> Zhixing  Tan,  Boli  Wang,  Jinming  Hu,  Yidong  Chen and  xiaodong  shi </td>
-			<td valign="top" align="left"><a name="400">pp.&nbsp;400&#8211;404</a></td>
-		</tr>
-
-
-		<tr class="bg2">
-			<td valign="top"><a href="pdf/WMT41.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT41.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT41.pdf"><i>The JAIST Machine Translation Systems for WMT 17</i></a><br> Long  Trieu,  Trung-Tin  Pham and  Le-Minh  Nguyen </td>
-			<td valign="top" align="left"><a name="405">pp.&nbsp;405&#8211;409</a></td>
-		</tr>
-
-
-		<tr class="bg1">
-			<td valign="top"><a href="pdf/WMT42.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT42.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT42.pdf"><i>Sogou Neural Machine Translation Systems for WMT17</i></a><br> Yuguang  Wang,  Shanbo  Cheng,  Liyang  Jiang,  Jiajun  Yang,  Wei  Chen,  Muze  Li,  Lin  Shi,  Yanfeng  Wang and  Hongtao  Yang </td>
-			<td valign="top" align="left"><a name="410">pp.&nbsp;410&#8211;415</a></td>
-		</tr>
-
-
-		<tr class="bg2">
-			<td valign="top"><a href="pdf/WMT43.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT43.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT43.pdf"><i>PJIIT's systems for WMT 2017 Conference</i></a><br> Krzysztof  Wolk and  Krzysztof  Marasek </td>
-			<td valign="top" align="left"><a name="416">pp.&nbsp;416&#8211;421</a></td>
-		</tr>
-
-
-		<tr class="bg1">
-			<td valign="top"><a href="pdf/WMT44.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT44.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT44.pdf"><i>Hunter MT: A Course for Young Researchers in WMT17</i></a><br> Jia  Xu,  Yi Zong  Kuang,  Shondell  Baijoo,  Jacob Hyun  Lee,  Uman  Shahzad,  Mir  Ahmed,  Meredith  Lancaster and  Chris  Carlan </td>
-			<td valign="top" align="left"><a name="422">pp.&nbsp;422&#8211;427</a></td>
-		</tr>
-
-
-		<tr class="bg2">
-			<td valign="top"><a href="pdf/WMT45.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT45.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT45.pdf"><i>CASICT-DCU Neural Machine Translation Systems for WMT17</i></a><br> Jinchao  Zhang,  Peerachet  Porkaew,  Jiawei  Hu,  Qiuye  Zhao and  Qun  Liu </td>
-			<td valign="top" align="left"><a name="428">pp.&nbsp;428&#8211;431</a></td>
-		</tr>
-
-
-		<tr class="bg1">
-			<td valign="top"><a href="pdf/WMT46.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT46.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT46.pdf"><i>LIUM-CVC Submissions for WMT17 Multimodal Translation Task</i></a><br> Ozan  Caglayan,  Walid  Aransa,  Adrien  Bardet,  Mercedes  Garc&iacute;a-Mart&iacute;nez,  Fethi  Bougares,  Lo&iuml;c  Barrault,  Marc  Masana,  Luis  Herranz and  Joost  van de Weijer </td>
-			<td valign="top" align="left"><a name="432">pp.&nbsp;432&#8211;439</a></td>
-		</tr>
-
-
-		<tr class="bg2">
-			<td valign="top"><a href="pdf/WMT47.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT47.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT47.pdf"><i>DCU System Report on the WMT 2017 Multi-modal Machine Translation Task</i></a><br> Iacer  Calixto,  Koel  Dutta Chowdhury and  Qun  Liu </td>
-			<td valign="top" align="left"><a name="440">pp.&nbsp;440&#8211;444</a></td>
-		</tr>
-
-
-		<tr class="bg1">
-			<td valign="top"><a href="pdf/WMT48.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT48.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT48.pdf"><i>The AFRL-OSU WMT17 Multimodal Translation System: An Image Processing Approach</i></a><br> Jeremy  Gwinnup,  John  Duselis,  Michael  Hutt,  James  Davis and  Joshua  Sandvick </td>
-			<td valign="top" align="left"><a name="445">pp.&nbsp;445&#8211;449</a></td>
-		</tr>
-
-
-		<tr class="bg2">
-			<td valign="top"><a href="pdf/WMT49.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT49.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT49.pdf"><i>CUNI System for the WMT17 Multimodal Translation Task</i></a><br> Jind&#345;ich  Helcl and  Jind&#345;ich  Libovick&yacute; </td>
-			<td valign="top" align="left"><a name="450">pp.&nbsp;450&#8211;457</a></td>
-		</tr>
-
-
-		<tr class="bg1">
-			<td valign="top"><a href="pdf/WMT50.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT50.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT50.pdf"><i>Generating Image Descriptions using Multilingual Data</i></a><br> Alan  Jaffe </td>
-			<td valign="top" align="left"><a name="458">pp.&nbsp;458&#8211;464</a></td>
-		</tr>
-
-
-		<tr class="bg2">
-			<td valign="top"><a href="pdf/WMT51.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT51.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT51.pdf"><i>OSU Multimodal Machine Translation System Report</i></a><br> Mingbo  Ma,  Dapeng  Li,  Kai  Zhao and  Liang  Huang </td>
-			<td valign="top" align="left"><a name="465">pp.&nbsp;465&#8211;469</a></td>
-		</tr>
-
-
-		<tr class="bg1">
-			<td valign="top"><a href="pdf/WMT52.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT52.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT52.pdf"><i>Sheffield MultiMT: Using Object Posterior Predictions for Multimodal Machine Translation</i></a><br> Pranava Swaroop  Madhyastha,  Josiah  Wang and  Lucia  Specia </td>
-			<td valign="top" align="left"><a name="470">pp.&nbsp;470&#8211;476</a></td>
-		</tr>
-
-
-		<tr class="bg2">
-			<td valign="top"><a href="pdf/WMT53.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT53.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT53.pdf"><i>NICT-NAIST System for WMT17 Multimodal Translation Task</i></a><br> Jingyi  Zhang,  Masao  Utiyama,  Eiichro  Sumita,  Graham  Neubig and  Satoshi  Nakamura </td>
-			<td valign="top" align="left"><a name="477">pp.&nbsp;477&#8211;482</a></td>
-		</tr>
-
-
-		<tr class="bg1">
-			<td valign="top"><a href="pdf/WMT54.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT54.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT54.pdf"><i>Automatic Threshold Detection for Data Selection in Machine Translation</i></a><br> Mirela-Stefania  Duma and  Wolfgang  Menzel </td>
-			<td valign="top" align="left"><a name="483">pp.&nbsp;483&#8211;488</a></td>
-		</tr>
-
-
-		<tr class="bg2">
-			<td valign="top"><a href="pdf/WMT55.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT55.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT55.pdf"><i>Results of the WMT17 Metrics Shared Task</i></a><br> Ond&#345;ej  Bojar,  Yvette  Graham and  Amir  Kamran </td>
-			<td valign="top" align="left"><a name="489">pp.&nbsp;489&#8211;513</a></td>
-		</tr>
-
-
-		<tr class="bg1">
-			<td valign="top"><a href="pdf/WMT56.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT56.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT56.pdf"><i>A Shared Task on Bandit Learning for Machine Translation</i></a><br> Artem  Sokolov,  Julia  Kreutzer,  Kellen  Sunderland,  Pavel  Danchenko,  Witold  Szymaniak,  Hagen  F&uuml;rstenau and  Stefan  Riezler </td>
-			<td valign="top" align="left"><a name="514">pp.&nbsp;514&#8211;524</a></td>
-		</tr>
-
-
-		<tr class="bg2">
-			<td valign="top"><a href="pdf/WMT57.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT57.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT57.pdf"><i>Results of the WMT17 Neural MT Training Task</i></a><br> Ond&#345;ej  Bojar,  Jind&#345;ich  Helcl,  Tom  Kocmi,  Jind&#345;ich  Libovick&yacute; and  Tom&aacute;&#353;  Musil </td>
-			<td valign="top" align="left"><a name="525">pp.&nbsp;525&#8211;533</a></td>
-		</tr>
-
-
-		<tr class="bg1">
-			<td valign="top"><a href="pdf/WMT58.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT58.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT58.pdf"><i>Sentence-level quality estimation by predicting HTER as a multi-component metric</i></a><br> Eleftherios  Avramidis </td>
-			<td valign="top" align="left"><a name="534">pp.&nbsp;534&#8211;539</a></td>
-		</tr>
-
-
-		<tr class="bg2">
-			<td valign="top"><a href="pdf/WMT59.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT59.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT59.pdf"><i>Predicting Translation Performance with Referential Translation Machines</i></a><br> Ergun  Bi&ccedil;ici </td>
-			<td valign="top" align="left"><a name="540">pp.&nbsp;540&#8211;544</a></td>
-		</tr>
-
-
-		<tr class="bg1">
-			<td valign="top"><a href="pdf/WMT60.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT60.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT60.pdf"><i>Bilexical Embeddings for Quality Estimation</i></a><br> Fr&eacute;d&eacute;ric  Blain,  Carolina  Scarton and  Lucia  Specia </td>
-			<td valign="top" align="left"><a name="545">pp.&nbsp;545&#8211;550</a></td>
-		</tr>
-
-
-		<tr class="bg2">
-			<td valign="top"><a href="pdf/WMT61.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT61.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT61.pdf"><i>Improving Machine Translation Quality Estimation with Neural Network Features</i></a><br> Zhiming  Chen,  Yiming  Tan,  Chenlin  Zhang,  Qingyu  Xiang,  Lilin  Zhang,  Maoxi  Li and  Mingwen  WANG </td>
-			<td valign="top" align="left"><a name="551">pp.&nbsp;551&#8211;555</a></td>
-		</tr>
-
-
-		<tr class="bg1">
-			<td valign="top"><a href="pdf/WMT62.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT62.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT62.pdf"><i>UHH Submission to the WMT17 Quality Estimation Shared Task</i></a><br> Melania  Duma and  Wolfgang  Menzel </td>
-			<td valign="top" align="left"><a name="556">pp.&nbsp;556&#8211;561</a></td>
-		</tr>
-
-
-		<tr class="bg2">
-			<td valign="top"><a href="pdf/WMT63.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT63.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT63.pdf"><i>Predictor-Estimator using Multilevel Task Learning with Stack Propagation for Neural Quality Estimation</i></a><br> Hyun  Kim,  Jong-Hyeok  Lee and  Seung-Hoon  Na </td>
-			<td valign="top" align="left"><a name="562">pp.&nbsp;562&#8211;568</a></td>
-		</tr>
-
-
-		<tr class="bg1">
-			<td valign="top"><a href="pdf/WMT64.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT64.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT64.pdf"><i>Unbabel&rsquo;s Participation in the WMT17 Translation Quality Estimation Shared Task</i></a><br> Andr&eacute; F. T.  Martins,  Fabio  Kepler and  Jose  Monteiro </td>
-			<td valign="top" align="left"><a name="569">pp.&nbsp;569&#8211;574</a></td>
-		</tr>
-
-
-		<tr class="bg2">
-			<td valign="top"><a href="pdf/WMT65.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT65.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT65.pdf"><i>Feature-Enriched Character-Level Convolutions for Text Regression</i></a><br> Gustavo  Paetzold and  Lucia  Specia </td>
-			<td valign="top" align="left"><a name="575">pp.&nbsp;575&#8211;581</a></td>
-		</tr>
-
-
-		<tr class="bg1">
-			<td valign="top"><a href="pdf/WMT66.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT66.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT66.pdf"><i>UHH Submission to the WMT17 Metrics Shared Task</i></a><br> Melania  Duma and  Wolfgang  Menzel </td>
-			<td valign="top" align="left"><a name="582">pp.&nbsp;582&#8211;588</a></td>
-		</tr>
-
-
-		<tr class="bg2">
-			<td valign="top"><a href="pdf/WMT67.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT67.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT67.pdf"><i>MEANT 2.0: Accurate semantic MT evaluation for any output language</i></a><br> Chi-kiu  Lo </td>
-			<td valign="top" align="left"><a name="589">pp.&nbsp;589&#8211;597</a></td>
-		</tr>
-
-
-		<tr class="bg1">
-			<td valign="top"><a href="pdf/WMT68.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT68.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT68.pdf"><i>Blend: a Novel Combined MT Metric Based on Direct Assessment - CASICT-DCU submission to WMT17 Metrics Task</i></a><br> Qingsong  Ma,  Yvette  Graham,  Shugen  Wang and  Qun  Liu </td>
-			<td valign="top" align="left"><a name="598">pp.&nbsp;598&#8211;603</a></td>
-		</tr>
-
-
-		<tr class="bg2">
-			<td valign="top"><a href="pdf/WMT69.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT69.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT69.pdf"><i>CUNI Experiments for WMT17 Metrics Task</i></a><br> David  Mare&#269;ek,  Ond&#345;ej  Bojar,  Ond&#345;ej  H&uuml;bsch,  Rudolf  Rosa and  Dusan  Varis </td>
-			<td valign="top" align="left"><a name="604">pp.&nbsp;604&#8211;611</a></td>
-		</tr>
-
-
-		<tr class="bg1">
-			<td valign="top"><a href="pdf/WMT70.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT70.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT70.pdf"><i>chrF++: words helping character n-grams</i></a><br> Maja  Popovi&#263; </td>
-			<td valign="top" align="left"><a name="612">pp.&nbsp;612&#8211;618</a></td>
-		</tr>
-
-
-		<tr class="bg2">
-			<td valign="top"><a href="pdf/WMT71.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT71.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT71.pdf"><i>bleu2vec: the Painfully Familiar Metric on Continuous Vector Space Steroids</i></a><br> Andre  T&auml;ttar and  Mark  Fishel </td>
-			<td valign="top" align="left"><a name="619">pp.&nbsp;619&#8211;622</a></td>
-		</tr>
-
-
-		<tr class="bg1">
-			<td valign="top"><a href="pdf/WMT72.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT72.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT72.pdf"><i>LIG-CRIStAL Submission for the WMT 2017 Automatic Post-Editing Task</i></a><br> Alexandre  Berard,  Laurent  Besacier and  Olivier  Pietquin </td>
-			<td valign="top" align="left"><a name="623">pp.&nbsp;623&#8211;629</a></td>
-		</tr>
-
-
-		<tr class="bg2">
-			<td valign="top"><a href="pdf/WMT73.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT73.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT73.pdf"><i>Multi-source Neural Automatic Post-Editing: FBK's participation in the WMT 2017 APE shared task</i></a><br> Rajen  Chatterjee,  M. Amin  Farajian,  Matteo  Negri,  Marco  Turchi,  Ankit  Srivastava and  Santanu  Pal </td>
-			<td valign="top" align="left"><a name="630">pp.&nbsp;630&#8211;638</a></td>
-		</tr>
-
-
-		<tr class="bg1">
-			<td valign="top"><a href="pdf/WMT74.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT74.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT74.pdf"><i>The AMU-UEdin Submission to the WMT 2017 Shared Task on Automatic Post-Editing</i></a><br> Marcin  Junczys-Dowmunt and  Marcin  Junczys-Dowmunt </td>
-			<td valign="top" align="left"><a name="639">pp.&nbsp;639&#8211;646</a></td>
-		</tr>
-
-
-		<tr class="bg2">
-			<td valign="top"><a href="pdf/WMT75.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT75.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT75.pdf"><i>Ensembling Factored Neural Machine Translation Models for Automatic Post-Editing and Quality Estimation</i></a><br> Chris  Hokamp </td>
-			<td valign="top" align="left"><a name="647">pp.&nbsp;647&#8211;654</a></td>
-		</tr>
-
-
-		<tr class="bg1">
-			<td valign="top"><a href="pdf/WMT76.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT76.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT76.pdf"><i>Neural Post-Editing Based on Quality Estimation</i></a><br> Yiming  Tan,  Zhiming  Chen,  Liu  Huang,  Lilin  Zhang,  Maoxi  Li and  Mingwen  Wang </td>
-			<td valign="top" align="left"><a name="655">pp.&nbsp;655&#8211;660</a></td>
-		</tr>
-
-
-		<tr class="bg2">
-			<td valign="top"><a href="pdf/WMT77.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT77.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT77.pdf"><i>CUNI System for WMT17 Automatic Post-Editing Task</i></a><br> Dusan  Varis and  Ond&#345;ej  Bojar </td>
-			<td valign="top" align="left"><a name="661">pp.&nbsp;661&#8211;666</a></td>
-		</tr>
-
-
-		<tr class="bg1">
-			<td valign="top"><a href="pdf/WMT78.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT78.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT78.pdf"><i>The UMD Neural Machine Translation Systems at WMT17 Bandit Learning Task</i></a><br> Amr  Sharaf,  Shi  Feng,  Khanh  Nguyen,  Kiante  Brantley and  Hal  Daum&eacute; III </td>
-			<td valign="top" align="left"><a name="667">pp.&nbsp;667&#8211;673</a></td>
-		</tr>
-
-
-		<tr class="bg2">
-			<td valign="top"><a href="pdf/WMT79.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT79.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT79.pdf"><i>LIMSI Submission for WMT&rsquo;17 Shared Task on Bandit Learning</i></a><br> Guillaume  Wisniewski </td>
-			<td valign="top" align="left"><a name="674">pp.&nbsp;674&#8211;679</a></td>
-		</tr>
-
-
-		<tr class="bg1">
-			<td valign="top"><a href="pdf/WMT80.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT80.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT80.pdf"><i>Variable Mini-Batch Sizing and Pre-Trained Embeddings</i></a><br> Mostafa  Abdou,  Vladan  Gloncak and  Ond&#345;ej  Bojar </td>
-			<td valign="top" align="left"><a name="680">pp.&nbsp;680&#8211;686</a></td>
-		</tr>
-
-
-		<tr class="bg2">
-			<td valign="top"><a href="pdf/WMT81.pdf">pdf</a></td>
-			<td valign="top"><a href="bib/WMT81.bib">bib</a></td>
-			<td valign="top" align="left"><a href="pdf/WMT81.pdf"><i>The AFRL WMT17 Neural Machine Translation Training Task Submission</i></a><br> Jeremy  Gwinnup,  Grant  Erdmann and  Katherine  Young </td>
-			<td valign="top" align="left"><a name="687">pp.&nbsp;687&#8211;691</a></td>
-		</tr>
-
-</table><p>
-Last modified on August 29, 2017, 1:06 p.m.<p>&nbsp;
-</center>
-</body>
+<p>
+<table border=0 cellspacing=0>
+  <tr><td>
+You can read <a href="http://groups.google.com/group/wmt-tasks">past
+	announcements</a> on the Google Groups page for WMT.  These also
+include an archive of announcements from earlier workshops.</td><td  style="padding-left: 25px" align=right nowrap>
+  <a href="http://groups.google.com/group/wmt-tasks"><img src="http://groups.google.com/groups/img/3nb/groups_bar.gif"
+	  height=26 width=132 alt="Google Groups"></a>
+</td></tr>
+</table>
+</p>
+
+<h3>INVITED TALK</h3>
+Holger Schwenk (Facebook)<br>
+<i>Multilingual Representions and Applications in NLP</i><br>
+
+<h3>ORGANIZERS</h3>
+Ondřej Bojar (Charles University in Prague)<br>
+Christian Buck (University of Edinburgh)<br>
+Rajen Chatterjee (FBK)<br>
+Christian Federmann (MSR)<br>
+Yvette Graham (DCU)<br>
+Barry Haddow (University of Edinburgh)<br>
+Matthias Huck (University of Edinburgh)<br>
+Antonio Jimeno Yepes (IBM Research Australia)<br>
+Philipp Koehn (University of Edinburgh / Johns Hopkins University)<br>
+Julia Kreutzer (Heidelberg University)<br>
+Varvara Logacheva (University of Sheffield)<br>
+Christof Monz (University of Amsterdam)<br>
+Matteo Negri (FBK)<br>
+Aur&eacute;lie N&eacute;v&eacute;ol (LIMSI, CNRS)<br>
+Mariana Neves (Federal Institute for Risk Assessment / Hasso Plattner Institute)<br>
+Matt Post (Johns Hopkins University)<br>
+Stefan Riezler (Heidelberg University)<br>
+<!--Carolina Scarton (University of Sheffield)<br>-->
+Artem Sokolov (Heidelberg University, Amazon Development Center, Berlin)<br>
+Lucia Specia (University of Sheffield)<br>
+Marco Turchi (FBK)<br>
+Karin Verspoor (University of Melbourne)<br>
+
+<h3>PROGRAM COMMITTEE</h3>
+<ul>
+<li> Tim Anderson (Air Force Research Laboratory) </li>
+<li> Eleftherios Avramidis (German Research Center for Artificial Intelligence (DFKI)) </li>
+<li> Daniel Beck (University of Melbourne) </li>
+<li> Arianna Bisazza (University of Amsterdam) </li>
+<li> Graeme Blackwood (IBM Research) </li>
+<li> Fr&eacute;d&eacute;ric Blain (University of Sheffield) </li>
+<li> Ozan Caglayan (LIUM, Le Mans University) </li>
+<li> Marine Carpuat (University of Maryland) </li>
+<li> Francisco Casacuberta (Universitat Polit&egrave;cnica de Val&egrave;ncia) </li>
+<li> Daniel Cer (Google) </li>
+<li> Mauro Cettolo (FBK) </li>
+<li> Rajen Chatterjee (Fondazione Bruno Kessler) </li>
+<li> Boxing Chen (NRC) </li>
+<li> Colin Cherry (NRC) </li>
+<li> David Chiang (University of Notre Dame) </li>
+<li> Eunah Cho (Karlsruhe Institute of Technology) </li>
+<li> Kyunghyun Cho (New York University) </li>
+<li> Vishal Chowdhary (MSR) </li>
+<li> Jonathan Clark (Microsoft) </li>
+<li> Marta R. Costa-juss&agrave; (Universitat Polit&egrave;cnica de Catalunya) </li>
+<li> Praveen Dakwale (University of Amsterdam) </li>
+<li> Steve DeNeefe (SDL Language Weaver) </li>
+<li> Michael Denkowski (Amazon.com, Inc.) </li>
+<li> Markus Dreyer (Amazon.com) </li>
+<li> Nadir Durrani (QCRI) </li>
+<li> Desmond Elliott (University of Edinburgh) </li>
+<li> Marzieh Fadaee (University of Amsterdam) </li>
+<li> Marcello Federico (FBK) </li>
+<li> Minwei Feng (IBM Watson Group) </li>
+<li> Yang Feng (Institute of Computing Technology, Chinese Academy of Sciences) </li>
+<li> Andrew Finch (NICT) </li>
+<li> Orhan Firat (Google Research) </li>
+<li> Marina Fomicheva (Universitat Pompeu Fabra) </li>
+<li> Jos&eacute; A. R. Fonollosa (Universitat Polit&egrave;cnica de Catalunya) </li>
+<li> Mikel L. Forcada (Universitat d'Alacant) </li>
+<li> George Foster (National Research Council) </li>
+<li> Alexander Fraser (Ludwig-Maximilians-Universit&auml;t M&uuml;nchen) </li>
+<li> Markus Freitag (IBM Research) </li>
+<li> Ekaterina Garmash (University of Amsterdam) </li>
+<li> Ulrich Germann (University of Edinburgh) </li>
+<li> Hamidreza Ghader (Informatics Institute, University of Amsterdam) </li>
+<li> Jes&uacute;s Gonz&aacute;lez-Rubio (Universitat Polit&egrave;cnica de Val&egrave;ncia) </li>
+<li> Cyril Goutte (National Research Council Canada) </li>
+<li> Thanh-Le Ha (Karlsruhe Institute of Technology) </li>
+<li> Nizar Habash (New York University Abu Dhabi) </li>
+<li> Jan Hajic (Charles University) </li>
+<li> Greg Hanneman (Carnegie Mellon University) </li>
+<li> Christian Hardmeier (Uppsala universitet) </li>
+<li> Eva Hasler (SDL) </li>
+<li> Yifan He (Bosch Research and Technology Center) </li>
+<li> Kenneth Heafield (University of Edinburgh) </li>
+<li> Carmen Heger (Iconic) </li>
+<li> John Henderson (MITRE) </li>
+<li> Felix Hieber (Amazon Research) </li>
+<li> St&eacute;phane Huet (Universit&eacute; d'Avignon) </li>
+<li> Young-Sook Hwang (SKPlanet) </li>
+<li> Gonzalo Iglesias (SDL) </li>
+<li> Doug Jones (MIT Lincoln Laboratory) </li>
+<li> Marcin Junczys-Dowmunt (Adam Mickiewicz University, Pozna&#324;) </li>
+<li> Roland Kuhn (National Research Council of Canada) </li>
+<li> Shankar Kumar (Google) </li>
+<li> &Aacute;kos K&aacute;d&aacute;r (Tilburg University) </li>
+<li> David Langlois (LORIA, Universit&eacute; de Lorraine) </li>
+<li> William Lewis (Microsoft Research) </li>
+<li> Qun Liu (Dublin City University) </li>
+<li> Shujie Liu (Microsoft Research Asia, Beijing, China) </li>
+<li> Saab Mansour (Apple) </li>
+<li> Daniel Marcu (ISI/USC) </li>
+<li> Arne Mauser (Google, Inc) </li>
+<li> Mohammed Mediani (Karlsruhe Institute of Technology) </li>
+<li> Abhijit Mishra (IBM Research India) </li>
+<li> Maria Nadejde (University of Edinburgh) </li>
+<li> Preslav Nakov (Qatar Computing Research Institute, HBKU) </li>
+<li> Jan Niehues (Karlsruhe Institute of Technology) </li>
+<li> Kemal Oflazer (Carnegie Mellon University - Qatar) </li>
+<li> Tsuyoshi Okita (Kyushuu institute of technology university) </li>
+<li> Daniel Ortiz-Mart&iacute;nez (Technical University of Valencia) </li>
+<li> Martha Palmer (University of Colorado) </li>
+<li> Siddharth Patwardhan (IBM Watson) </li>
+<li> Pavel Pecina (Charles University) </li>
+<li> Stephan Peitz (Apple) </li>
+<li> Sergio Penkale (Lingo24) </li>
+<li> Jan-Thorsten Peter (RWTH Aachen University) </li>
+<li> Maja Popovi&#263; (Humboldt University of Berlin) </li>
+<li> Preethi Raghavan (IBM Research TJ Watson) </li>
+<li> Stefan Riezler (Heidelberg University) </li>
+<li> Baskaran Sankaran (IBM T.J. Watson Research Center) </li>
+<li> Jean Senellart (SYSTRAN) </li>
+<li> Rico Sennrich (University of Edinburgh) </li>
+<li> Wade Shen (MIT) </li>
+<li> Michel Simard (NRC) </li>
+<li> Patrick Simianer (Heidelberg University) </li>
+<li> Linfeng Song (University of Rochester) </li>
+<li> Sara Stymne (Uppsala University) </li>
+<li> Katsuhito Sudoh (Nara Institute of Science and Technology (NAIST)) </li>
+<li> Felipe S&aacute;nchez-Mart&iacute;nez (Universitat d'Alacant) </li>
+<li> Ale&scaron; Tamchyna (Charles University in Prague, UFAL MFF) </li>
+<li> J&ouml;rg Tiedemann (University of Helsinki) </li>
+<li> Christoph Tillmann (IBM Research) </li>
+<li> Ke M. Tran (University of Amsterdam) </li>
+<li> Dan Tufi&#537; (Research Institute for Artificial Intelligence, Romanian Academy) </li>
+<li> Marco Turchi (Fondazione Bruno Kessler) </li>
+<li> Ferhan Ture (Comcast Labs) </li>
+<li> Masao Utiyama (NICT) </li>
+<li> David Vilar (Amazon) </li>
+<li> Stephan Vogel (Qatar Computing Research Institute) </li>
+<li> Martin Volk (University of Zurich) </li>
+<li> Taro Watanabe (Google) </li>
+<li> Bonnie Webber (University of Edinburgh) </li>
+<li> Marion Weller-Di Marco (LMU M&uuml;nchen, Universit&auml;t Stuttgart) </li>
+<li> Philip Williams (University of Edinburgh) </li>
+<li> Hua Wu (Baidu) </li>
+<li> Joern Wuebker (Lilt, Inc.) </li>
+<li> Fran&ccedil;ois Yvon (LIMSI/CNRS) </li>
+<li> Marlies van der Wees (University of Amsterdam) </li>
+</ul>
+
+    <H3>ANTI-HARASSMENT POLICY</H3>
+
+    <p>
+      WMT follows the ACL's <a href="https://www.aclweb.org/adminwiki/index.php?title=Anti-Harassment_Policy">anti-harassment policy</a>
+    </P>
+
+    <h3>CONTACT</h3>
+
+    <p>
+      For general questions, comments, etc. please send email
+      to <a href="mailto:bhaddow@inf.ed.ac.uk">bhaddow@inf.ed.ac.uk</a>.<br>
+      For task-specific questions, please contact the relevant organisers.
+    </p>
+
+<h3>ACKNOWLEDGEMENTS</h3>
+This conference has received funding
+from the European Union’s Horizon 2020 research
+and innovation programme under grant agreements
+645452 (<a href="http://www.qt21.eu/">QT21</a>) and  645357 (<a href="http://www.meta-net.eu/projects/cracker/">Cracker</a>).
+<br>
+We thank <a href="http://www.yandex.com">Yandex</a> for their donation of data for the Russian-English and Turkish-English news tasks, and the University of Helsinki for their donation for the Finnish-English news tasks.
+
+<!-- Supported by the European Commision<br> under the
+<a href="http://www.mosescore.eu"><img align=right src="http://www.statmt.org/mosescore/pub/img/mosescore-logo-transp.png" border=0 width=100 height=20></a>  <a href="http://www.mosescore.eu/">MosesCore</a> project <br>project (grant number 288487) <p>
+-->
+  </body>
 </html>
