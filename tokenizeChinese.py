@@ -1,12 +1,43 @@
-# encoding=utf-8
+# -*- coding: utf-8 -*-     
+"""
+MIT License
+Copyright (c) 2017 - Shujian Huang <huangsj@nju.edu.cn>      
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+"""
+
 # script of python2.7
-# the tokenization of Chinese text contains two steps: separate each Chinese characters (by utf-8 encoding); tokenize the non Chinese part (following the mteval script). 
+# the tokenization of Chinese text in this script contains two steps: separate each Chinese characters (by utf-8 encoding); tokenize the non Chinese part (following the mteval script). 
+# usage: python tokenizeChinese.py inputFile outputFile
 # Shujian Huang huangsj@nju.edu.cn
+
+
 import re
 import sys
 
 
 def isChineseChar(uchar):
+    """
+    :param uchar: input char in unicode
+    
+    :return: whether the input char is a Chinese character.
+    """
     if uchar >= u'\u3400' and uchar <= u'\u4db5':  # CJK Unified Ideographs Extension A, release 3.0
         return True
     elif uchar >= u'\u4e00' and uchar <= u'\u9fa5':  # CJK Unified Ideographs, release 1.1
@@ -57,8 +88,10 @@ def isChineseChar(uchar):
 def tokenizeString(sentence, lc=False):
     """
     :param sentence: input sentence
-    :param lc: flag of lowercase. default=True
-    :return: tokenized sentence, with \n
+
+    :param lc: flag of lowercase. default=False
+
+    :return: tokenized sentence, without the line break "\\n"
     """
    
     sentence = sentence.decode("utf-8")
@@ -107,7 +140,12 @@ def tokenizeString(sentence, lc=False):
     return sentence
 
 
-def tokenizeSentence(inputFile, outputFile):
+def tokenizeXMLFile(inputFile, outputFile):
+    """
+    :param inputFile: input XML file
+
+    :param outputFile: output XML file with tokenized text 
+    """
     file_r = open(inputFile, 'r')  # input file
     file_w = open(outputFile, 'w')  # result file
 #<seg id="1">-28 "老欧洲" Chef Found ， 就是背井离乡来到旧金山追求财富的巴西人 Mall</seg>
@@ -125,6 +163,21 @@ def tokenizeSentence(inputFile, outputFile):
     file_r.close()
     file_w.close()
 
+def tokenizePlainFile(inputFile, outputFile):
+    """
+    :param inputFile: input plain text file
+    
+    :param outputFile: output plain text file with tokenized text 
+    """
+    file_r = open(inputFile, 'r')  # input file
+    file_w = open(outputFile, 'w')  # result file
+
+    for sentence in file_r:
+        new_sentence = tokenizeString(sentence)
+        file_w.write(new_sentence+'\n')
+    
+    file_r.close()
+    file_w.close()
 
 if __name__ == '__main__':
-    tokenizeSentence(sys.argv[1], sys.argv[2])
+    tokenizeXMLFile(sys.argv[1], sys.argv[2])
