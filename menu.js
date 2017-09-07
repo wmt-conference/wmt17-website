@@ -3,6 +3,7 @@ document.write('\
   [<A HREF="/wmt17/papers.html">PAPERS</A>]  \
   [<A HREF="/wmt17/program.html">SCHEDULE</A>]  \
   [<A HREF="/wmt17/authors.html">AUTHORS</A>] \
+  [<A HREF="/wmt17/results.html">RESULTS</A>]\
  <br>  \
 TRANSLATION TASKS: \
   [<A HREF="/wmt17/translation-task.html">NEWS</A>] \
@@ -18,7 +19,6 @@ TRANSLATION TASKS: \
 ');
 
 /*[<A HREF="/wmt17/index.html">SCHEDULE</A>] \
-  [<A HREF="/wmt17/results.html">RESULTS</A>]\
 [<A HREF="/wmt17/index.html">PAPERS</A>] \
 [<A HREF="/wmt17/index.html">AUTHORS</A>] \
 [<A HREF="/wmt17/index.html">RESULTS</A>] */
